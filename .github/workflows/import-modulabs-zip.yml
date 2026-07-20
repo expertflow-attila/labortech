@@ -1,0 +1,79 @@
+name: Import modulabs.zip from Google Drive
+
+# A modulabs.zip (a felhasználó licencelt Webflow-exportja) a Google Drive-on van,
+# a fejlesztői konténer hálózata viszont nem éri el a Drive-ot. Ez a workflow a
+# GitHub futtatóján tölti le a linkkel megosztott fájlt, kicsomagolja a
+# site-export/ mappába, és visszacommitolja erre a branchre.
+
+on:
+  push:
+    branches:
+      - claude/modulabs-hungarian-website-87t424
+
+permissions:
+  contents: write
+
+env:
+  DRIVE_FILE_ID: 1jHLFjYO-yWh1BiEFol-ekGbz6Nw1p5pW
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip if export already imported
+        id: guard
+        run: |
+          if [ -d site-export ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "site-export/ already exists, nothing to do."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download zip from Google Drive
+        if: steps.guard.outputs.skip == 'false'
+        id: download
+        run: |
+          set -x
+          URL="https://drive.usercontent.google.com/download?id=${DRIVE_FILE_ID}&export=download&confirm=t"
+          curl -sL --max-time 300 -o modulabs.zip "$URL"
+          # Nagy fájloknál a Drive először egy vírusellenőrzési figyelmeztető
+          # HTML-űrlapot ad vissza — ilyenkor a form paramétereivel újrapróbáljuk.
+          if ! file modulabs.zip | grep -qi 'zip'; then
+            UUID=$(grep -oP 'name="uuid" value="\K[^"]+' modulabs.zip || true)
+            if [ -n "$UUID" ]; then
+              curl -sL --max-time 300 -o modulabs.zip \
+                "https://drive.usercontent.google.com/download?id=${DRIVE_FILE_ID}&export=download&confirm=t&uuid=${UUID}"
+            fi
+          fi
+          if file modulabs.zip | grep -qi 'zip'; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            ls -la modulabs.zip
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "A letöltés nem zip-et adott vissza — valószínűleg a fájl még nincs linkkel megosztva."
+            head -c 500 modulabs.zip || true
+          fi
+
+      - name: Unzip and commit
+        if: steps.guard.outputs.skip == 'false' && steps.download.outputs.ok == 'true'
+        run: |
+          set -e
+          mkdir -p site-export
+          unzip -q modulabs.zip -d site-export
+          rm modulabs.zip
+          # Ha minden egyetlen gyökérmappában van, emeljük ki a tartalmát.
+          entries=$(ls -A site-export | wc -l)
+          first=$(ls -A site-export | head -1)
+          if [ "$entries" = "1" ] && [ -d "site-export/$first" ]; then
+            mv "site-export/$first"/* "site-export/$first"/.[!.]* site-export/ 2>/dev/null || true
+            rmdir "site-export/$first" 2>/dev/null || true
+          fi
+          ls site-export | head -50
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site-export
+          git commit -m "[skip ci] Import modulabs.zip export (site-export/)"
+          git push
