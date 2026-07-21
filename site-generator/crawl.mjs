@@ -5,7 +5,7 @@
 // Output: ./public (static site) + ./public/_report/strings.json (coverage report).
 
 import * as cheerio from 'cheerio';
-import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -188,6 +188,14 @@ function translateHtml(html, pagePath) {
   const $ = cheerio.load(html);
   $('html').attr('lang', 'hu');
 
+  // A lokálisra átírt (és a bennük lévő URL-csere miatt módosult) fájlokra a
+  // Webflow-tól örökölt SRI-hash már nem stimmel, ezért a böngésző eldobná a
+  // stíluslapot — az integrity/crossorigin attribútumokat el kell távolítani.
+  $('link[integrity], script[integrity]').each((_, el) => {
+    $(el).removeAttr('integrity');
+    $(el).removeAttr('crossorigin');
+  });
+
   $('*').each((_, el) => {
     if (!el.tagName) return;
     const tag = el.tagName.toLowerCase();
@@ -289,6 +297,36 @@ const report = {
   },
 };
 writeFileSync(join(OUT, '_report', 'strings.json'), JSON.stringify(report, null, 2));
+
+// ---------- 5. Self-diagnostics for the build log ----------
+// The deployed pages cannot be fetched from the dev container (SSO), so the
+// build prints everything needed to debug styling/asset issues.
+try {
+  const idx = readFileSync(join(OUT, 'index.html'), 'utf8');
+  console.log('HEAD_SNIPPET_BEGIN');
+  console.log(idx.slice(0, 3000));
+  console.log('HEAD_SNIPPET_END');
+} catch (e) {
+  console.log('HEAD_SNIPPET_FAIL ' + e);
+}
+for (const [name] of cssTexts.entries()) {
+  const p = join(OUT, 'assets', name);
+  console.log(`CSS_FILE ${name} ${existsSync(p) ? statSync(p).size + 'b' : 'MISSING'}`);
+}
+// Verify that every local stylesheet/script reference in the built pages exists.
+const refRe = /(?:href|src)="(\/assets\/[^"]+)"/g;
+const badRefs = new Set();
+for (const path of pages.keys()) {
+  const f = join(OUT, outFile(path));
+  if (!existsSync(f)) continue;
+  const html = readFileSync(f, 'utf8');
+  for (const m of html.matchAll(refRe)) {
+    const local = decodeURIComponent(m[1]);
+    if (!existsSync(join(OUT, local))) badRefs.add(`${path} -> ${m[1]}`);
+  }
+}
+for (const r of badRefs) console.log('BROKEN_REF ' + r);
+console.log(`REF_CHECK done, ${badRefs.size} broken local refs`);
 
 // Preview deployments sit behind Vercel SSO, so the report is also emitted
 // into the build log where it can always be read.
