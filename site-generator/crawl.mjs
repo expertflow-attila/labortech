@@ -274,17 +274,22 @@ function translateHtml(html, pagePath) {
     '<circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/>' +
     '<circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/>' +
     '<circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg>';
-  const bnWordmark = (fontSize) =>
+  const bnWordmark = (fontSize, color) =>
     '<span class="bn-wordmark" aria-label="business nativ" ' +
     'style="display:inline-flex;align-items:baseline;gap:0.34em;' +
     'font-family:inherit;font-weight:600;letter-spacing:-0.02em;line-height:1;' +
-    'white-space:nowrap;color:currentColor;font-size:' + fontSize + '">' +
+    'white-space:nowrap;color:' + color + ';font-size:' + fontSize + '">' +
     'business' + BN_ARROW + 'nativ</span>';
+  // A navbar örökölt szöveg-színe sötét (az eredeti logó világos SVG volt, saját
+  // színnel), ezért a wordmarkot a sablon világos "icon-strong" tokenjére kötjük
+  // (#f6f3ec, téma-helyes) világos fallbackkel — így nem lesz fekete a fejlécben.
+  // A footer háttere sötét, ott a currentColor eleve világos.
+  const NAV_COLOR = 'var(--_🎨-color--tokens---icon--strong, #f5f4f1)';
   $('.brand-nav, .navbar-brand, .brand-nav-mobile').each((_, el) => {
-    $(el).html(bnWordmark('21px'));
+    $(el).html(bnWordmark('21px', NAV_COLOR));
   });
   $('.brand-footer').each((_, el) => {
-    $(el).html(bnWordmark('26px'));
+    $(el).html(bnWordmark('26px', 'currentColor'));
   });
 
   return $.html();
