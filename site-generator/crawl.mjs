@@ -262,6 +262,31 @@ function translateHtml(html, pagePath) {
     }
   });
 
+  // --- Logó-csere (a fordítás UTÁN, hogy a wordmark szövegét ne fordítsa) ---
+  // A Modulabs védjegy (navbar + footer) helyére a Business Native wordmark
+  // kerül: "business" + dot-matrix nyíl + "nativ". A törzsszöveg "Modulabs"
+  // említéseit nem érinti — kizárólag a márka-logó grafikát cseréli.
+  const BN_ARROW =
+    '<svg viewBox="0 0 15 13" fill="currentColor" aria-hidden="true" ' +
+    'style="width:1em;height:0.87em;align-self:center;flex:none">' +
+    '<circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/>' +
+    '<circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/>' +
+    '<circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/>' +
+    '<circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/>' +
+    '<circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg>';
+  const bnWordmark = (fontSize) =>
+    '<span class="bn-wordmark" aria-label="business nativ" ' +
+    'style="display:inline-flex;align-items:baseline;gap:0.34em;' +
+    'font-family:inherit;font-weight:600;letter-spacing:-0.02em;line-height:1;' +
+    'white-space:nowrap;color:currentColor;font-size:' + fontSize + '">' +
+    'business' + BN_ARROW + 'nativ</span>';
+  $('.brand-nav, .navbar-brand, .brand-nav-mobile').each((_, el) => {
+    $(el).html(bnWordmark('21px'));
+  });
+  $('.brand-footer').each((_, el) => {
+    $(el).html(bnWordmark('26px'));
+  });
+
   return $.html();
 }
 
