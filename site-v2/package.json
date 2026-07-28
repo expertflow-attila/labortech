@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node check-modules.mjs && node crawl.mjs && node crawl-apps.mjs && node content.mjs && node generate.mjs && node generate-apps.mjs && node generate-legal.mjs && node generate-core.mjs && node generate-ef.mjs && node generate-quiz.mjs && node polish.mjs",
-    "sync:tpl": "for f in index.html careers.html pricing.html service/service-a.html service/service-b.html contact/contact-a.html homepage/home-b.html; do cp \"../site-generator/public/$f\" \"tpl/$f\"; done && echo 'tpl/ frissítve'"
+    "sync:tpl": "for f in index.html careers.html pricing.html service/service-a.html service/service-b.html contact/contact-a.html homepage/home-b.html; do cp \"../site-generator/public/$f\" \"tpl/$f\"; done && echo 'tpl/ frissítve'",
+    "sync:quiz": "node -e \"const fs=require('fs'),R='/Users/nagyattila/dev/expertflow-quiz';const s=fs.readFileSync(R+'/lib/quiz-data.ts','utf8').match(/export const QUIZ_STEPS[^=]*=\\\\s*(\\\\[[\\\\s\\\\S]*?\\\\n\\\\];)/);const steps=eval(s[1]);const g=fs.readFileSync(R+'/lib/segment.ts','utf8');const G=n=>{const m=g.match(new RegExp('const '+n+'[^=]*=\\\\\\\\s*(\\\\\\\\{[\\\\\\\\s\\\\\\\\S]*?\\\\\\\\n\\\\\\\\};)'));return m?eval('('+m[1]+')'):{}};fs.writeFileSync('quiz-data.json',JSON.stringify({_forras:'expertflow-quiz — npm run sync:quiz',steps,seg:{industry:G('INDUSTRY_LABEL'),team:G('TEAM_LABEL'),budget:G('BUDGET_LABEL'),urgency:G('URGENCY_LABEL')}},null,2)+'\\n');console.log('quiz-data.json frissítve')\""
   },
   "dependencies": {
     "cheerio": "^1.0.0"

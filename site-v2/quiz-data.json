@@ -1,0 +1,230 @@
+{
+  "_forras": "expertflow-quiz/lib/quiz-data.ts + segment.ts — a npm run sync:quiz frissíti",
+  "steps": [
+    {
+      "id": "industry",
+      "type": "closed",
+      "title": "Milyen területen dolgozol?",
+      "helper": "Válaszd ki azt, amelyik a legközelebb áll hozzád.",
+      "options": [
+        {
+          "value": "LAWYER",
+          "label": "Jogász / ügyvéd"
+        },
+        {
+          "value": "ACCOUNTANT",
+          "label": "Könyvelő / pénzügyi tanácsadó"
+        },
+        {
+          "value": "REALESTATE",
+          "label": "Ingatlanos / ingatlanközvetítő"
+        },
+        {
+          "value": "HEALTHCARE",
+          "label": "Orvos / egészségügyi szolgáltató"
+        },
+        {
+          "value": "PHOTOGRAPHER",
+          "label": "Fotós / kreatív"
+        },
+        {
+          "value": "CONSULTANT",
+          "label": "Tanácsadó / coach"
+        },
+        {
+          "value": "ECOMMERCE",
+          "label": "Webshop / e-commerce"
+        },
+        {
+          "value": "OTHER",
+          "label": "Egyéb szolgáltatás"
+        }
+      ]
+    },
+    {
+      "id": "team_size",
+      "type": "closed",
+      "title": "Hányan vagytok a vállalkozásban?",
+      "helper": "Beleértve magadat is.",
+      "options": [
+        {
+          "value": "SOLO",
+          "label": "Egyedül vagyok"
+        },
+        {
+          "value": "SMALL",
+          "label": "2-5 fő"
+        },
+        {
+          "value": "MEDIUM",
+          "label": "6-15 fő"
+        },
+        {
+          "value": "LARGE",
+          "label": "16+ fő"
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "type": "closed",
+      "title": "Mekkora most a havi marketing büdzséd?",
+      "helper": "Hogy reális ajánlatot tudjunk adni — nincs jó vagy rossz válasz.",
+      "options": [
+        {
+          "value": "NONE",
+          "label": "Még nincs dedikált büdzsé"
+        },
+        {
+          "value": "LOW",
+          "label": "Kevesebb mint 50 000 Ft / hó"
+        },
+        {
+          "value": "MID",
+          "label": "50 000 – 200 000 Ft / hó"
+        },
+        {
+          "value": "HIGH",
+          "label": "200 000 – 500 000 Ft / hó"
+        },
+        {
+          "value": "ENTERPRISE",
+          "label": "500 000 Ft felett / hó"
+        }
+      ]
+    },
+    {
+      "id": "urgency",
+      "type": "closed",
+      "title": "Mennyire sürgős most a változás?",
+      "helper": "Ez segít, hogy lássuk, mikor érdemes elkezdeni.",
+      "options": [
+        {
+          "value": "NOW",
+          "label": "Most azonnal kell"
+        },
+        {
+          "value": "QUARTER",
+          "label": "1-3 hónapon belül"
+        },
+        {
+          "value": "EXPLORE",
+          "label": "Felfedezem, még nem sürget"
+        }
+      ]
+    },
+    {
+      "id": "what_worked",
+      "type": "open",
+      "title": "Mi működött eddig jól?",
+      "helper": "Hogyan értél el eddig eredményeket, milyen megoldások hoztak sikert?",
+      "placeholder": "Pl. ajánlások, Google hirdetés, közösségi média, hideghívás..."
+    },
+    {
+      "id": "goal",
+      "type": "open",
+      "title": "Mit szeretnél most elérni?",
+      "helper": "Milyen konkrét igényeid vannak jelenleg, és hogyan nézne ki az ideális működés számodra?",
+      "placeholder": "Pl. heti 5 új minősített érdeklődő, automata foglaltság, kevesebb ad-hoc munka..."
+    },
+    {
+      "id": "success_metric",
+      "type": "open",
+      "title": "Miből látnád, hogy jól haladunk?",
+      "helper": "Mik azok a számok, eredmények, amikből tudni fogjuk, hogy sikeres az együttműködés?",
+      "placeholder": "Pl. árbevétel, lead-szám, válaszidő, ügyfél-elégedettség..."
+    },
+    {
+      "id": "main_goal_timeframe",
+      "type": "open",
+      "title": "Mi a fő cél, és milyen időtávon belül szeretnéd elérni?",
+      "helper": "Konkrét szám + határidő — pl.: \"A következő 12 hónapban 20%-os árbevétel-növekedés.\"",
+      "placeholder": "Pl. 6 hónap alatt eljutni X árbevételhez, 1 év alatt 3 új ügyfél / hó..."
+    },
+    {
+      "id": "ideal_customer",
+      "type": "open",
+      "title": "Kik most a legfontosabb vevőid?",
+      "helper": "Milyen ügyfelek vásárolnak tőled most, és kiket tartasz ideális vásárlónak?",
+      "placeholder": "Pl. 30-50 éves vállalkozók, 100M+ árbevétellel, akik már próbálkoztak korábban..."
+    },
+    {
+      "id": "challenges",
+      "type": "open",
+      "title": "Mik a jelenlegi kihívások?",
+      "helper": "Milyen problémákat, elakadásokat tapasztalsz, amik akadályozzák a növekedést?",
+      "placeholder": "Pl. túl sok idő ügyfélkommunikációra, nem elég lead, alacsony konverzió..."
+    },
+    {
+      "id": "buying_process",
+      "type": "open",
+      "title": "Hogyan zajlik most egy vásárlás?",
+      "helper": "Milyen kifogásokat szoktak megfogalmazni az érdeklődők?",
+      "placeholder": "Pl. érdeklődnek, küldök ajánlatot, 2 héttel később dönt — vagy elveszik..."
+    },
+    {
+      "id": "competitors",
+      "type": "open",
+      "title": "Kik a fő versenytársaid?",
+      "helper": "Kiket látsz hasonló célcsoportnak dolgozni, és hogyan pozicionálod magad hozzájuk képest?",
+      "placeholder": "Pl. X céget, Y kollégát ismerek — náluk olcsóbb / gyorsabb / specializáltabb vagyok..."
+    },
+    {
+      "id": "budget_plan",
+      "type": "open",
+      "title": "Hogyan tervezed a marketing büdzsédet a jövőben?",
+      "helper": "Tervezed-e növelni, és ha igen, mihez kötve (pl. eredményhez)?",
+      "placeholder": "Pl. 6 hónap után 2x-ezem, ha hozza az X eredményt; vagy fix havi keret..."
+    },
+    {
+      "id": "available_assets",
+      "type": "open",
+      "title": "Mi áll már rendelkezésre?",
+      "helper": "Vannak-e kész anyagok, adatok, leírások, amik segíthetnek az indulásban?",
+      "placeholder": "Pl. ügyféladatbázis, kész weboldal, korábbi hirdetési statisztikák, brand-kit..."
+    },
+    {
+      "id": "promotions",
+      "type": "open",
+      "title": "Szoktál promóciókat futtatni?",
+      "helper": "Ha igen, milyen gyakran, és milyen eredményekkel?",
+      "placeholder": "Pl. negyedévente egy akció — sales 30%-kal nő, vagy semmi pluszt nem hoz..."
+    },
+    {
+      "id": "contact",
+      "type": "contact",
+      "title": "Hova küldjük a személyre szabott javaslatot?",
+      "helper": "24 órán belül átnézem a válaszaid és írok vissza emailben."
+    }
+  ],
+  "seg": {
+    "industry": {
+      "LAWYER": "Jogász",
+      "ACCOUNTANT": "Könyvelő",
+      "REALESTATE": "Ingatlanos",
+      "HEALTHCARE": "Orvos / egészségügyi szolgáltató",
+      "PHOTOGRAPHER": "Fotós / kreatív",
+      "CONSULTANT": "Tanácsadó",
+      "ECOMMERCE": "Webshop / e-commerce",
+      "OTHER": "Egyéb szolgáltatás"
+    },
+    "team": {
+      "SOLO": "egyedül dolgozik",
+      "SMALL": "2-5 fős csapat",
+      "MEDIUM": "6-15 fős csapat",
+      "LARGE": "16+ fős csapat"
+    },
+    "budget": {
+      "NONE": "még nincs dedikált büdzséje",
+      "LOW": "alacsony büdzsé (<50e Ft)",
+      "MID": "közepes büdzsé (50-200e Ft)",
+      "HIGH": "magas büdzsé (200-500e Ft)",
+      "ENTERPRISE": "vállalati büdzsé (500e+ Ft)"
+    },
+    "urgency": {
+      "NOW": "azonnal indulna",
+      "QUARTER": "1-3 hónapon belül kezdene",
+      "EXPLORE": "még felfedező fázisban van"
+    }
+  }
+}

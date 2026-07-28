@@ -21,21 +21,30 @@ const CAL_NS = 'egyeni-konzultacio';
 
 const esc = (s) => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// A TS-forrásból kivágjuk a tömböt és kiértékeljük. Így a kérdések egyetlen
-// igazság-forrása a kvíz-app marad.
+// A kérdések egyetlen igazság-forrása a kvíz-app (`lib/quiz-data.ts`), de az
+// egy MÁSIK repó — egy Vercel-oldali buildnél nem elérhető, és a kvíz csendben
+// kimaradna. Ezért a kimásolt adat a repóban is ott van (`quiz-data.json`),
+// és a `npm run sync:quiz` hozza át belőle a friss változatot.
+function readVendored() {
+  return existsSync('quiz-data.json')
+    ? JSON.parse(readFileSync('quiz-data.json', 'utf8')) : null;
+}
+
 function readSteps() {
   const p = join(QUIZ_REPO, 'lib/quiz-data.ts');
-  if (!existsSync(p)) return null;
-  const m = readFileSync(p, 'utf8').match(/export const QUIZ_STEPS[^=]*=\s*(\[[\s\S]*?\n\];)/);
-  if (!m) return null;
-  // eslint-disable-next-line no-eval
-  return eval(m[1].replace(/;\s*$/, ''));
+  if (existsSync(p)) {
+    const m = readFileSync(p, 'utf8').match(/export const QUIZ_STEPS[^=]*=\s*(\[[\s\S]*?\n\];)/);
+    // eslint-disable-next-line no-eval
+    if (m) return eval(m[1].replace(/;\s*$/, ''));
+  }
+  const v = readVendored();
+  return v ? v.steps : null;
 }
 
 // A szegmens-besorolás címkéi és ajánlás-szövegei szintén a forrásból.
 function readSegment() {
   const p = join(QUIZ_REPO, 'lib/segment.ts');
-  if (!existsSync(p)) return null;
+  if (!existsSync(p)) { const v = readVendored(); return v ? v.seg : null; }
   const src = readFileSync(p, 'utf8');
   const grab = (name) => {
     const m = src.match(new RegExp(`const ${name}[^=]*=\\s*(\\{[\\s\\S]*?\\n\\};)`));
