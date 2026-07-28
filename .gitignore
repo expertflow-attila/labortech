@@ -7,9 +7,12 @@ node_modules/
 # a reprodukáláshoz.
 public/
 
-# Letükrözött assetek: a crawl-lépések töltik le újra (CDN-ről), ezért nem
-# tartjuk verzióban. A FORRÁS HTML-ek (ef-src/, bn-src/, app-src/) viszont
-# igen — azok a tartalom egyetlen igazság-forrásai.
+# Letükrözött assetek. Az app-assets a crawl-apps lépésből újratölthető,
+# ezért nem tartjuk verzióban.
+#
+# A bn-assets/ VISZONT IGEN: a content.mjs ebből írja át a forrás
+# `/images/...` hivatkozásait a kimeneti `/assets/bn-...` nevekre. Ha a mappa
+# hiányzik (friss klón, Vercel-build), az átírás csendben elmarad, és a
+# projektképek az eredeti, nem létező útvonalon maradnak — 15 törött kép.
 site-v2/ef-assets/
-site-v2/bn-assets/
 site-v2/app-assets/
