@@ -50,7 +50,11 @@ const imgOf = ($, $scope) => localImg($scope.find('img').first().attr('src'));
 // a szöveget és a képet cseréljük benne. Így a sablon saját arányai, sticky
 // viselkedése és stílusai maradnak — nincs saját CSS, ami elcsúszhat tőle.
 
-const TPLDIR = '../site-generator/public';
+// A felhasznált sablon-szekciók forrásfájljai a repóban élnek (`tpl/`), nem a
+// gitignore-olt `site-generator/public/`-ban. Enélkül egy Vercel-oldali build
+// nem találná meg őket, és a blokkok csendben üresen maradnának. Ha a
+// `site-generator` frissül, a `npm run sync:tpl` hozza át az új változatot.
+const TPLDIR = existsSync('tpl/index.html') ? 'tpl' : '../site-generator/public';
 const TPL = `${TPLDIR}/index.html`;
 
 // A sablon elemein Webflow-interakciós KEZDŐÁLLAPOT ül inline stílusként

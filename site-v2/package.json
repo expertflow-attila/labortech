@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node check-modules.mjs && node crawl.mjs && node crawl-apps.mjs && node content.mjs && node generate.mjs && node generate-apps.mjs && node generate-legal.mjs && node generate-core.mjs && node generate-ef.mjs && node generate-quiz.mjs && node polish.mjs"
+    "build": "node check-modules.mjs && node crawl.mjs && node crawl-apps.mjs && node content.mjs && node generate.mjs && node generate-apps.mjs && node generate-legal.mjs && node generate-core.mjs && node generate-ef.mjs && node generate-quiz.mjs && node polish.mjs",
+    "sync:tpl": "for f in index.html careers.html pricing.html service/service-a.html service/service-b.html contact/contact-a.html homepage/home-b.html; do cp \"../site-generator/public/$f\" \"tpl/$f\"; done && echo 'tpl/ frissítve'"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
