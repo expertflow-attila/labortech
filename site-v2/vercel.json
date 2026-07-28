@@ -1,4 +1,17 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/rolam", "permanent": true },
+    { "source": "/pricing", "destination": "/arak", "permanent": true },
+    { "source": "/privacy-policy", "destination": "/adatvedelem", "permanent": true },
+    { "source": "/news-insights", "destination": "/tudastar", "permanent": true },
+    { "source": "/news-insights/:path*", "destination": "/tudastar", "permanent": true },
+    { "source": "/careers", "destination": "/kapcsolat", "permanent": true },
+    { "source": "/careers/:path*", "destination": "/kapcsolat", "permanent": true },
+    { "source": "/service/:path*", "destination": "/szolgaltatas", "permanent": true },
+    { "source": "/contact/:path*", "destination": "/kapcsolat", "permanent": true },
+    { "source": "/homepage/:path*", "destination": "/", "permanent": true },
+    { "source": "/template/:path*", "destination": "/", "permanent": true }
+  ]
 }
