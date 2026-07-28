@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Modulok és leckék kialakítása · Kurzusépítés alapok</title>
+<meta name="description" content="Hogyan bontsd a vázat modulokra és emészthető leckékre, felesleg nélkül.">
+<meta name="author" content="Business Native">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<link rel="canonical" href="https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek">
+<link rel="alternate" hreflang="hu-HU" href="https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek">
+<link rel="alternate" hreflang="x-default" href="https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kurzusépítés alapok · Business Native">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:url" content="https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek">
+<meta property="og:title" content="Modulok és leckék kialakítása">
+<meta property="og:description" content="Hogyan bontsd a vázat modulokra és emészthető leckékre, felesleg nélkül.">
+<meta property="og:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modulok és leckék kialakítása">
+<meta name="twitter:description" content="Hogyan bontsd a vázat modulokra és emészthető leckékre, felesleg nélkül.">
+<meta name="twitter:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/style.css?v=20260721">
+<link rel="stylesheet" href="/bn-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Modulok és leckék kialakítása",
+  "description": "Hogyan bontsd a vázat modulokra és emészthető leckékre, felesleg nélkül.",
+  "image": "https://kurzusepites-alapok.vercel.app/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "url": "https://businessnative.hu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kurzusepites-alapok.vercel.app/og.png"
+    }
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek"
+  },
+  "inLanguage": "hu-HU",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Kurzusépítés alapok",
+    "url": "https://kurzusepites-alapok.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Főoldal",
+      "item": "https://kurzusepites-alapok.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kurzusváz és tananyag",
+      "item": "https://kurzusepites-alapok.vercel.app/#kurzusvaz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Modulok és leckék",
+      "item": "https://kurzusepites-alapok.vercel.app/tananyag/42-modulok-leckek"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Business Native",
+  "url": "https://businessnative.hu",
+  "logo": "https://kurzusepites-alapok.vercel.app/og.png",
+  "description": "AI alapú működés szolgáltató vállalkozóknak.",
+  "founder": {
+    "@type": "Person",
+    "name": "Nagy Attila"
+  },
+  "sameAs": [
+    "https://businessnative.hu",
+    "https://youtube.com/@expertflow-hu",
+    "https://www.linkedin.com/in/nagy-attila-expert/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="https://www.businessnative.hu/" aria-label="business nativ — főoldal"><span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span></a>
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="https://businessnative.hu/pricing.html">Árak</a>
+      <a class="bnx-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+      <a class="bnx-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">E-mail minikurzus lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener"><span>Funnelek</span><span class="bnx-drop-sub">Kész marketing-tölcsérek</span></a>
+            <a class="bnx-drop-link" href="https://www.businessnative.hu/hasznos-oldalak"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener">Funnelek</a>
+    <a class="bnx-m-sublink" href="https://www.businessnative.hu/hasznos-oldalak">AI eszköztár</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+
+<header class="lesson-header">
+  <div class="hero-stage">
+    <div class="breadcrumb reveal"><a href="/">Főoldal</a><span class="sep">/</span><a href="/#kurzusvaz">Kurzusváz és tananyag</a><span class="sep">/</span><span>Modulok és leckék</span></div>
+    <h1 class="animate-fade-in-up reveal reveal-delay-1">Modulok és leckék <em class="em-violet">kialakítása</em></h1>
+    <p class="lesson-sub reveal reveal-delay-2">Hogyan bontsd a vázat modulokra és emészthető leckékre, felesleg nélkül.</p>
+    <div class="lesson-pill-row reveal reveal-delay-3">
+      <span class="lesson-pill accent">Lecke 21 / 40</span>
+      <span class="lesson-pill">Kurzusváz és tananyag</span>
+      <span class="lesson-pill">Kezdő</span>
+    </div>
+  </div>
+</header>
+
+<article class="lesson-content" data-slug="42-modulok-leckek">
+<blockquote>A lecke végére a cetlimódszerrel felépíted a kurzusod modul és lecke szerkezetét, és minden modulhoz konkrét kimenetet rendelsz.</blockquote>
+<h2>Miért számít?</h2>
+<p>A modul szerkezet dönti el, hogy a tanuló végigmegy-e a kurzuson vagy elakad a harmadik leckénél. A tipikus reflex a tankönyv logika, vagyis a fejezetek téma szerint, pedig a kurzus nem tankönyv, hanem útvonal, ahol a modul a transzformáció egy fázisa, aminek a végén a tanuló valamit MEGCSINÁLT, nem csak megértett. A cetlimódszer erre a szemléletváltásra kényszerít, mert a cetlik fizikailag mozgathatók, és szétválasztják a brainstormot a rendszerezéstől. Nézzünk egy hipotetikus magyar példát. Egy fizioterapeuta 9 témakörös első vázlatából a cetlifal után 5 kimenetes fázis lesz, és a próbatanulók szerint a kurzus így végre „csinálós", nem előadás.</p>
+<h2>Mit kell tudnod?</h2>
+<h3>Mire való?</h3>
+<p>A cetlimódszer a kurzusváz 3–4. lépésének gyakorlati eszköze, vagyis a moduljaid és leckéid felvázolása úgy, hogy közben a sorrendet és a szükségességet is teszteled. A végeredmény egy fal (vagy Miro-tábla), amin 3–7 modul cetli alatt ott sorakoznak a lecke cetlik, és minden modul mellett egy kimenet cetli. Ezt viszed át aztán a vázlat dokumentumodba.</p>
+<h3>Hogyan csináld?</h3>
+<ol><li><strong>Készítsd elő a terepet.</strong> Fogj egy köteg cetlit és egy filcet, keress egy szabad falat vagy ajtót. Digitálisan a Miro vagy egy Notion-tábla ugyanezt tudja, de első alkalommal a papír gyorsabb, mert nem megy el az idő az eszközzel való ismerkedésre.</li><li><strong>Írd fel a modulokat.</strong> Az előző leckében felvázolt 3–7 modul mindegyike kap egy saját cetlit. Egy modul egy fázis vagy lépés a transzformációban, ezért igealapú munkacímekben gondolkodj („Felméred a kiindulópontodat", nem „Bevezetés az alapokba").</li><li><strong>Brainstormold a leckéket.</strong> Modulonként 5–10 perc alatt mindent kiírsz, hogy mit tanítasz, milyen példát mondasz, milyen történetet mesélsz és milyen feladatot adsz. Egy gondolat egy cetli. Most még nincs rossz ötlet, ne szűrj.</li><li><strong>Rendezd a cetliket a modulok alá.</strong> Először a modul cetliket tedd tanítási sorrendbe, aztán a lecke cetliket sorold be alájuk. Ami sehova nem illik, azt tedd egy külön „parkoló" oszlopba, de ne dobd ki, mert még lehet belőle bónusz.</li><li><strong>Írj minden modulhoz kimenetet.</strong> Modulonként egy mondat arról, mit tud vagy mit csinált meg a tanuló a modul végére. Ha egy modulhoz nem tudsz konkrét kimenetet írni, az nem modul, hanem témakör, ezért dolgozd át, vagy olvaszd be máshova.</li><li><strong>Ellenőrizd az ívet.</strong> Menj végig a modulokon sorban, és kérdezd meg mindegyiknél, hogy ebben a sorrendben tényleg eljut-e a tanuló az ígért eredményig. Épülnek-e egymásra a lépések? Van-e olyan modul, ami nem viszi előre? Rendezz át bátran, most még ingyen van.</li><li><strong>Vidd át dokumentumba.</strong> A kész falat fotózd le, majd gépeld be a vázlat dokumentumodba a modult, a kimenetet és a leckéket. Innen folytatod a tartalom kifejtésével (43. lecke) és a finomítással (45. lecke).</li></ol>
+<h3>Mikor érdemes?</h3>
+<ul><li>A kurzusváz 3–4. lépésénél, amikor a modulokból lecke szerkezet lesz</li><li>Ha egy meglévő kurzusod „nem halad", és át kell rendezni fázis logikára</li><li>Ha túl sok az anyagod, és vizuálisan kell látnod, mi tartozik össze</li><li>Minikurzusnál is (32. lecke), ahol rövidebb, de a modul kimenet logika ugyanaz</li></ul>
+<h3>Mikor NE?</h3>
+<ul><li>Ha még nincs meg a transzformációs ígéreted (az az eredmény, amit a vevőd a kurzus végére elér, lásd a 13. leckét), mert a cetlik mérce nélkül csak kupac</li><li>Letölthető terméknél, hiszen egy checklisthez vagy sablonhoz nem kell cetlifal</li><li>Ha már felvetted a kurzust, és csak a platform struktúrát rendezed, mert az feltöltési kérdés (54. lecke)</li><li>Egyetlen lecke átdolgozásához elég a tartalomkeret (43. lecke), nem kell újra falazni</li></ul>
+<h3>Leggyakoribb hibák</h3>
+<ul><li>Témakör modulok kimenet nélkül („Alapok", „Haladó technikák"), így a tanuló nem tudja, miért van ott</li><li>7-nél több modul, mert így a kurzus túlvállalt lesz, és a tanuló már a tartalomjegyzéktől elfárad</li><li>A brainstorm és a rendezés összecsúszik, így már az ötletelés közben szerkesztgetsz, és leáll a flow</li><li>Minden lecke ötlet bekerül a végleges vázba, a parkoló oszlop üres marad, és a kurzus felduzzad</li><li>A lecke cetliken csak címek vannak, példa és feladat ötlet nélkül, így a kifejtésnél üres lapról indulsz újra</li></ul>
+<h3>Mit mérj?</h3>
+<ul><li>A modulszám 3–7 legyen; belépő kurzusnál jellemzően 3–4, zászlóshajónál 6–7</li><li>A leckehossz tervnél leckénként egy gondolat, videóban jellemzően 5–15 perc; ami hosszabb, azt bontsd ketté</li><li>A modulok 100%-ának legyen egy mondatos kimenete; ha ez a lefedettség nem megy, a szerkezet hibás</li><li>Ha még nincs modullistád, előbb a 41. lecke 1–3. lépését csináld meg</li></ul>
+<h2>Mit vesz át ebből az AI?</h2>
+<p><strong>Régen kézzel:</strong></p>
+<ul><li>A lecke brainstorm csak abból dolgozott, ami aznap eszedbe jutott, így a rutin tudásod fele bent ragadt</li><li>A „jó-e ez a sorrend" kérdésre csak hetekkel később, tanulói panaszokból jött válasz</li><li>Az előtudás ugrásokat legkorábban az első értetlen tanulói email jelezte</li></ul>
+<p><strong>Ma AI-val:</strong></p>
+<ul><li>A cetlifázis UTÁN add oda a Claude-nak a modullistádat és a kimeneteket, és kérj modulonként 2–3 további lecke ötletet, mert a sajátjaiddal összevetve látod, mi maradt ki</li><li>Kérd meg, hogy egy konkrét tanuló perszóna szemével menjen végig a szerkezeten, és jelezze, hol feltételezel túl sok előtudást</li><li>A validáló beszélgetéseid átiratából kiemelteted, mely kérdések térnek vissza, mert azok külön leckét érdemelnek</li></ul>
+<p><strong>Ami emberi marad:</strong></p>
+<ul><li>A saját módszertanod fázisai. Az AI generikus lépéseket ismer, a te gyakorlatodban kipróbált sorrendet nem</li><li>A döntés, hogy melyik cetli megy a parkolóba. Ezt csak az ígéreted ismeretében lehet meghozni</li></ul>
+<h2>AI-prompt sablon</h2>
+<p>Másold AI-ügynöknek</p>
+<p>Ez a sablon ezt a lépést csinálja meg veled a saját vállalkozásodra. Töltsd ki a <code>{{placeholder}}</code> változókat, és add át egy AI-ügynöknek (Claude, GPT, Gemini). A Claude, a GPT és a Gemini ingyenes AI-chat oldalak (pl. claude.ai). A sablont egyszerűen üzenetként másolod be, nincs telepítés, nem kell hozzá technikai tudás.</p>
+<div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>Tananyag strukturálási szakértőként segítesz kiegészíteni és tesztelni
+a kurzusom modul és lecke szerkezetét. A saját brainstormom már kész —
+NE írd újra, hanem hiányokat keress és opciókat adj.
+
+KONTEXTUS (én töltöm ki):
+- Transzformációs ígéretem: {{transzformacios_igeret}}
+- Ideális vevőm és jelenlegi szintje: {{avatar_es_szint}}
+- Moduljaim a kimenetekkel: {{modulok_es_kimenetek}}
+- Leckéim modulonként: {{lecke_lista}}
+
+FELADAT:
+1. Menj végig a szerkezeten egy kezdő tanuló fejével, és jelezd,
+   hol hiányzik egy lépés, hol túl nagy az ugrás két lecke között.
+2. Modulonként javasolj legfeljebb 2 további leckét, amit érdemes
+   lehet felvenni — egy mondatos indoklással. Ha egy modul így is
+   teljes, mondd ki, hogy nem kell bele több.
+3. Jelöld meg azokat a leckéket, amik szerinted nem szükségesek
+   az ígért kimenethez — ezek bónuszjelöltek.
+4. Ha egy modul kimenete nem konkrét (nem derül ki, mit CSINÁL meg
+   a tanuló), írj rá 2 átfogalmazási javaslatot.
+5. Zárásként egyetlen mondatban mondd ki, hogy a szerkezet a megadott
+   ígérethez képest teljes-e, vagy van benne strukturális hiány.
+
+Vázlat szinten válaszolj, táblázatban. A döntéseket én hozom meg.
+Ne írj kész lecke szövegeket.</code></pre></div>
+<h2>Hasznos források</h2>
+<ul><li><a href="https://miro.com" target="_blank" rel="noopener">Miro, ingyenes digitális cetlifal</a>. Akkor jó, ha nincs szabad falad, vagy távolról dolgozol társsal.</li><li><a href="https://www.notion.com" target="_blank" rel="noopener">Notion, modul-lecke adatbázis sablonok</a>. A begépelt szerkezet későbbi karbantartásához.</li><li><a href="https://docs.google.com" target="_blank" rel="noopener">Google Docs, a vázlat dokumentum helye</a>. Ide kerül a fal tartalma a 7. lépésben.</li></ul>
+</article>
+
+<aside class="lesson-feedback reveal" aria-label="Kurzusépítés szolgáltatás">
+  <p>Nem akarod egyedül végigcsinálni? Ránézünk együtt a kurzusodra, a tervezéstől az indításig.</p>
+  <a class="cta cta-feedback" href="https://businessnative.hu/kurzusepites" target="_blank" rel="noopener">
+    <span>Kurzusépítés szolgáltatás</span>
+    <span class="arrow">→</span>
+  </a>
+</aside>
+
+<nav class="lesson-nav" aria-label="Lecke navigáció">
+<a href="/tananyag/41-otlepeses-kurzusvaz" class="prev"><span class="nav-label">← Előző</span><span class="nav-title">5 lépéses kurzusváz</span></a><a href="/tananyag/43-tartalom-keret" class="next"><span class="nav-label">Következő →</span><span class="nav-title">Leckék tartalomkerete</span></a>
+</nav>
+<style>
+.prompt-box{position:relative;}
+.prompt-box .prompt-copy{position:absolute;top:10px;right:10px;z-index:2;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid var(--border-strong,#d8d6d3);background:var(--card,#fff);color:inherit;cursor:pointer;}
+.prompt-box .prompt-copy:hover{border-color:currentColor;}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('.prompt-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre code');
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(){ var t=btn.textContent; btn.textContent='Másolva'; setTimeout(function(){btn.textContent=t;},1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="https://www.businessnative.hu/">Főoldal</a>
+        <a href="https://www.businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+        <a href="https://www.businessnative.hu/pricing.html">Árak</a>
+        <a href="https://www.businessnative.hu/sajat-projektek.html">Projektek</a>
+      </div>
+            <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="https://www.businessnative.hu/rolam.html">Rólam</a>
+        <a href="https://www.businessnative.hu/contact/contact-a.html">Kapcsolat</a>
+        <a href="https://www.businessnative.hu/gyik.html">GYIK</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="https://www.businessnative.hu/adatvedelem.html">Adatvédelem</a>
+        <a href="https://www.businessnative.hu/aszf.html">ÁSZF</a>
+        <a href="https://www.businessnative.hu/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.businessnative.hu/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script>
+(function(){
+  var h=document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle'); if(!tog)return;
+    tog.addEventListener('click',function(e){e.preventDefault();
+      items.forEach(function(x){if(x!==item){x.classList.remove('is-open');var t=x.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});
+      var o=item.classList.toggle('is-open'); tog.setAttribute('aria-expanded',o?'true':'false');});
+  });
+  document.addEventListener('click',function(e){items.forEach(function(item){if(!item.contains(e.target)){item.classList.remove('is-open');var t=item.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});});
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+</body>
+</html>

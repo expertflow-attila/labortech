@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>Tudástár — landing elemzések, szöveg sablonok, online jelenlét, kurzusépítés, AI eszköztár | business nativ</title>
+<meta content="A Tudástár szabadon elérhető tudásbázis szolgáltató szakértőknek — landing oldal elemzések, értékesítési szöveg sablonok, online jelenlét alapok, kurzusépítés alapok és AI eszköztár, regisztráció nélkül." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.businessnative.hu/tudastar" rel="canonical"/>
+<meta content="https://www.businessnative.hu/tudastar" property="og:url"/>
+<link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
+<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="/css/bn-brand.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Geist:300,400,500,600,700","IBM Plex Mono:300,400,500,600,700"] }});</script>
+<link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="/css/custom.css" rel="stylesheet"/>
+<style>
+/* Tudástár — témázható oldal (alapértelmezés: dark).
+   A színek CSS-változókon élnek; a html[data-theme="light"] blokk adja a világos (BN) palettát.
+   A választást a fejléc téma-váltó gombja kezeli, localStorage('bn-theme')-ben marad meg. */
+:root{
+  --td-bg:#0c0c11; --td-card:#15151a; --td-card-hover:#17171d; --td-card-ico:#1f1f27;
+  --td-text:#f5f4f1;
+  --td-muted:rgba(245,244,241,.62); --td-muted-strong:rgba(245,244,241,.72);
+  --td-half:rgba(245,244,241,.5); --td-faint:rgba(245,244,241,.42); --td-meta:rgba(245,244,241,.4);
+  --td-border:#23232b; --td-hairline:#1b1b22; --td-border-strong:#3a3a42;
+  --td-inv-bg:#f5f4f1; --td-inv-bg-hover:#fff; --td-inv-text:#15151a; --td-inv-muted:#4a4a50; --td-inv-border:#cfcdc8;
+  --td-shot-shadow:0 18px 44px rgba(0,0,0,.5);
+}
+html[data-theme="light"]{
+  --td-bg:#fff; --td-card:#faf9f7; --td-card-hover:#f5f4f1; --td-card-ico:#f0efec;
+  --td-text:#15151a;
+  --td-muted:#4a4a50; --td-muted-strong:#3a3a40;
+  --td-half:rgba(0,0,0,.56); --td-faint:rgba(0,0,0,.46); --td-meta:rgba(0,0,0,.44);
+  --td-border:#e7e5e1; --td-hairline:#e7e5e1; --td-border-strong:#15151a;
+  --td-inv-bg:#15151a; --td-inv-bg-hover:#000; --td-inv-text:#f5f4f1; --td-inv-muted:rgba(245,244,241,.72); --td-inv-border:#3a3a42;
+  --td-shot-shadow:0 16px 36px rgba(0,0,0,.14);
+}
+
+/* Fejléc: csak dark témában vált feketére — világos módban a normál (fehér) fejléc-viselkedés él. */
+html:not([data-theme="light"]) .bnx-header{background:rgba(12,12,17,.94) !important;border-bottom-color:#23232b !important;}
+html:not([data-theme="light"]) .bnx-header .bnx-brand .bn-logo{color:#f5f4f1;}
+html:not([data-theme="light"]) .bnx-header .bnx-link{color:#b9b8c0;}
+html:not([data-theme="light"]) .bnx-header .bnx-link:hover{color:#fff;}
+html:not([data-theme="light"]) .bnx-header .bnx-cta{background:#f5f4f1;color:#15151a;}
+html:not([data-theme="light"]) .bnx-header .bnx-cta:hover{background:#fff;}
+html:not([data-theme="light"]) .bnx-header .bnx-burger{border-color:#3a3a42;}
+html:not([data-theme="light"]) .bnx-header .bnx-burger span{background:#f5f4f1;}
+html:not([data-theme="light"]) .bnx-header .bnx-mobile{background:#0c0c11;border-top-color:#23232b;}
+html:not([data-theme="light"]) .bnx-header .bnx-m-link{color:#f5f4f1;border-bottom-color:#23232b;}
+html, body{background:var(--td-bg) !important;}
+.bnx-page{background:var(--td-bg);color:var(--td-text);}
+
+/* Téma-váltó gomb (nap/hold) a fejléc Konzultáció-gombja mellett */
+.bnx-theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:none;padding:0;border-radius:999px;border:1px solid #3a3a42;background:transparent;color:#f5f4f1;cursor:pointer;transition:border-color .18s ease,color .18s ease,transform .18s ease;}
+.bnx-theme-toggle:hover{border-color:#f5f4f1;transform:translateY(-1px);}
+.bnx-theme-toggle svg{width:17px;height:17px;display:block;}
+.bnx-theme-toggle .tt-moon{display:none;}
+html[data-theme="light"] .bnx-theme-toggle{border-color:#cfcdc8;color:#15151a;}
+html[data-theme="light"] .bnx-theme-toggle:hover{border-color:#15151a;}
+html[data-theme="light"] .bnx-header.is-scrolled .bnx-theme-toggle{border-color:#3a3a42;color:#f5f4f1;}
+html[data-theme="light"] .bnx-header.is-scrolled .bnx-theme-toggle:hover{border-color:#f5f4f1;}
+html[data-theme="light"] .bnx-theme-toggle .tt-sun{display:none;}
+html[data-theme="light"] .bnx-theme-toggle .tt-moon{display:block;}
+@media (max-width:991px){.bnx-theme-toggle{width:42px;height:42px;border-radius:10px;}}
+
+/* Hero — minimál: rövid főcím + egy mondat, semmi más */
+.td-hero{padding:clamp(3.75rem,7vw,6.25rem) 0 clamp(2.5rem,5vw,4rem);border-bottom:1px solid var(--td-hairline);}
+.td-hero h1{color:var(--td-text);max-width:56rem;margin:0 0 1.1rem;}
+.td-lead{max-width:44rem;font-size:1.14rem;line-height:1.65;color:var(--td-muted-strong);margin:0;}
+
+/* Négy váltakozó blokk — a főoldali kombó-panelek mintájára:
+   brand-színű háttér-panel, benne kisebb, a szöveghez illő tartalom-kép */
+.td-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.2rem,5vw,4.5rem);align-items:center;padding:clamp(3.2rem,6vw,5.5rem) 0;border-bottom:1px solid var(--td-hairline);}
+.td-row:last-child{border-bottom:0;}
+.td-row.flip{grid-template-columns:minmax(0,7fr) minmax(0,5fr);}
+.td-row.flip .td-row-copy{order:2;}
+.td-row.flip .td-row-media{order:1;}
+.td-row-copy h2{color:var(--td-text);margin:0 0 .9rem;max-width:26rem;}
+.td-row-copy p{font-size:1.05rem;line-height:1.65;color:var(--td-muted);margin:0 0 1.5rem;max-width:33rem;}
+.td-row-link{display:inline-flex;align-items:center;gap:.5rem;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--td-text);text-decoration:none;border-bottom:1px solid var(--td-border-strong);padding-bottom:.35rem;transition:border-color .18s ease;}
+.td-row-link:hover{border-color:var(--td-text);}
+.td-row-link svg{width:14px;height:14px;transition:transform .2s ease;}
+.td-row-link:hover svg{transform:translateX(3px);}
+.td-row-media{display:flex;align-items:center;justify-content:center;padding:clamp(1.6rem,3.2vw,2.8rem);border-radius:16px;overflow:hidden;height:34rem;background-image:url('/images/bnx-combo-warm.jpg');background-size:cover;background-position:50%;}
+.td-row-media.is-cool{background-image:url('/images/bnx-combo-cool.jpg');}
+a.td-row-media{text-decoration:none;transition:transform .22s ease;}
+a.td-row-media:hover{transform:translateY(-3px);}
+/* A főoldali widget-illusztrációk (styles.css .widget) itt panelen belül élnek */
+.td-row-media .wrap_widget-demo{max-width:27rem;}
+.td-row-media .bnv{max-width:27rem;padding:1.35rem;}
+.td-row-media .widget{box-shadow:0 24px 60px rgba(21,21,26,.22);}
+/* BNV — témára szabott illusztráció-kártyák (2026-07-19) */
+.bnv{width:100%;max-width:23.5rem;background:#faf9f7;border:1px solid #e7e5e1;border-radius:16px;padding:1.15rem;box-shadow:0 24px 60px rgba(21,21,26,.22);color:#15151a;}
+.bnv-top{display:flex;justify-content:space-between;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.48);margin-bottom:.9rem;}
+.bnv-top em{font-style:normal;color:rgba(0,0,0,.32);}
+.bnv-note{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:rgba(0,0,0,.55);margin-top:.8rem;}
+.bnv-dot{flex:none;width:7px;height:7px;border-radius:50%;background:#5f7a5f;}
+.bnv-sec{display:flex;align-items:center;gap:.8rem;border:1px solid #e7e5e1;border-radius:10px;padding:.6rem .75rem;margin-bottom:.5rem;background:#fff;}
+.bnv-sec.is-hit{border-color:#15151a;}
+.bnv-draw{flex:1;display:flex;flex-direction:column;gap:.32rem;}
+.bnv-draw i{display:block;background:#e3e1dd;border-radius:3px;height:6px;}
+.bnv-draw i.hb{height:9px;background:#d6d4cf;}
+.bnv-draw.cols{flex-direction:row;}
+.bnv-draw.cols i{flex:1;height:16px;}
+.bnv-sec-tag{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(0,0,0,.5);white-space:nowrap;}
+.bnv-line{font-size:.96rem;line-height:1.8;margin:0 0 .8rem;}
+.bnv-line mark{background:#efe7d6;border-radius:4px;padding:.05em .3em;color:inherit;}
+.bnv-line mark.g{background:#e2eadf;}
+.bnv-line mark.v{background:#e7e4f1;}
+.bnv-slotrow{display:flex;flex-wrap:wrap;gap:.4rem;}
+.bnv-slot{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(0,0,0,.55);border:1px solid #e0ded9;border-radius:999px;padding:.28rem .6rem;background:#fff;}
+.bnv-hr{height:1px;background:#eceae6;margin:.95rem 0;}
+.bnv-caret{display:inline-block;width:1.5px;height:1em;background:#15151a;vertical-align:-.15em;margin-left:2px;animation:bnvblink 1.1s steps(1) infinite;}
+@keyframes bnvblink{50%{opacity:0;}}
+.bnv-tree{margin-bottom:.2rem;}
+.bnv-node{border:1px solid #e0ded9;background:#fff;border-radius:8px;padding:.38rem .65rem;font-size:12px;font-weight:500;text-align:center;}
+.bnv-node.root{width:max-content;margin:0 auto;}
+.bnv-node.dark{background:#15151a;border-color:#15151a;color:#f5f4f1;width:max-content;margin:0 auto;}
+.bnv-branch{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.45rem;}
+.bnv-lines{display:block;width:100%;height:20px;}
+.bnv-msg{font-size:.88rem;line-height:1.55;}
+.bnv-msg.user{background:#15151a;color:#f5f4f1;border-radius:12px 12px 4px 12px;padding:.65rem .85rem;max-width:90%;margin:0 0 .6rem auto;}
+.bnv-msg.bot{background:#fff;border:1px solid #e7e5e1;border-radius:12px 12px 12px 4px;padding:.8rem .85rem;max-width:78%;margin-bottom:.9rem;display:flex;flex-direction:column;gap:.35rem;}
+.bnv-msg.bot i{display:block;height:6px;border-radius:3px;background:#e3e1dd;}
+.bnv-ev{display:flex;gap:.7rem;align-items:flex-start;padding:.6rem 0;border-top:1px solid #eceae6;}
+.bnv-ev:first-of-type{border-top:0;padding-top:0;}
+.bnv-ev b{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;color:rgba(0,0,0,.5);padding-top:.15rem;}
+.bnv-ev-body{flex:1;min-width:0;}
+.bnv-ev-body strong{display:block;font-size:.86rem;font-weight:500;line-height:1.4;}
+.bnv-ev-body em{display:block;font-style:normal;font-size:.75rem;color:rgba(0,0,0,.5);margin-top:.1rem;}
+.bnv-chip{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:.25rem .55rem;background:#eceae6;color:rgba(0,0,0,.6);white-space:nowrap;}
+.bnv-chip.ok{background:#e2eadf;color:#3c503c;}
+.bnv-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;}
+.bnv-col-h{display:flex;align-items:center;gap:.4rem;font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(0,0,0,.55);margin-bottom:.45rem;}
+.bnv-av{flex:none;width:18px;height:18px;border-radius:50%;background:#e3e1dd;color:#15151a;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;font-style:normal;}
+.bnv-av.sys{background:#15151a;color:#f5f4f1;}
+.bnv-card{background:#fff;border:1px solid #e7e5e1;border-radius:9px;padding:.5rem .6rem;}
+.bnv-card span{display:block;font-size:.76rem;font-weight:500;line-height:1.35;}
+.bnv-card em{display:block;font-style:normal;font-size:.68rem;color:rgba(0,0,0,.5);margin-top:.15rem;}
+
+
+@media (max-width:860px){
+  .td-row,.td-row.flip{grid-template-columns:1fr;gap:2rem;align-items:start;}
+  .td-row.flip .td-row-copy{order:1;}
+  .td-row.flip .td-row-media{order:2;}
+  .td-row-media{height:auto;padding:2rem 1.4rem;}
+}
+
+/* Hírlevél-feliratkozás (Kit/ConvertKit — business nativ fiók) */
+.td-subscribe{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--td-hairline);}
+.td-subscribe-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.75rem;}
+.td-subscribe-copy{max-width:28rem;}
+.td-subscribe-copy h2{color:var(--td-text);margin:0 0 .5rem;}
+.td-subscribe-copy p{color:var(--td-muted);margin:0;font-size:.98rem;line-height:1.6;}
+.td-subscribe-form{display:flex;gap:.6rem;flex-wrap:wrap;flex:none;}
+.td-subscribe-form input[type="email"]{height:48px;padding:0 1.1rem;border-radius:999px;border:1px solid var(--td-border-strong);background:transparent;color:var(--td-text);font-size:15px;min-width:15rem;}
+.td-subscribe-form input[type="email"]::placeholder{color:var(--td-faint);}
+.td-subscribe-form input[type="email"]:focus{outline:none;border-color:var(--td-text);}
+.td-subscribe-form .bnx-btn{border:0;cursor:pointer;background:var(--td-inv-bg);color:var(--td-inv-text);}
+.td-subscribe-form .bnx-btn:hover{background:var(--td-inv-bg-hover);}
+.td-subscribe-form .bnx-btn:disabled{opacity:.6;cursor:default;}
+.td-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.td-subscribe-msg{margin:.9rem 0 0;font-size:.85rem;color:var(--td-muted);min-height:1.2em;}
+.td-subscribe-msg.is-error{color:#e0554f;}
+.td-subscribe-msg.is-ok{color:var(--td-text);}
+@media (max-width:767px){
+  .td-subscribe-inner{flex-direction:column;align-items:flex-start;}
+  .td-subscribe-form{width:100%;}
+  .td-subscribe-form input[type="email"]{flex:1;min-width:0;}
+}
+</style>
+<script>
+/* BN téma-bootstrap: alapértelmezés LIGHT; csak a mentett dark választás vált vissza sötétre. */
+(function(){try{if(localStorage.getItem('bn-theme')!=='dark'){document.documentElement.setAttribute('data-theme','light');}}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<!-- BNX-ANALYTICS-HEAD:START -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XSZQJ37');</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-saN1X96fqGpqiarWDfqvq.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="WCWBPQPJ" defer></script>
+<!-- / Fathom -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadLater([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroupPropertiesForFlags setPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_d0ILQSSxO0rsZpp9CxWlxoCZAHOxRATstluTD46BI0u',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only',disable_session_recording:true})
+</script>
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+  amplitude.init('a6ba8cc46ec88eee6d3121680a294976');
+</script>
+<!-- BNX-ANALYTICS-HEAD:END -->
+</head>
+<body>
+<!-- BNX-ANALYTICS-BODY:START -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XSZQJ37" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- BNX-ANALYTICS-BODY:END -->
+
+<div class="page-wrapper">
+<!-- BNX-NAV:START — kanonikus menü, a scripts/inject-nav.py illeszti be minden oldalra. Ne szerkeszd oldalanként. -->
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="/" aria-label="business nativ — főoldal">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+    </a>
+
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="/pricing.html">Árak</a>
+      <a class="bnx-link" href="/rolam.html">Rólam</a>
+      <a class="bnx-link" href="/sajat-projektek.html">Projektek</a>
+
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">Minikurzus felépítése lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="/hasznos-oldalak.html"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+            <a class="bnx-drop-link" href="/claude-skillek-pluginok.html"><span>Claude skill-ek és plugin-ok</span><span class="bnx-drop-sub">Claude skillek és bővítmények</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <!-- mobil panel -->
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="/hasznos-oldalak.html">AI eszköztár</a>
+    <a class="bnx-m-sublink" href="/claude-skillek-pluginok.html">Claude skill-ek és plugin-ok</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+<script>
+(function(){
+  var h=document.currentScript.closest('.bnx-header')||document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle');
+    if(!tog)return;
+    tog.addEventListener('click',function(e){
+      e.preventDefault();
+      items.forEach(function(x){ if(x!==item){x.classList.remove('is-open'); var t=x.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');} });
+      var o=item.classList.toggle('is-open');
+      tog.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    items.forEach(function(item){
+      if(!item.contains(e.target)){item.classList.remove('is-open'); var t=item.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');}
+    });
+  });
+  /* görgetésre a fejléc feketére vált */
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+<button class="bnx-totop" type="button" aria-label="Vissza az oldal tetejére" hidden>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.bnx-totop');
+  if(!b||b.dataset.bnxInit)return; b.dataset.bnxInit="1";
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){b.removeAttribute('hidden');}else{b.setAttribute('hidden','');}
+  },{passive:true});
+  b.addEventListener('click',function(){ window.scrollTo(0,0); });
+})();
+</script>
+<!-- BNX-NAV:END -->
+<main class="bnx-page">
+
+  <section class="td-hero">
+    <div class="bnx-container">
+      <h1>Tudástár szolgáltató vállalkozóknak</h1>
+      <p class="td-lead">Gyakorlati anyagok arról, hogyan épül fel és hogyan ad el egy jó online jelenlét. Minden szabadon böngészhető, és a saját vállalkozásodra szabhatod.</p>
+    </div>
+  </section>
+
+  <section id="tartalmak">
+    <div class="bnx-container">
+
+      <div class="td-row">
+        <div class="td-row-copy">
+          <h2>Landing oldal elemzések</h2>
+          <p>Ismert szakértők landing oldalai, szekcióról szekcióra szétszedve. Megmutatja, mi miért működik egy jól felépített oldalon — és minden elemzésből három konkrét lépést vihetsz át a sajátodba.</p>
+          <a class="td-row-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Megnyitom <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a class="td-row-media" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener" aria-label="Landing oldal elemzések — megnyitás">
+          <div class="wrap_widget-demo">
+<div class="bnv bnv-anatomy">
+  <div class="bnv-top"><span>Szekciónkénti bontás</span><em>illusztráció</em></div>
+  <div class="bnv-sec is-hit">
+    <div class="bnv-draw"><i class="hb" style="width:64%"></i><i style="width:42%"></i></div>
+    <span class="bnv-sec-tag">Hero · nagy ígéret</span>
+  </div>
+  <div class="bnv-sec">
+    <div class="bnv-draw cols"><i></i><i></i><i></i></div>
+    <span class="bnv-sec-tag">Bizonyíték · eredmények</span>
+  </div>
+  <div class="bnv-sec">
+    <div class="bnv-draw"><i style="width:82%"></i><i style="width:68%"></i></div>
+    <span class="bnv-sec-tag">Ajánlat · csomag és ár</span>
+  </div>
+  <div class="bnv-sec">
+    <div class="bnv-draw"><i class="hb" style="width:34%"></i></div>
+    <span class="bnv-sec-tag">Zárás · egyetlen gomb</span>
+  </div>
+  <div class="bnv-note"><span class="bnv-dot"></span>Minden szekciónál ott a miért, és a lépés, amit átvihetsz</div>
+</div>
+</div>
+        </a>
+      </div>
+
+      <div class="td-row flip">
+        <div class="td-row-copy">
+          <h2>Értékesítési szöveg sablonok</h2>
+          <p>Bevált copywriting képletek és kész sablonok, magyar példákkal. Velük olyan szöveget írsz, ami eladja a munkádat — a főcímtől az ajánlatig, a saját hangodon.</p>
+          <a class="td-row-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Megnyitom <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a class="td-row-media is-cool" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener" aria-label="Értékesítési szöveg sablonok — megnyitás">
+          <div class="wrap_widget-demo">
+<div class="bnv bnv-draft">
+  <div class="bnv-top"><span>Sablon · főcím</span><em>illusztráció</em></div>
+  <p class="bnv-line">Segítek <mark>a szolgáltatóknak</mark>, hogy <mark class="g">kiszámíthatóan érkezzenek az ügyfeleik</mark>, <mark class="v">túlóra nélkül</mark>.</p>
+  <div class="bnv-slotrow"><span class="bnv-slot">Kinek</span><span class="bnv-slot">Mit ígér</span><span class="bnv-slot">Mi nélkül</span></div>
+  <div class="bnv-hr"></div>
+  <div class="bnv-top" style="margin-bottom:.35rem;"><span>A te verziód</span></div>
+  <p class="bnv-line" style="margin-bottom:0;">Segítek a<span class="bnv-caret"></span></p>
+</div>
+</div>
+        </a>
+      </div>
+
+      <div class="td-row">
+        <div class="td-row-copy">
+          <h2>Online jelenlét alapok</h2>
+          <p>Weboldal szerkezetek, oldalvázlatok és funnel folyamatok, lerajzolva. Ebből tudod, mit építs meg először, és hogyan álljon össze lépésről lépésre a teljes online jelenléted.</p>
+          <a class="td-row-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Megnyitom <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a class="td-row-media" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener" aria-label="Online jelenlét alapok — megnyitás">
+          <div class="wrap_widget-demo">
+<div class="bnv bnv-map">
+  <div class="bnv-top"><span>Oldaltérkép</span><em>illusztráció</em></div>
+  <div class="bnv-tree">
+    <div class="bnv-node root">Főoldal</div>
+    <svg class="bnv-lines" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0 V8 M16 8 H84 M16 8 V20 M50 8 V20 M84 8 V20" stroke="#d6d4cf" stroke-width="1.4" fill="none"/></svg>
+    <div class="bnv-branch"><div class="bnv-node">Szolgáltatás</div><div class="bnv-node">Rólam</div><div class="bnv-node">Árak</div></div>
+    <svg class="bnv-lines" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M16 0 V8 M84 0 V8 M16 8 H84 M50 8 V20" stroke="#d6d4cf" stroke-width="1.4" fill="none"/></svg>
+    <div class="bnv-node dark">Konzultáció foglalása</div>
+  </div>
+  <div class="bnv-note"><span class="bnv-dot"></span>Minden oldal egy világos következő lépéshez vezet</div>
+</div>
+</div>
+        </a>
+      </div>
+
+      <div class="td-row flip">
+        <div class="td-row-copy">
+          <h2>AI eszköztár</h2>
+          <p>Kipróbált AI eszközök egy helyen — mire jó, mikor éri meg használni. Nem neked kell keresgélned, kiválasztod, ami a saját működésedhez kell.</p>
+          <a class="td-row-link" href="/hasznos-oldalak.html">Megnyitom <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a class="td-row-media is-cool" href="/hasznos-oldalak.html" aria-label="AI eszköztár — megnyitás">
+          <div class="wrap_widget-demo">
+<div class="bnv bnv-ai">
+  <div class="bnv-top"><span>AI a gyakorlatban</span><em>illusztráció</em></div>
+  <div class="bnv-msg user">Írj udvarias választ a ma érkezett érdeklődőnek, és ajánlj két időpontot a jövő hétre.</div>
+  <div class="bnv-msg bot"><i style="width:88%"></i><i style="width:72%"></i><i style="width:45%"></i></div>
+  <div class="bnv-slotrow"><span class="bnv-slot">Szövegírás</span><span class="bnv-slot">Elemzés</span><span class="bnv-slot">Folyamatok</span></div>
+</div>
+</div>
+        </a>
+      </div>
+
+      <div class="td-row">
+        <div class="td-row-copy">
+          <h2>Kurzusépítés alapok</h2>
+          <p>A tudásodból minikurzus, kurzus vagy letölthető digitális termék — 40 lecke a témaválasztástól a validáláson és a tananyagon át az indításig, minden lépésnél AI munkafolyamattal.</p>
+          <a class="td-row-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Megnyitom <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a class="td-row-media" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener" aria-label="Kurzusépítés alapok — megnyitás">
+          <div class="wrap_widget-demo">
+<div class="bnv bnv-map">
+  <div class="bnv-top"><span>Kurzusváz</span><em>illusztráció</em></div>
+  <div class="bnv-tree">
+    <div class="bnv-node root">Transzformációs ígéret</div>
+    <svg class="bnv-lines" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0 V8 M16 8 H84 M16 8 V20 M50 8 V20 M84 8 V20" stroke="#d6d4cf" stroke-width="1.4" fill="none"/></svg>
+    <div class="bnv-branch"><div class="bnv-node">1. modul</div><div class="bnv-node">2. modul</div><div class="bnv-node">3. modul</div></div>
+    <svg class="bnv-lines" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M16 0 V8 M84 0 V8 M16 8 H84 M50 8 V20" stroke="#d6d4cf" stroke-width="1.4" fill="none"/></svg>
+    <div class="bnv-node dark">Indítás — kosárnyitástól zárásig</div>
+  </div>
+  <div class="bnv-note"><span class="bnv-dot"></span>Minden modul egy kimenethez, minden lecke egy döntéshez vezet</div>
+</div>
+</div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="td-subscribe">
+    <div class="td-subscribe-inner">
+      <div class="td-subscribe-copy">
+        <p class="bnv-sec-tag" style="margin:0 0 .6rem">Hírlevél</p>
+        <h2>Új anyag a Tudástárban? Szólok.</h2>
+        <p>Ritkán, csak amikor tényleg új sablon, elemzés vagy lecke kerül be — nincs spam.</p>
+      </div>
+      <div>
+        <form class="td-subscribe-form" id="td-subscribe-form" novalidate>
+          <input type="text" name="website" class="td-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="email" name="email" id="td-subscribe-email" placeholder="E-mail címed" required maxlength="254">
+          <button type="submit" class="bnx-btn td-subscribe-submit">Feliratkozom</button>
+        </form>
+        <p class="td-subscribe-msg" id="td-subscribe-msg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- BNX-FOOTER:START — kanonikus lábléc, a scripts/inject-footer.py illeszti be. Ne szerkeszd oldalanként. -->
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="/szolgaltatas.html">Szolgáltatás</a>
+        <a href="/pricing.html">Árak</a>
+        <a href="/sajat-projektek.html">Projektek</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="/rolam.html">Rólam</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+        <a href="/gyik.html">GYIK</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="/adatvedelem.html">Adatvédelem</a>
+        <a href="/aszf.html">ÁSZF</a>
+        <a href="/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+<!-- BNX-FOOTER:END -->
+<script src="/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/js/reveal-fallback.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('td-subscribe-form');
+  if(!form) return;
+  var msg = document.getElementById('td-subscribe-msg');
+  var btn = form.querySelector('.td-subscribe-submit');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('td-subscribe-email').value.trim();
+    if(!email) return;
+    btn.disabled = true; btn.textContent = 'Küldés…';
+    msg.textContent = ''; msg.className = 'td-subscribe-msg';
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ email: email, website: form.website.value })
+    }).then(function(r){ return r.json().then(function(d){ return {ok:r.ok, data:d}; }); })
+      .then(function(res){
+        if(res.ok && res.data && res.data.success){
+          msg.textContent = 'Sikeres feliratkozás — köszönöm!';
+          msg.className = 'td-subscribe-msg is-ok';
+          form.reset();
+        } else {
+          msg.textContent = (res.data && res.data.error) || 'Hiba történt, próbáld újra.';
+          msg.className = 'td-subscribe-msg is-error';
+        }
+      })
+      .catch(function(){
+        msg.textContent = 'Hiba történt, próbáld újra.';
+        msg.className = 'td-subscribe-msg is-error';
+      })
+      .finally(function(){
+        btn.disabled = false; btn.textContent = 'Feliratkozom';
+      });
+  });
+})();
+</script>
+</div>
+</body>
+</html>

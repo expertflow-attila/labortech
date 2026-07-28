@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Delegálás, az AI mint első munkatárs · Minikurzus alapok</title>
+<meta name="description" content="Mit adj ki nyugodtan az AI-nak, és mi maradjon nálad, hogy a neved minősége ne sérüljön.">
+<meta name="author" content="Business Native">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<link rel="canonical" href="https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars">
+<link rel="alternate" hreflang="hu-HU" href="https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars">
+<link rel="alternate" hreflang="x-default" href="https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Minikurzus alapok · Business Native">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:url" content="https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars">
+<meta property="og:title" content="Delegálás, az AI mint első munkatárs">
+<meta property="og:description" content="Mit adj ki nyugodtan az AI-nak, és mi maradjon nálad, hogy a neved minősége ne sérüljön.">
+<meta property="og:image" content="https://minikurzus-alapok.vercel.app/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Minikurzus alapok — Business Native">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Delegálás, az AI mint első munkatárs">
+<meta name="twitter:description" content="Mit adj ki nyugodtan az AI-nak, és mi maradjon nálad, hogy a neved minősége ne sérüljön.">
+<meta name="twitter:image" content="https://minikurzus-alapok.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Minikurzus alapok — Business Native">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/bn-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Delegálás, az AI mint első munkatárs",
+  "description": "Mit adj ki nyugodtan az AI-nak, és mi maradjon nálad, hogy a neved minősége ne sérüljön.",
+  "image": "https://minikurzus-alapok.vercel.app/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "url": "https://businessnative.hu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://minikurzus-alapok.vercel.app/og.png"
+    }
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars"
+  },
+  "inLanguage": "hu-HU",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Minikurzus alapok",
+    "url": "https://minikurzus-alapok.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Főoldal",
+      "item": "https://minikurzus-alapok.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Technikai megvalósítás",
+      "item": "https://minikurzus-alapok.vercel.app/#technika"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Delegálás és AI",
+      "item": "https://minikurzus-alapok.vercel.app/tananyag/45-delegalas-ai-elso-munkatars"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Business Native",
+  "url": "https://businessnative.hu",
+  "logo": "https://minikurzus-alapok.vercel.app/og.png",
+  "description": "AI alapú működés szolgáltató vállalkozóknak.",
+  "founder": {
+    "@type": "Person",
+    "name": "Nagy Attila"
+  },
+  "sameAs": [
+    "https://businessnative.hu",
+    "https://youtube.com/@expertflow-hu",
+    "https://www.linkedin.com/in/nagy-attila-expert/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="https://www.businessnative.hu/" aria-label="business nativ — főoldal"><span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span></a>
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="https://businessnative.hu/pricing.html">Árak</a>
+      <a class="bnx-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+      <a class="bnx-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/"><span>Minikurzus</span><span class="bnx-drop-sub">E-mail minikurzus lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener"><span>Funnelek</span><span class="bnx-drop-sub">Kész marketing-tölcsérek</span></a>
+            <a class="bnx-drop-link" href="https://www.businessnative.hu/hasznos-oldalak"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/">Minikurzus</a>
+    <a class="bnx-m-sublink" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener">Funnelek</a>
+    <a class="bnx-m-sublink" href="https://www.businessnative.hu/hasznos-oldalak">AI eszköztár</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+
+<header class="lesson-header">
+  <div class="hero-stage">
+    <div class="breadcrumb reveal"><a href="/">Főoldal</a><span class="sep">/</span><a href="/#technika">Technikai megvalósítás</a><span class="sep">/</span><span>Delegálás és AI</span></div>
+    <h1 class="animate-fade-in-up reveal reveal-delay-1">Delegálás, az AI mint első <em class="em-violet">munkatárs</em></h1>
+    <p class="lesson-sub reveal reveal-delay-2">Mit adj ki nyugodtan az AI-nak, és mi maradjon nálad, hogy a neved minősége ne sérüljön.</p>
+    <div class="lesson-pill-row reveal reveal-delay-3">
+      <span class="lesson-pill accent">Lecke 23 / 32</span>
+      <span class="lesson-pill">Technikai megvalósítás</span>
+    </div>
+  </div>
+</header>
+
+<article class="lesson-content" data-slug="45-delegalas-ai-elso-munkatars">
+<blockquote>A lecke végére eldöntöd, mit adsz ki a minikurzus-gyártásból az AI-nak mint első munkatársadnak, és mit tartasz meg magadnak, hogy a neved alatt csak általad jóváhagyott anyag jelenjen meg.</blockquote>
+<h2>Miért számít?</h2>
+<p>A minikurzus jellemzően azért csúszik, mert a gépies gyártási munkát is te csinálod a szolgáltatói órák után. Kezdőként ilyenkor nem emberi csapatot kell felvenned, hanem egy sokkal olcsóbb, betanítás nélkül dolgozó első munkatársat, az AI-t. A vágás előkészítése, a felirat, az átirat és a segédanyagok nagy része kiadható neki, a tanítás, a saját történeteid és a végső jóváhagyás viszont nem. Egy hipotetikus példa: egy teli naptárú adótanácsadó a lecke-összefoglalókat és a feliratokat az AI-ra bízza, és a felszabadult estéit a következő lecke felvételére fordítja.</p>
+<h2>Mit kell tudnod?</h2>
+<h3>Mire való?</h3>
+<p>A delegálás itt azt jelenti, hogy a minikurzus-gyártás ismétlődő, gépies lépéseit kiadod az AI-nak, és a saját órádat csak arra tartod meg, amit rajtad kívül senki nem tud. Két kosárban gondolkodj. Az egyikbe kerül, amit nyugodtan az AI-ra bízol, a vázlat, az összegzés, az átirat, a felirat nyersanyaga és az ellenőrzőlista. A másikba, ami nálad marad, a szakmai döntés, a saját példáid, a hitelesség és a kiadás előtti minőség-kapu. Emberi bedolgozó, vágó vagy virtuális asszisztens felvétele a nagyobb, folyamatos programod haladó kérdése, nem az első minikurzusé.</p>
+<h3>Hogyan csináld?</h3>
+<ol><li>Írd össze egy tipikus gyártási hét feladatait, és jelöld meg, melyik gépies. A gépies feladat szabályba foglalható, tehát AI-ra bízható, a döntés és a jelenlét nem.</li><li>Először az AI-t vond be, ne embert. A 4.3. lecke menetével a felirat, az átirat, az összefoglalók és a dia-nyersanyag már gépre kerülhet, betanítási idő és órabér nélkül.</li><li>Add ki az AI-nak a négy biztos feladatot. A leckevázlat, az átirat-tisztítás, a lecke-összefoglaló és a segédanyag-ellenőrzőlista mind olyan, ahol az AI nyersanyagot ad, te pedig csak finomítasz.</li><li>Tartsd meg magadnak a szakmai döntést. Hogy mi kerül a leckébe, hogyan tanítod, mennyi az ár, ezek nem delegálhatók, ezek te vagy. Az AI javasol, te döntesz.</li><li>Tarts minőség-kaput kiadás előtt. Minden anyagot te nézel át rövid ellenőrzőlistával, szakmai pontosság, hangzás, felirat, arculat, linkek. Ez nem bizalmatlanság, hanem a neved védelme.</li><li>Negyedévente vizsgáld felül, mit vett át közben az AI. Ami tavaly emberi munka volt, idén lehet gombnyomás, de a jóváhagyás kapuját akkor se add ki.</li></ol>
+<h3>Mikor érdemes?</h3>
+<ul><li>Amikor a gépies gyártási munka viszi az estéidet, és emiatt csúszik a minikurzus</li><li>Ismétlődő, szabályba foglalható lépéseknél, például feliratnál, átiratnál és összefoglalónál</li><li>Mielőtt emberi bedolgozót vennél fel, mert az első munkatárs olcsóbban is lehet az AI</li></ul>
+<h3>Mikor NE?</h3>
+<ul><li>Ne add ki a szakmai döntéseket, vagyis mi legyen a leckében, hogyan tanítsd, mi legyen az ár, mert ezek nem delegálhatók.</li><li>Ne írasd meg mással vagy az AI-val a saját történeteidet és példáidat, mert a tanuló a te tapasztalatodért fizetett.</li><li>Ne hagyd ki a minőség-kaput „megbízom benne" alapon, mert a hibás felirat a te neved alatt megy ki.</li></ul>
+<h3>Leggyakoribb hibák</h3>
+<ul><li>Nyers AI-kimenet kiadása emberi átnézés nélkül, pedig a generált szöveg az átnézésig nyersanyag, nem termék.</li><li>A saját praxisod delegálása, vagyis a hitelességet adó rész kiszervezése, ami a minikurzus egyetlen igazi versenyelőnyét viszi el.</li><li>Emberi bedolgozó keresése az első minikurzushoz, pedig itt a magad-csinálod plusz AI bőven elég.</li></ul>
+<h3>Mit mérj?</h3>
+<ul><li>Visszanyert órák hetente, a delegálás egyetlen igazi hozama. Ha nem csökken a te ráfordításod, csak az eszközök gyűltek fel.</li><li>A minőség-kapun fogott hibák száma. Ha rendre magas, a bemenő nyersanyag gyenge, nem az AI rossz.</li><li>Ha most indulsz, előbb csak egyet nézz: mennyi órát nyertél a felirat és az összefoglalók AI-ra bízásával egy leckén. Ez a saját alapvonalad.</li></ul>
+<h2>Mit vesz át ebből az AI?</h2>
+<p><strong>Régen kézzel:</strong> a vágás előkészítése, a feliratozás és a segédanyagok formázása minden este a te dolgod volt, vagy rögtön emberi órabérrel indult.</p>
+<p><strong>Ma AI-val:</strong> az első munkatársad előfizetésnyi pénzért dolgozik. Add oda a Claude-nak (claude.ai) az átiratot, és kérj összefoglalót, feliratvázlatot és segédanyag-ellenőrzőlistát, a lenti sablon pedig a feladataidat sorolja két kosárba.</p>
+<p><strong>Ami emberi marad:</strong> a tanítás, a saját történeteid és a szakmai felelősség, meg a végső jóváhagyás, mert a neved az anyagon a minőség garanciája, és ezt a kaput csak te őrizheted.</p>
+<h2>AI-prompt sablon</h2>
+<p class="prompt-intro">Másold be egy AI-chatbe (a Claude a <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>-on ingyenes, de a GPT vagy a Gemini is jó), töltsd ki a <code>{{...}}</code> változókat, és küldd el. Nincs telepítés, nem kell hozzá technikai tudás. A végleges döntést mindig te hozod meg.</p><div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>Egyfős szolgáltatók munkaszervezésében jártas tanácsadó vagy. Segíts
+eldönteni, mit bízzak az AI-ra a minikurzus gyártásából, és mit tartsak meg.
+Térképet és vázakat adj, ne kész szövegeket.
+
+KONTEXTUS:
+- Szakmám és szolgáltatásom: {{szakma}}
+- Minikurzus-gyártási feladataim egy tipikus héten, időbecsléssel:
+  {{feladatlista}}
+- Amit már AI-val csinálok: {{ai_lepesek}}
+- Heti óraszám, amit vissza akarok nyerni: {{ora_cel}}
+
+FELADAT:
+1. Sorold a feladataimat két kosárba — az AI-ra bízható (vázlat, összegzés,
+   átirat, felirat nyersanyag, checklist) és a nálam maradó (szakmai döntés,
+   saját példák, hitelesség, minőség-kapu) — és indokold egy-egy mondattal.
+2. Jelöld meg azt az EGY feladatot, amivel a legtöbb órát nyerem az AI-val,
+   és mondd el, miért.
+3. Adj 6-8 pontos kiadás előtti minőség-ellenőrző listát, amin minden anyag
+   átmegy, mielőtt a nevem alatt megjelenik.
+
+A végső döntés és a kiadás előtti jóváhagyás nálam marad.</code></pre></div>
+<h2>Következő lépés a minikurzusodhoz</h2>
+<p>Írd be a Minikurzus-munkalapod „Gyártási terv" szakaszába, melyik négy feladatot bízod az AI-ra, és készítsd el a kiadás előtti minőség-kapu ellenőrzőlistádat.</p>
+<h2>Hasznos források</h2>
+<ul><li><a href="https://www.loom.com" target="_blank" rel="noopener">Loom, rövid képernyővideós rögzítés</a>. Ha egyszer bedolgozót vonnál be a nagyobb programodhoz, egy 10 perces felvétel többet tanít, mint egy hosszú leírás.</li><li><a href="https://www.notion.com" target="_blank" rel="noopener">Notion, folyamatleírás és ellenőrzőlisták egy helyen</a>. A minőség-kapu listád és a sablonjaid megosztható otthona.</li></ul>
+</article>
+
+<p class="lesson-worksheet-link reveal" style="text-align:center;margin:4px 0 28px;font-size:.98rem;"><a href="/munkalap">Nyisd meg a Minikurzus-munkalapot, és jegyezd fel ennek a leckének a kimenetét</a></p>
+
+<aside class="lesson-feedback reveal" aria-label="Minikurzus-építés szolgáltatás">
+  <p>Nem akarod egyedül végigcsinálni? Ránézünk együtt a minikurzusodra, a tervezéstől az indításig.</p>
+  <a class="cta cta-feedback" href="https://businessnative.hu/kurzusepites" target="_blank" rel="noopener">
+    <span>Minikurzus-építés szolgáltatás</span>
+  </a>
+</aside>
+
+<nav class="lesson-nav" aria-label="Lecke navigáció">
+<a href="/tananyag/44-feltoltes-tanuloi-elmeny" class="prev"><span class="nav-label">← Előző</span><span class="nav-title">Feltöltés és élmény</span></a><a href="/tananyag/51-minikurzus-mint-tartalombazis" class="next"><span class="nav-label">Következő →</span><span class="nav-title">Minikurzus mint tartalombázis</span></a>
+</nav>
+<style>
+.prompt-intro{font-size:.95rem;opacity:.85;margin:0 0 14px;}
+.prompt-box{position:relative;}
+.prompt-box .prompt-copy{position:absolute;top:10px;right:10px;z-index:2;font-family:var(--font-sans,Geist,Arial,sans-serif);font-size:12px;font-weight:500;letter-spacing:0;padding:6px 13px;border-radius:999px;border:1px solid var(--border-strong,#d8d6d3);background:var(--card,#fff);color:inherit;cursor:pointer;}
+.prompt-box .prompt-copy:hover{border-color:currentColor;}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('.prompt-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre code');
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(){ var t=btn.textContent; btn.textContent='Másolva'; setTimeout(function(){btn.textContent=t;},1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="https://www.businessnative.hu/">Főoldal</a>
+        <a href="https://www.businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+        <a href="https://www.businessnative.hu/pricing.html">Árak</a>
+        <a href="https://www.businessnative.hu/sajat-projektek.html">Projektek</a>
+      </div>
+            <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="https://www.businessnative.hu/rolam.html">Rólam</a>
+        <a href="https://www.businessnative.hu/contact/contact-a.html">Kapcsolat</a>
+        <a href="https://www.businessnative.hu/gyik.html">GYIK</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="https://www.businessnative.hu/adatvedelem.html">Adatvédelem</a>
+        <a href="https://www.businessnative.hu/aszf.html">ÁSZF</a>
+        <a href="https://www.businessnative.hu/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.businessnative.hu/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script>
+(function(){
+  var h=document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle'); if(!tog)return;
+    tog.addEventListener('click',function(e){e.preventDefault();
+      items.forEach(function(x){if(x!==item){x.classList.remove('is-open');var t=x.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});
+      var o=item.classList.toggle('is-open'); tog.setAttribute('aria-expanded',o?'true':'false');});
+  });
+  document.addEventListener('click',function(e){items.forEach(function(item){if(!item.contains(e.target)){item.classList.remove('is-open');var t=item.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});});
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>Gyakran ismételt kérdések — business nativ</title>
+<meta content="Válaszok a leggyakoribb kérdésekre: adatvédelem, szerződési feltételek, garancia, együttműködés." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.businessnative.hu/gyik" rel="canonical"/>
+<meta content="https://www.businessnative.hu/gyik" property="og:url"/>
+<link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
+<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="/css/bn-brand.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Geist:300,400,500,600,700","IBM Plex Mono:300,400,500,600,700"] }});</script>
+<link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="/css/custom.css" rel="stylesheet"/>
+<style>
+html, body{background:#fff !important;}
+html{scroll-behavior:smooth;}
+.bnx-page{background:#fff;}
+/* GYIK — bal ragadó oszlop + jobb kategória-csoportok (a sablon FAQ-oldalának mintája) */
+.gy-halves{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(4rem,12vw,13rem);align-items:start;}
+.gy-side{position:sticky;top:calc(70px + 2rem);}
+.gy-side h1{font-size:clamp(1.9rem,3.6vw,2.8rem);margin:0 0 1.6rem;}
+.gy-sidenav{display:flex;flex-direction:column;margin-bottom:1.8rem;}
+.gy-nav{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.752px;text-transform:uppercase;color:rgba(0,0,0,.5);text-decoration:none;padding:.6rem 0;border-bottom:1px solid #eceae6;transition:color .15s ease;}
+.gy-nav:first-child{border-top:1px solid #eceae6;}
+.gy-nav:hover{color:#15151a;}
+.gy-nav.is-active{color:#15151a;border-bottom-color:#15151a;}
+.gy-group{margin-bottom:clamp(2.2rem,4.5vw,3.2rem);scroll-margin-top:calc(70px + 2rem);}
+.gy-group h2{font-size:1.35rem;margin:0 0 1rem;}
+@media (max-width:860px){ .gy-halves{grid-template-columns:1fr;} .gy-side{position:static;} }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hogyan kezeled az adataimat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A GDPR előírásai szerint, célhoz kötötten és csak a szükséges ideig. A teljes adatvédelmi tájékoztatót itt találod."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen adatokat gyűjt az oldal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Csak azt, amit te adsz meg — például kapcsolatfelvételkor a neved és az e-mail-címed, megrendeléskor a számlázási adatokat. A részleteket az adatvédelmi tájékoztató sorolja fel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kivel osztod meg az adataimat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kizárólag a működéshez szükséges szolgáltatókkal (például online fizetésnél a Stripe-pal). Az adataidat harmadik félnek nem adom át marketingcélra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan kérhetem az adataim törlését?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az adatvédelmi tájékoztatóban megadott elérhetőségen bármikor kérheted az adataid módosítását vagy törlését."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hol találom a szerződési feltételeket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az általános szerződési feltételek ezen az oldalon érhetők el — vásárlás vagy megrendelés előtt érdemes átfutni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan jön létre a szerződés?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az egyedi ajánlat elfogadásával — a pontos menetét az ÁSZF írja le."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan fizethetek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Számla alapján, az ajánlatban rögzített ütemezéssel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Elállhatok a szerződéstől?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen, az ÁSZF-ben leírt feltételek szerint — ott találod a pontos határidőket és a menetét."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit jelent az elégedettségi garancia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Két pillére van: az első hónap végéig az addig kifizetett díj teljes egészében visszajár, ha nem látod az értékét — utána pedig addig finomítjuk a leadott munkát, amíg a megbeszélt célnak meg nem felel. A pontos feltételeket a Garancia oldalon találod."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi történik, ha nem vagyok elégedett?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Először közösen átnézzük, mi nem működik, és javítjuk. A garancia részletei — beleértve azt is, mire terjed ki — a Garancia oldalon vannak leírva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A folyamatos együttműködés lemondható?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen. A minimum 3 hónap után hónapról hónapra folytatható, és bármikor lemondható, felmondási kötöttség nélkül."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan indul a közös munka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Egy díjmentes konzultációval: átbeszéljük, hol tartasz, majd audit és rendszerterv alapján kapsz egyedi javaslatot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mennyi ideig tart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Egy konkrét terület rendbetétele 3–4 hét, a teljes háttérrendszer 12 hét — a pontos ütemet a nálad elvégzett audit dönti el."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kell hozzá technikai tudás?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem. A rendszert úgy építem fel, hogy a napi használata egyszerű legyen, az átadás része a betanítás."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le kell cserélnem a meglévő eszközeimet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem — a már használt eszközeidre építek, és csak ott hozok be újat, ahol tényleg indokolt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kinek szól a business nativ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Szolgáltató vállalkozóknak és vállalkozásoknak, akik erősek a hivatásukban, és rendszert szeretnének a működésük mögé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi az AI szerepe a rendszerekben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az ismétlődő munkát veszi át — a technológia a hátteret rendezi, hogy neked a hivatásodra maradjon időd. Nem öncélú automatizálás."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hol tudok időpontot foglalni?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A díjmentes konzultációra itt foglalhatsz időpontot."
+      }
+    }
+  ]
+}
+</script>
+<!-- BNX-ANALYTICS-HEAD:START -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XSZQJ37');</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-saN1X96fqGpqiarWDfqvq.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="WCWBPQPJ" defer></script>
+<!-- / Fathom -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadLater([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroupPropertiesForFlags setPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_d0ILQSSxO0rsZpp9CxWlxoCZAHOxRATstluTD46BI0u',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only',disable_session_recording:true})
+</script>
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+  amplitude.init('a6ba8cc46ec88eee6d3121680a294976');
+</script>
+<!-- BNX-ANALYTICS-HEAD:END -->
+</head>
+<body>
+<!-- BNX-ANALYTICS-BODY:START -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XSZQJ37" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- BNX-ANALYTICS-BODY:END -->
+
+<div class="page-wrapper">
+<!-- BNX-NAV:START — kanonikus menü, a scripts/inject-nav.py illeszti be minden oldalra. Ne szerkeszd oldalanként. -->
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="/" aria-label="business nativ — főoldal">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+    </a>
+
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="/pricing.html">Árak</a>
+      <a class="bnx-link" href="/rolam.html">Rólam</a>
+      <a class="bnx-link" href="/sajat-projektek.html">Projektek</a>
+
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">Minikurzus felépítése lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="/hasznos-oldalak.html"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+            <a class="bnx-drop-link" href="/claude-skillek-pluginok.html"><span>Claude skill-ek és plugin-ok</span><span class="bnx-drop-sub">Claude skillek és bővítmények</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <!-- mobil panel -->
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="/hasznos-oldalak.html">AI eszköztár</a>
+    <a class="bnx-m-sublink" href="/claude-skillek-pluginok.html">Claude skill-ek és plugin-ok</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+<script>
+(function(){
+  var h=document.currentScript.closest('.bnx-header')||document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle');
+    if(!tog)return;
+    tog.addEventListener('click',function(e){
+      e.preventDefault();
+      items.forEach(function(x){ if(x!==item){x.classList.remove('is-open'); var t=x.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');} });
+      var o=item.classList.toggle('is-open');
+      tog.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    items.forEach(function(item){
+      if(!item.contains(e.target)){item.classList.remove('is-open'); var t=item.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');}
+    });
+  });
+  /* görgetésre a fejléc feketére vált */
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+<button class="bnx-totop" type="button" aria-label="Vissza az oldal tetejére" hidden>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.bnx-totop');
+  if(!b||b.dataset.bnxInit)return; b.dataset.bnxInit="1";
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){b.removeAttribute('hidden');}else{b.setAttribute('hidden','');}
+  },{passive:true});
+  b.addEventListener('click',function(){ window.scrollTo(0,0); });
+})();
+</script>
+<!-- BNX-NAV:END -->
+<main class="bnx-page">
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <div class="gy-halves">
+        <div class="gy-side">
+          <span class="bnx-eyebrow">GYIK</span>
+          <h1>A leggyakoribb kérdésekre <span class="tone-subtle">itt a válasz</span></h1>
+          <nav class="gy-sidenav" aria-label="Kérdés-kategóriák">
+        <a class="gy-nav" href="#adatvedelem">Adatvédelem</a>
+        <a class="gy-nav" href="#aszf">ÁSZF és fizetés</a>
+        <a class="gy-nav" href="#garancia">Garancia</a>
+        <a class="gy-nav" href="#egyuttmukodes">Együttműködés</a>
+        <a class="gy-nav" href="#egyeb">Egyéb kérdések</a>
+          </nav>
+        </div>
+        <div>
+      <div class="gy-group" id="adatvedelem">
+        <h2>Adatvédelem</h2>
+        <div class="bnx-faq" style="max-width:none;">
+        <details>
+          <summary>Hogyan kezeled az adataimat?</summary>
+          <p>A GDPR előírásai szerint, célhoz kötötten és csak a szükséges ideig. A teljes adatvédelmi tájékoztatót <a href="/adatvedelem.html">itt találod</a>.</p>
+        </details>
+        <details>
+          <summary>Milyen adatokat gyűjt az oldal?</summary>
+          <p>Csak azt, amit te adsz meg — például kapcsolatfelvételkor a neved és az e-mail-címed, megrendeléskor a számlázási adatokat. A részleteket az adatvédelmi tájékoztató sorolja fel.</p>
+        </details>
+        <details>
+          <summary>Kivel osztod meg az adataimat?</summary>
+          <p>Kizárólag a működéshez szükséges szolgáltatókkal (például online fizetésnél a Stripe-pal). Az adataidat harmadik félnek nem adom át marketingcélra.</p>
+        </details>
+        <details>
+          <summary>Hogyan kérhetem az adataim törlését?</summary>
+          <p>Az adatvédelmi tájékoztatóban megadott elérhetőségen bármikor kérheted az adataid módosítását vagy törlését.</p>
+        </details>
+        </div>
+      </div>
+      <div class="gy-group" id="aszf">
+        <h2>ÁSZF és fizetés</h2>
+        <div class="bnx-faq" style="max-width:none;">
+        <details>
+          <summary>Hol találom a szerződési feltételeket?</summary>
+          <p>Az általános szerződési feltételek <a href="/aszf.html">ezen az oldalon</a> érhetők el — vásárlás vagy megrendelés előtt érdemes átfutni.</p>
+        </details>
+        <details>
+          <summary>Hogyan jön létre a szerződés?</summary>
+          <p>Az egyedi ajánlat elfogadásával — a pontos menetét az ÁSZF írja le.</p>
+        </details>
+        <details>
+          <summary>Hogyan fizethetek?</summary>
+          <p>Számla alapján, az ajánlatban rögzített ütemezéssel.</p>
+        </details>
+        <details>
+          <summary>Elállhatok a szerződéstől?</summary>
+          <p>Igen, az ÁSZF-ben leírt feltételek szerint — ott találod a pontos határidőket és a menetét.</p>
+        </details>
+        </div>
+      </div>
+      <div class="gy-group" id="garancia">
+        <h2>Garancia</h2>
+        <div class="bnx-faq" style="max-width:none;">
+        <details>
+          <summary>Mit jelent az elégedettségi garancia?</summary>
+          <p>Két pillére van: az első hónap végéig az addig kifizetett díj teljes egészében visszajár, ha nem látod az értékét — utána pedig addig finomítjuk a leadott munkát, amíg a megbeszélt célnak meg nem felel. A pontos feltételeket a <a href="/garancia.html">Garancia oldalon</a> találod.</p>
+        </details>
+        <details>
+          <summary>Mi történik, ha nem vagyok elégedett?</summary>
+          <p>Először közösen átnézzük, mi nem működik, és javítjuk. A garancia részletei — beleértve azt is, mire terjed ki — a Garancia oldalon vannak leírva.</p>
+        </details>
+        <details>
+          <summary>A folyamatos együttműködés lemondható?</summary>
+          <p>Igen. A minimum 3 hónap után hónapról hónapra folytatható, és bármikor lemondható, felmondási kötöttség nélkül.</p>
+        </details>
+        </div>
+      </div>
+      <div class="gy-group" id="egyuttmukodes">
+        <h2>Együttműködés</h2>
+        <div class="bnx-faq" style="max-width:none;">
+        <details>
+          <summary>Hogyan indul a közös munka?</summary>
+          <p>Egy díjmentes konzultációval: átbeszéljük, hol tartasz, majd audit és rendszerterv alapján kapsz egyedi javaslatot.</p>
+        </details>
+        <details>
+          <summary>Mennyi ideig tart?</summary>
+          <p>Egy konkrét terület rendbetétele 3–4 hét, a teljes háttérrendszer 12 hét — a pontos ütemet a nálad elvégzett audit dönti el.</p>
+        </details>
+        <details>
+          <summary>Kell hozzá technikai tudás?</summary>
+          <p>Nem. A rendszert úgy építem fel, hogy a napi használata egyszerű legyen, az átadás része a betanítás.</p>
+        </details>
+        <details>
+          <summary>Le kell cserélnem a meglévő eszközeimet?</summary>
+          <p>Nem — a már használt eszközeidre építek, és csak ott hozok be újat, ahol tényleg indokolt.</p>
+        </details>
+        </div>
+      </div>
+      <div class="gy-group" id="egyeb">
+        <h2>Egyéb kérdések</h2>
+        <div class="bnx-faq" style="max-width:none;">
+        <details>
+          <summary>Kinek szól a business nativ?</summary>
+          <p>Szolgáltató vállalkozóknak és vállalkozásoknak, akik erősek a hivatásukban, és rendszert szeretnének a működésük mögé.</p>
+        </details>
+        <details>
+          <summary>Mi az AI szerepe a rendszerekben?</summary>
+          <p>Az ismétlődő munkát veszi át — a technológia a hátteret rendezi, hogy neked a hivatásodra maradjon időd. Nem öncélú automatizálás.</p>
+        </details>
+        <details>
+          <summary>Hol tudok időpontot foglalni?</summary>
+          <p>A díjmentes konzultációra <a href="https://expertflow-quiz.vercel.app/" target="_blank" rel="noopener">itt foglalhatsz időpontot</a>.</p>
+        </details>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <style>
+      /* Kapcsolat-blokk a GYIK alján — bal cím+szöveg+csempék, jobb űrlap-kártya */
+      .gyc{max-width:36rem;margin:0 auto;}
+      .gyc-head{text-align:center;margin-bottom:2rem;}
+      .gyc-head h2{margin:.4rem 0 0;}
+      .gyc-form{background:#efedea;border-radius:16px;padding:clamp(1.4rem,3vw,2.2rem);}
+      .gyc-form label{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.752px;text-transform:uppercase;color:rgba(0,0,0,.5);margin:0 0 .4rem;}
+      .gyc-form input,.gyc-form textarea{width:100%;box-sizing:border-box;background:#e3e1dd;border:1px solid transparent;border-radius:8px;padding:.7rem .9rem;font:inherit;font-size:.95rem;color:#15151a;margin-bottom:1.1rem;transition:border-color .15s ease,background .15s ease;}
+      .gyc-form input:focus,.gyc-form textarea:focus{outline:none;border-color:#15151a;background:#fff;}
+      .gyc-form textarea{min-height:8.5rem;resize:vertical;}
+      .gyc-send{display:flex;width:100%;align-items:center;justify-content:center;gap:.5em;height:48px;border:0;border-radius:999px;background:#15151a;color:#f5f4f1;font:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:background .18s ease,transform .18s ease;}
+      .gyc-send:hover{background:#000;transform:translateY(-1px);}
+      .gyc-note{margin:1rem 0 0;font-size:.82rem;color:rgba(0,0,0,.5);text-align:center;}
+      @media (max-width:860px){ .gyc{grid-template-columns:1fr;} }
+      </style>
+      <div class="gyc">
+        <div class="gyc-head">
+          <span class="bnx-eyebrow">Kapcsolat</span>
+          <h2>További kérdés merült fel benned?</h2>
+          <p class="bnx-p tone-subtle" style="margin:.6rem 0 0;">Írj egy üzenetet, és segítek.</p>
+        </div>
+        <form class="gyc-form" id="gyc-form">
+          <label for="gyc-name">Név</label>
+          <input id="gyc-name" name="name" type="text" placeholder="A neved" required/>
+          <label for="gyc-phone">Telefon (opcionális)</label>
+          <input id="gyc-phone" name="phone" type="tel" placeholder="Telefonszámod"/>
+          <label for="gyc-email">Email</label>
+          <input id="gyc-email" name="email" type="email" placeholder="Email-címed" required/>
+          <label for="gyc-msg">Üzenet</label>
+          <textarea id="gyc-msg" name="message" placeholder="Miben segíthetek?" required></textarea>
+          <button class="gyc-send" type="submit">Üzenet küldése <span aria-hidden="true">&#8594;</span></button>
+          <p class="gyc-note">A küldés a saját levelezőprogramodon keresztül történik — az adataidat az <a href="/adatvedelem.html">adatvédelmi tájékoztató</a> szerint kezelem.</p>
+        </form>
+      </div>
+      <script>
+      (function(){
+        var f=document.getElementById('gyc-form');
+        f.addEventListener('submit',function(e){
+          e.preventDefault();
+          var v=function(id){return encodeURIComponent(document.getElementById(id).value.trim());};
+          var body='Név: '+v('gyc-name')+'%0ATelefon: '+v('gyc-phone')+'%0AEmail: '+v('gyc-email')+'%0A%0A'+v('gyc-msg');
+          window.location.href='mailto:hello@businessnative.hu?subject='+encodeURIComponent('Kérdés a GYIK oldalról')+'&body='+body;
+        });
+      })();
+      </script>
+    </div>
+  </section>
+
+  <script>
+  /* GYIK — a bal oldali kategória-lista követi a görgetést */
+  (function(){
+    var links=document.querySelectorAll('.gy-nav');
+    if(!links.length||!('IntersectionObserver' in window))return;
+    var map={};
+    links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var obs=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.remove('is-active');});
+          var a=map[e.target.id]; if(a)a.classList.add('is-active');
+        }
+      });
+    },{rootMargin:'-15% 0px -70% 0px'});
+    document.querySelectorAll('.gy-group').forEach(function(g){obs.observe(g);});
+  })();
+  </script>
+</main>
+<!-- BNX-FOOTER:START — kanonikus lábléc, a scripts/inject-footer.py illeszti be. Ne szerkeszd oldalanként. -->
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="/szolgaltatas.html">Szolgáltatás</a>
+        <a href="/pricing.html">Árak</a>
+        <a href="/sajat-projektek.html">Projektek</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="/rolam.html">Rólam</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+        <a href="/gyik.html">GYIK</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="/adatvedelem.html">Adatvédelem</a>
+        <a href="/aszf.html">ÁSZF</a>
+        <a href="/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+<!-- BNX-FOOTER:END -->
+<script src="/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/js/reveal-fallback.js"></script>
+</div>
+</body>
+</html>

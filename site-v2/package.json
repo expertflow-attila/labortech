@@ -1,0 +1,14 @@
+{
+  "name": "businessnative-modulabs-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node check-modules.mjs && node crawl.mjs && node crawl-apps.mjs && node content.mjs && node generate.mjs && node generate-apps.mjs && node generate-legal.mjs && node generate-core.mjs && node generate-ef.mjs && node generate-quiz.mjs && node polish.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

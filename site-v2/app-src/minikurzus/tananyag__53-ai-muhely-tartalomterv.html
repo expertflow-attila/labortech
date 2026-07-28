@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI-műhely a tartalomtervhez és az ütemezéshez · Minikurzus alapok</title>
+<meta name="description" content="Claude-munkafolyamat, ami a minikurzusodból négyhetes, hiteles tartalomtervet készít.">
+<meta name="author" content="Business Native">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<link rel="canonical" href="https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv">
+<link rel="alternate" hreflang="hu-HU" href="https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv">
+<link rel="alternate" hreflang="x-default" href="https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Minikurzus alapok · Business Native">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:url" content="https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv">
+<meta property="og:title" content="AI-műhely a tartalomtervhez és az ütemezéshez">
+<meta property="og:description" content="Claude-munkafolyamat, ami a minikurzusodból négyhetes, hiteles tartalomtervet készít.">
+<meta property="og:image" content="https://minikurzus-alapok.vercel.app/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Minikurzus alapok — Business Native">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI-műhely a tartalomtervhez és az ütemezéshez">
+<meta name="twitter:description" content="Claude-munkafolyamat, ami a minikurzusodból négyhetes, hiteles tartalomtervet készít.">
+<meta name="twitter:image" content="https://minikurzus-alapok.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Minikurzus alapok — Business Native">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/bn-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI-műhely a tartalomtervhez és az ütemezéshez",
+  "description": "Claude-munkafolyamat, ami a minikurzusodból négyhetes, hiteles tartalomtervet készít.",
+  "image": "https://minikurzus-alapok.vercel.app/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "url": "https://businessnative.hu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://minikurzus-alapok.vercel.app/og.png"
+    }
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv"
+  },
+  "inLanguage": "hu-HU",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Minikurzus alapok",
+    "url": "https://minikurzus-alapok.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Főoldal",
+      "item": "https://minikurzus-alapok.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Marketing és tartalom",
+      "item": "https://minikurzus-alapok.vercel.app/#marketing"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI-műhely a tartalomtervhez",
+      "item": "https://minikurzus-alapok.vercel.app/tananyag/53-ai-muhely-tartalomterv"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Business Native",
+  "url": "https://businessnative.hu",
+  "logo": "https://minikurzus-alapok.vercel.app/og.png",
+  "description": "AI alapú működés szolgáltató vállalkozóknak.",
+  "founder": {
+    "@type": "Person",
+    "name": "Nagy Attila"
+  },
+  "sameAs": [
+    "https://businessnative.hu",
+    "https://youtube.com/@expertflow-hu",
+    "https://www.linkedin.com/in/nagy-attila-expert/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="https://www.businessnative.hu/" aria-label="business nativ — főoldal"><span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span></a>
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="https://businessnative.hu/pricing.html">Árak</a>
+      <a class="bnx-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+      <a class="bnx-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/"><span>Minikurzus</span><span class="bnx-drop-sub">E-mail minikurzus lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener"><span>Funnelek</span><span class="bnx-drop-sub">Kész marketing-tölcsérek</span></a>
+            <a class="bnx-drop-link" href="https://www.businessnative.hu/hasznos-oldalak"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/">Minikurzus</a>
+    <a class="bnx-m-sublink" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener">Funnelek</a>
+    <a class="bnx-m-sublink" href="https://www.businessnative.hu/hasznos-oldalak">AI eszköztár</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+
+<header class="lesson-header">
+  <div class="hero-stage">
+    <div class="breadcrumb reveal"><a href="/">Főoldal</a><span class="sep">/</span><a href="/#marketing">Marketing és tartalom</a><span class="sep">/</span><span>AI-műhely a tartalomtervhez</span></div>
+    <h1 class="animate-fade-in-up reveal reveal-delay-1">AI-műhely a tartalomtervhez és az <em class="em-violet">ütemezéshez</em></h1>
+    <p class="lesson-sub reveal reveal-delay-2">Claude-munkafolyamat, ami a minikurzusodból négyhetes, hiteles tartalomtervet készít.</p>
+    <div class="lesson-pill-row reveal reveal-delay-3">
+      <span class="lesson-pill accent">Lecke 26 / 32</span>
+      <span class="lesson-pill">Marketing és tartalom</span>
+    </div>
+  </div>
+</header>
+
+<article class="lesson-content" data-slug="53-ai-muhely-tartalomterv">
+<blockquote>A lecke végére egyetlen AI-beszélgetésben összekötöd a minikurzus-tananyagodat a közösségi tartalommal, és a kezedben lesz egy négyhetes tartalomterv poszt-ötletekkel, hook-okkal, formátumokkal és ütemezéssel.</blockquote>
+<h2>Miért számít?</h2>
+<p>A modul előző két leckéje megadta a nyersanyagot, vagyis a poszt-témákat és a saját hangodat. Ez a lecke mindezt egyetlen AI-támogatott munkafolyamatba fűzi. A Claude gyors az ötletelésben, a rendszerezésben és az ütemezésben, te pedig hozod a hangot, a hitelességet és a végleges mondatokat. Egy hipotetikus példa: egy coach a kész minikurzusából fél óra alatt jut el egy négyhetes tartalomtervig, amit korábban hetente újra és újra kitalált volna.</p>
+<h2>Mit kell tudnod?</h2>
+<h3>Mire való?</h3>
+<p>Ha még sosem használtál AI-chatet, semmi gond, ez egy sima weboldal, ahol úgy írsz az asszisztensnek, mintha üzenetet küldenél. Szöveget másolsz be, a választ olvasod, elrontani nem tudsz semmit. A Claude (claude.ai) az alapeszköz, nincs telepítés és nem kell hozzá technikai tudás. Ez a munkafolyamat a kész poszt-témalista és a hetekre előre megtervezett, ütemezett tartalomnaptár közötti utat rövidíti le. Az AI ötletel és ütemez, de a hang és a hitelesség a tiéd marad, a kész posztot mindig te írod meg a saját szavaiddal.</p>
+<h3>Hogyan csináld?</h3>
+<ol><li><strong>Állítsd össze a forráscsomagot.</strong> Egy dokumentumba gyűjtsd össze, amid már van: a minikurzus vázát és leckéit, az 5.1. leckében kibontott 8–15 poszt-témát, az 5.2. leckében rögzített hang-leírásodat és tiltólistádat, valamint az ideális vevőd és a fájdalompontja leírását. Minél teljesebb, annál kevésbé generikus a terv.</li><li><strong>Nyisd meg a beszélgetést, és add át a kontextust.</strong> Első üzenetként csak a forráscsomagot küldd el, feladat nélkül, például így: „Ez a hátterem a tartalomtervezéshez, a következő üzenetekben ezzel dolgozunk". Így a promptok rövidek maradnak.</li><li><strong>Kérd le a négyhetes tartalomtervet.</strong> Ez a saját témáidból rendez ütemtervet, nem helyetted talál ki tartalmat.</li></ol>
+<p class="prompt-intro">Másold be egy AI-chatbe (a Claude a <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>-on ingyenes, de a GPT vagy a Gemini is jó), töltsd ki a <code>{{...}}</code> változókat, és küldd el. Nincs telepítés, nem kell hozzá technikai tudás. A végleges döntést mindig te hozod meg.</p><div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>A megadott háttéranyagból készíts 4 hetes tartalomtervet.
+Kész posztot NE írj, csak tervet és hook-ötleteket.
+
+KONTEXTUS ADVA (váz, poszt-témák, hangom, avatár).
+
+FELADAT:
+1. Ossz be heti 3 posztot 4 hétre, összesen 12 tételre.
+2. Tételenként add meg: a témát, a formátumot (poszt / carousel /
+   reel), egy hook-ötletet és a cél-hatást (bizalom, hasznos érték
+   vagy a minikurzus felé terelés).
+3. Tartsd az arányt: a tételek nagyobb része adjon értéket, csak
+   néhány tereljen a minikurzushoz.
+4. Emeld ki, hol villantom meg konkrétan az erősségemet.
+
+Táblázatos, tömör kimenetet kérek. A posztokat én írom meg.</code></pre></div>
+<ol><li><strong>Emberi kör, döntsd el a tervet.</strong> Menj végig a javaslatokon, húzz, cserélj, igazíts. Ne fogadd el gondolkodás nélkül, mert az AI nem ismeri a szakmád minden sarkát és hajlamos túltölteni a naptárt. A végleges tervet küldd vissza a beszélgetésbe, hogy ez legyen az érvényes verzió.</li><li><strong>Kérj hook- és nyitó-variációkat a nehezebb tételekhez.</strong> Ahol nem indul be az ötlet, kérj több kezdést, amiből választhatsz. A hook a te szavaidra lesz átírva, ez csak alapanyag.</li></ol>
+<div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>A véglegesített tervből dolgozunk. A megjelölt tételhez adj
+3-4 alternatív nyitómondatot (hookot).
+
+Tétel: {{tema_es_formatum}}
+Nyers gondolataim ehhez: {{sajat_jegyzet}}
+
+Szabályok:
+- Rövid, beszélt magyar mondatok, a hangom szerint.
+- Semmi túlzó ígéret, semmi üres lelkesedés.
+- Ne találj ki sztorit vagy adatot; ahol saját példa kell,
+  jelöld kérdéssel, amivel elő tudom hívni.</code></pre></div>
+<ol><li><strong>Emberi kör minden poszton.</strong> A kész tervből te írod meg a posztokat a saját szavaiddal, az 5.2. hang-leírásod és tiltólistád szerint. Olvasd fel hangosan, és írd át, ami nem úgy hangzik, ahogy te mondanád. Tényellenőrizz minden számot és szakmai állítást, ez nem szervezhető ki.</li></ol>
+<h3>Mikor érdemes?</h3>
+<ul><li>Az 5.1. és 5.2. lecke UTÁN, amikor már van poszt-témalistád és hang-leírásod</li><li>Ha a tervezés a szűk keresztmetszeted, van témád, de nem áll össze naptárrá</li><li>Ha egyedül dolgozol, és nincs, aki segítene rendszerezni a tartalmat</li></ul>
+<h3>Mikor NE?</h3>
+<ul><li>Ha még nincs kész minikurzusod és témalistád, mert akkor nincs mit tervbe rendezni</li><li>Ha a generált posztot változtatás nélkül tennéd ki, mert a követő megérzi, hogy nem a te hangod</li><li>Ha kész sztorit vagy adatot generáltatnál, mert a kitalált példa szakmai és etikai hiba</li></ul>
+<h3>Leggyakoribb hibák</h3>
+<ul><li>Egyetlen óriás promptban kérik az egész havi tartalmat kész posztokként, pedig a terv és a hook a jó kimenet</li><li>Kihagyják a hang-leírást a kontextusból, ezért az AI a leggyakoribb, személytelen sablonokat adja</li><li>Minden tétel eladás lesz, a naptár pedig elveszti az értékadó egyensúlyt</li></ul>
+<h3>Mit mérj?</h3>
+<ul><li>A négyhetes tervtől a kész posztokig jellemzően fél-egy nap munka, enélkül ez hetekig húzódna</li><li>A kész posztok mekkora részét írod át a saját hangodra; ha alig, valószínűleg nem olvastad elég figyelmesen</li><li>Ha most indulsz, előbb csak egyet nézz: elkészül-e a négyhetes terv, és tényleg kimegy-e az első hét három posztja. A számok később válnak értelmezhetővé.</li></ul>
+<h2>Következő lépés a minikurzusodhoz</h2>
+<p>Írd be a Minikurzus-munkalapod „Marketing és tartalom" szakaszába a négyhetes tartalomterv fő pontjait és az első hét három poszt-témáját. Ez lesz a nyersanyag, amiből a saját hangodon megírod a posztokat.</p>
+<h2>Hasznos források</h2>
+<ul><li><a href="https://claude.ai" target="_blank" rel="noopener">Claude, projektek a tartalomtervezéshez</a>. A forráscsomagot Projectbe töltve minden beszélgetésben kéznél van.</li><li><a href="https://www.notion.so" target="_blank" rel="noopener">Notion, a jóváhagyott tartalomnaptár tárolása</a>. A tételek, a státusz és a megjelenés dátuma egy helyen követhető.</li><li><a href="https://buffer.com" target="_blank" rel="noopener">Buffer, poszt-ütemezés több platformra</a>. A kész posztokat előre ütemezed, hogy a naptár magától fusson.</li></ul>
+</article>
+
+<p class="lesson-worksheet-link reveal" style="text-align:center;margin:4px 0 28px;font-size:.98rem;"><a href="/munkalap">Nyisd meg a Minikurzus-munkalapot, és jegyezd fel ennek a leckének a kimenetét</a></p>
+
+<aside class="lesson-feedback reveal" aria-label="Minikurzus-építés szolgáltatás">
+  <p>Nem akarod egyedül végigcsinálni? Ránézünk együtt a minikurzusodra, a tervezéstől az indításig.</p>
+  <a class="cta cta-feedback" href="https://businessnative.hu/kurzusepites" target="_blank" rel="noopener">
+    <span>Minikurzus-építés szolgáltatás</span>
+  </a>
+</aside>
+
+<nav class="lesson-nav" aria-label="Lecke navigáció">
+<a href="/tananyag/52-hiteles-branding-a-te-hangod" class="prev"><span class="nav-label">← Előző</span><span class="nav-title">Hiteles branding</span></a><a href="/tananyag/61-sales-oldal" class="next"><span class="nav-label">Következő →</span><span class="nav-title">Sales oldal</span></a>
+</nav>
+<style>
+.prompt-intro{font-size:.95rem;opacity:.85;margin:0 0 14px;}
+.prompt-box{position:relative;}
+.prompt-box .prompt-copy{position:absolute;top:10px;right:10px;z-index:2;font-family:var(--font-sans,Geist,Arial,sans-serif);font-size:12px;font-weight:500;letter-spacing:0;padding:6px 13px;border-radius:999px;border:1px solid var(--border-strong,#d8d6d3);background:var(--card,#fff);color:inherit;cursor:pointer;}
+.prompt-box .prompt-copy:hover{border-color:currentColor;}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('.prompt-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre code');
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(){ var t=btn.textContent; btn.textContent='Másolva'; setTimeout(function(){btn.textContent=t;},1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="https://www.businessnative.hu/">Főoldal</a>
+        <a href="https://www.businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+        <a href="https://www.businessnative.hu/pricing.html">Árak</a>
+        <a href="https://www.businessnative.hu/sajat-projektek.html">Projektek</a>
+      </div>
+            <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="https://www.businessnative.hu/rolam.html">Rólam</a>
+        <a href="https://www.businessnative.hu/contact/contact-a.html">Kapcsolat</a>
+        <a href="https://www.businessnative.hu/gyik.html">GYIK</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="https://www.businessnative.hu/adatvedelem.html">Adatvédelem</a>
+        <a href="https://www.businessnative.hu/aszf.html">ÁSZF</a>
+        <a href="https://www.businessnative.hu/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.businessnative.hu/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script>
+(function(){
+  var h=document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle'); if(!tog)return;
+    tog.addEventListener('click',function(e){e.preventDefault();
+      items.forEach(function(x){if(x!==item){x.classList.remove('is-open');var t=x.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});
+      var o=item.classList.toggle('is-open'); tog.setAttribute('aria-expanded',o?'true':'false');});
+  });
+  document.addEventListener('click',function(e){items.forEach(function(item){if(!item.contains(e.target)){item.classList.remove('is-open');var t=item.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});});
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+</body>
+</html>

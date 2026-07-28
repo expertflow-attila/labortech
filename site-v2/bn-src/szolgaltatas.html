@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>Szolgáltatás — business nativ</title>
+<meta content="Egy összefüggő rendszer a vállalkozásod mögé: ügyfélszerzés, kiszolgálás és háttérműködés — egyedi áron, átadás után a te tulajdonodban." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.businessnative.hu/szolgaltatas" rel="canonical"/>
+<meta content="https://www.businessnative.hu/szolgaltatas" property="og:url"/>
+<link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
+<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="/css/bn-brand.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Geist:300,400,500,600,700","IBM Plex Mono:300,400,500,600,700"] }});</script>
+<link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="/css/custom.css" rel="stylesheet"/>
+<style>
+/* Szolgáltatás — teljesen fehér alap, sötét nyitánnyal (hero + Kinek szól) */
+html, body{background:#fff !important;}
+.bnx-page{background:#fff;}
+/* fejléc alapból fekete (a sötét heróhoz) — a sajat-projektek mintája */
+.bnx-header{background:rgba(12,12,17,.94) !important;border-bottom-color:#23232b !important;}
+.bnx-header .bnx-brand .bn-logo{color:#f5f4f1;}
+.bnx-header .bnx-link{color:#b9b8c0;}
+.bnx-header .bnx-link:hover{color:#fff;}
+.bnx-header .bnx-cta{background:#f5f4f1;color:#15151a;}
+.bnx-header .bnx-cta:hover{background:#fff;}
+.bnx-header .bnx-burger{border-color:#3a3a42;}
+.bnx-header .bnx-burger span{background:#f5f4f1;}
+/* a mobil menüpanel is sötét (az is-scrolled párja), különben a világos panelen eltűnnek a CTA-k */
+.bnx-header .bnx-mobile{background:#0c0c11;border-top-color:#23232b;}
+.bnx-header .bnx-m-link{color:#f5f4f1;border-bottom-color:#23232b;}
+.bnx-header .bnx-m-sublink{color:#b9b8c0;}
+.bnx-header .bnx-m-label{color:#6b6a72;}
+/* sötét hero */
+.sv-hero-dark{background:#0c0c11;border-bottom:0;}
+.sv-hero-dark h1{color:#f5f4f1;}
+.sv-hero-dark .bnx-lead{color:rgba(245,244,241,.62);}
+/* Kinek szól — sötét split szekció: bal sticky cím + CTA, jobbra kártya-lista */
+.sv-split-sec{background:#0c0c11;padding:clamp(4rem,7vw,7.5rem) 0;}
+.sv-split{display:grid;grid-template-columns:5fr 2fr 5fr;gap:1rem;align-items:start;}
+.sv-split-head{position:sticky;top:7.5rem;display:flex;flex-direction:column;gap:2.6rem;align-items:flex-start;}
+.sv-split-head .bnx-eyebrow{color:rgba(245,244,241,.5);}
+.sv-split-head h2{color:#f5f4f1;margin:0;}
+.sv-split-head h2 .sv-sub{color:rgba(245,244,241,.55);}
+.sv-split-head .sv-lede{margin:0;font-size:1rem;line-height:1.6;color:rgba(245,244,241,.62);max-width:26rem;}
+.sv-split-cta{display:inline-flex;align-items:center;gap:.55rem;height:48px;padding:0 1.5rem;border-radius:999px;background:#f5f4f1;color:#15151a;font-weight:500;font-size:15px;text-decoration:none;transition:background .3s ease,transform .18s ease;}
+.sv-split-cta:hover{background:#fff;transform:translateY(-1px);}
+.sv-split-cta svg{width:15px;height:15px;}
+.sv-cardlist{display:flex;flex-direction:column;gap:1.25rem;min-width:0;}
+.sv-vcard{background:#15151a;border:1px solid #23232b;border-radius:16px;padding:clamp(2rem,3vw,3rem);min-height:21rem;display:flex;flex-direction:column;justify-content:space-between;gap:3rem;}
+/* a kártya színes része teljes szélességű, elnyújtott média-sáv (a Webflow-referencia
+   kártya-média mintája, a BN színes hátterekkel) */
+.sv-vcard-ico{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/5;border-radius:12px;overflow:hidden;background-size:cover;background-position:50%;}
+.sv-vcard-ico::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42);}
+.sv-vcard-ico svg{position:relative;z-index:2;width:30px;height:30px;color:rgba(245,244,241,.9);}
+.sv-vcard h3{margin:0 0 .5rem;font-size:1.45rem;font-weight:400;letter-spacing:-.015em;color:#f5f4f1;}
+.sv-vcard p{margin:0;font-size:1rem;line-height:1.6;color:rgba(245,244,241,.62);}
+.sv-in{opacity:0;transition:opacity .7s ease-out;}
+.sv-in.is-in{opacity:1;transform:none;}
+/* hero CTA-pár a sötét nyitányban — a custom.css gombjai fekete alapon láthatatlanok lennének */
+.sv-hero-dark .bnx-btn-row{justify-content:center;margin-top:2.1rem;}
+.sv-hero-dark .bnx-btn.primary{background:#f5f4f1;color:#15151a;}
+.sv-hero-dark .bnx-btn.primary:hover{background:#fff;}
+.sv-hero-dark .bnx-btn.ghost{color:#f5f4f1;border-color:#3a3a42;}
+.sv-hero-dark .bnx-btn.ghost:hover{border-color:#f5f4f1;}
+/* Mit építek fel — a főoldal/Rólam csempe-mintája: elnyújtott színes KERET (.38 sötétítővel)
+   + világos belső kártya, sima vonalas ikonnal (rl-val-tile minta) */
+.bnx-grid-3{align-items:stretch;}
+.sv-area-tile{border-radius:18px;padding:.65rem;background-size:cover;background-position:50%;}
+.sv-area-tile.a1{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-amber.jpg');}
+.sv-area-tile.a2{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-teal.jpg');}
+.sv-area-tile.a3{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-violet.jpg');}
+.sv-area-inner{background:#faf9f7;border-radius:13px;padding:1.6rem;height:100%;}
+.sv-area-svg{display:block;width:32px;height:32px;color:#3a3a40;margin-bottom:1.1rem;}
+.sv-area-inner p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(0,0,0,.64);}
+.sv-check{list-style:none;margin:1.1rem 0 0;padding:0;display:flex;flex-direction:column;gap:.55rem;}
+.sv-check li{position:relative;min-width:0;padding-left:1.55rem;font-size:.93rem;line-height:1.5;color:#3a3a40;overflow-wrap:break-word;}
+.sv-check li::before{content:"";position:absolute;left:0;top:.32em;width:14px;height:14px;border-radius:50%;background:#15151a;-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2.5 6.2l2.2 2.2 4.6-4.9' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat;mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2.5 6.2l2.2 2.2 4.6-4.9' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat;}
+.sv-area-note{margin:1.4rem 0 0;text-align:center;font-size:.95rem;color:#5a5a60;}
+/* Ezt kapod kézhez — egy nagy világos kártya, 2 hasábos checklist */
+.sv-deliver-card{background:#faf9f7;border:1px solid #e7e5e1;border-radius:20px;padding:clamp(1.8rem,3.5vw,2.8rem);max-width:60rem;margin:0 auto;}
+.sv-deliver{display:grid;grid-template-columns:1fr 1fr;gap:.85rem 2.5rem;}
+.sv-deliver li{font-size:.98rem;}
+.sv-deliver-note{margin:1.6rem 0 0;padding-top:1.2rem;border-top:1px solid #e7e5e1;font-size:.95rem;line-height:1.55;color:#5a5a60;}
+@media (max-width:767px){ .sv-deliver{grid-template-columns:1fr;} }
+/* Csomagok — a pricing kártyapárja (világos .plan + sötét .plan.is-with-bg), ide scope-olva */
+#csomagok .grid_plans{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:72rem;margin:0 auto;}
+@media (max-width:767px){ #csomagok .grid_plans{grid-template-columns:1fr;} }
+#csomagok .plan{padding:clamp(1.6rem,2.5vw,2.4rem);}
+#csomagok .plan-q{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin:1.1rem 0 .3rem;}
+#csomagok .plan_title-tile .plan-q{margin-top:.9rem;}
+#csomagok .plan .bnx-btn{width:100%;margin-top:1.4rem;}
+#csomagok .plan.is-with-bg .bnx-btn.primary{background:#f5f4f1;color:#15151a;}
+#csomagok .plan.is-with-bg .bnx-btn.primary:hover{background:#fff;}
+/* Bizonyíték — a sajat-projektek kártyamintája (pj-own), 2 kártyára szűkítve */
+.pj-own-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:66rem;margin:0 auto;}
+.pj-own{background:#faf9f7;border:1px solid #e7e5e1;border-radius:16px;padding:1rem;display:flex;flex-direction:column;min-width:0;}
+.pj-own-img{position:relative;border-radius:12px;overflow:hidden;background:#e7e5e1;}
+.pj-own-img img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block;}
+.pj-own-tag{position:absolute;left:.7rem;top:.7rem;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);padding:.32rem .7rem;border-radius:999px;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.752px;text-transform:uppercase;color:rgba(0,0,0,.72);}
+.pj-own h3{margin:1.1rem .35rem .9rem;font-size:1.2rem;font-weight:400;letter-spacing:-.02em;line-height:1.35;}
+.pj-own-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 .35rem .35rem;}
+.pj-own-meta{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.752px;text-transform:uppercase;color:rgba(0,0,0,.45);}
+.pj-own-btn{display:inline-flex;align-items:center;height:38px;padding:0 1.1rem;border:1px solid #d5d3ce;border-radius:999px;font-size:13px;font-weight:500;color:#15151a;text-decoration:none;cursor:pointer;background:#fff;transition:all .18s ease;white-space:nowrap;}
+.pj-own-btn:hover{background:#15151a;color:#f5f4f1;border-color:#15151a;}
+.pj-own-btn.dark{background:#15151a;color:#f5f4f1;border-color:#15151a;}
+.pj-own-btn.dark:hover{background:#000;}
+.pj-own-ctrls{display:flex;gap:.45rem;align-items:center;}
+@media (max-width:860px){ .pj-own-grid{grid-template-columns:1fr;} }
+@media (max-width:480px){ .pj-own-foot{flex-wrap:wrap;} }
+@media (max-width:991px){
+  .sv-split{display:flex;flex-direction:column;gap:3.5rem;}
+  .sv-split-head{position:static;gap:2rem;}
+}
+@media (max-width:767px){
+  .sv-split-sec{padding:3.5rem 0;}
+  .sv-vcard{min-height:0;gap:2.2rem;}
+}
+</style>
+<!-- BNX-ANALYTICS-HEAD:START -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XSZQJ37');</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-saN1X96fqGpqiarWDfqvq.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="WCWBPQPJ" defer></script>
+<!-- / Fathom -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadLater([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroupPropertiesForFlags setPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_d0ILQSSxO0rsZpp9CxWlxoCZAHOxRATstluTD46BI0u',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only',disable_session_recording:true})
+</script>
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+  amplitude.init('a6ba8cc46ec88eee6d3121680a294976');
+</script>
+<!-- BNX-ANALYTICS-HEAD:END -->
+</head>
+<body>
+<!-- BNX-ANALYTICS-BODY:START -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XSZQJ37" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- BNX-ANALYTICS-BODY:END -->
+
+<div class="page-wrapper">
+<!-- BNX-NAV:START — kanonikus menü, a scripts/inject-nav.py illeszti be minden oldalra. Ne szerkeszd oldalanként. -->
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="/" aria-label="business nativ — főoldal">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+    </a>
+
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="/pricing.html">Árak</a>
+      <a class="bnx-link" href="/rolam.html">Rólam</a>
+      <a class="bnx-link" href="/sajat-projektek.html">Projektek</a>
+
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">Minikurzus felépítése lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="/hasznos-oldalak.html"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+            <a class="bnx-drop-link" href="/claude-skillek-pluginok.html"><span>Claude skill-ek és plugin-ok</span><span class="bnx-drop-sub">Claude skillek és bővítmények</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <!-- mobil panel -->
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="/hasznos-oldalak.html">AI eszköztár</a>
+    <a class="bnx-m-sublink" href="/claude-skillek-pluginok.html">Claude skill-ek és plugin-ok</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+<script>
+(function(){
+  var h=document.currentScript.closest('.bnx-header')||document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle');
+    if(!tog)return;
+    tog.addEventListener('click',function(e){
+      e.preventDefault();
+      items.forEach(function(x){ if(x!==item){x.classList.remove('is-open'); var t=x.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');} });
+      var o=item.classList.toggle('is-open');
+      tog.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    items.forEach(function(item){
+      if(!item.contains(e.target)){item.classList.remove('is-open'); var t=item.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');}
+    });
+  });
+  /* görgetésre a fejléc feketére vált */
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+<button class="bnx-totop" type="button" aria-label="Vissza az oldal tetejére" hidden>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.bnx-totop');
+  if(!b||b.dataset.bnxInit)return; b.dataset.bnxInit="1";
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){b.removeAttribute('hidden');}else{b.setAttribute('hidden','');}
+  },{passive:true});
+  b.addEventListener('click',function(){ window.scrollTo(0,0); });
+})();
+</script>
+<!-- BNX-NAV:END -->
+<main class="bnx-page">
+
+  <section class="bnx-page-hero sv-hero-dark">
+    <div class="bnx-container" style="text-align:center;">
+      <h1 style="margin-left:auto;margin-right:auto;">Egy rendszert építek a vállalkozásod mögé, ami elvégzi helyetted az ismétlődő munkát</h1>
+      <p class="bnx-lead" style="margin-left:auto;margin-right:auto;margin-bottom:0;">Ügyfélszerzés, kiszolgálás, háttérműködés — egy összefüggő, AI-val támogatott rendszerben, amit egyedi ajánlat alapján építek fel, és ami átadás után a tiéd.</p>
+      <div class="bnx-btn-row">
+        <a class="bnx-btn primary" href="/pricing.html">Nézd meg a csomagokat</a>
+        <a class="bnx-btn ghost" href="https://expertflow-quiz.vercel.app/" target="_blank" rel="noopener">Konzultáció foglalása</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sv-split-sec">
+    <div class="bnx-container">
+      <div class="sv-split">
+
+        <div class="sv-split-head sv-in">
+          <div>
+            <span class="bnx-eyebrow">Kinek szól</span>
+            <h2 style="margin-top:.7rem;">Jó helyen jársz, ha… <span class="sv-sub">ezek közül bármelyik ismerős</span></h2>
+          </div>
+          <p class="sv-lede">Szolgáltató vállalkozóknak dolgozom — tanácsadóknak, szakértőknek, praxisoknak, kis csapatoknak. Ha egy pont is a tiéd, van miről beszélnünk.</p>
+          <a class="sv-split-cta" href="https://expertflow-quiz.vercel.app/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Díjmentes konzultáció
+          </a>
+        </div>
+
+        <div></div>
+
+        <div class="sv-cardlist">
+          <div class="sv-vcard sv-in">
+            <span class="sv-vcard-ico" style="background-image:url('/images/bnx-light-amber.jpg');">
+              <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M16 10v6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><h3>Az adminisztráció viszi az idődet</h3><p>A napjaid jelentős része emailezés, számlázás, időpont-egyeztetés és utánkövetés — nem az, amiben a legjobb vagy.</p></div>
+          </div>
+          <div class="sv-vcard sv-in">
+            <span class="sv-vcard-ico" style="background-image:url('/images/bnx-light-teal.jpg');">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M4 28h24M8 22l5-6 5 3 6-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><h3>Minden a fejedben van</h3><p>Az ügyfelek állapota, a határidők, a teendők — rendszer helyett memóriából működik a vállalkozásod, és ez egyre több hibát szül.</p></div>
+          </div>
+          <div class="sv-vcard sv-in">
+            <span class="sv-vcard-ico" style="background-image:url('/images/bnx-light-violet.jpg');">
+              <svg viewBox="0 0 32 32" fill="none"><circle cx="11" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 26c1-4 4-6 7-6s6 2 7 6M18 25c.7-2.6 2.3-4 4-4s3.3 1.4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <div><h3>Az érdeklődők elcsúsznak</h3><p>Jönnek megkeresések, de nincs kiépített út, ami a jelentkezéstől a fizető ügyfélig viszi őket — így egy részük elveszik.</p></div>
+          </div>
+          <div class="sv-vcard sv-in">
+            <span class="sv-vcard-ico" style="background-image:url('/images/bnx-light-sage.jpg');">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M14.7 3.8a1.33 1.33 0 0 1 2.6 0l1.4 7.4a2.7 2.7 0 0 0 2.1 2.1l7.4 1.4a1.33 1.33 0 0 1 0 2.6l-7.4 1.4a2.7 2.7 0 0 0-2.1 2.1l-1.4 7.4a1.33 1.33 0 0 1-2.6 0l-1.4-7.4a2.7 2.7 0 0 0-2.1-2.1l-7.4-1.4a1.33 1.33 0 0 1 0-2.6l7.4-1.4a2.7 2.7 0 0 0 2.1-2.1l1.4-7.4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><h3>Használnád az AI-t, de nem tudod, hol kezdd</h3><p>Látod, hogy van benne valami, de nem akarsz hónapokat kísérletezéssel tölteni — kész, működő megoldást akarsz.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <div class="bnx-shead center">
+        <span class="bnx-eyebrow">Mit építek</span>
+        <h2>Három terület, egy összefüggő rendszer</h2>
+        <p class="bnx-p">Nem különálló automatizálásokat kapsz, hanem egy rendszert, amiben a három terület összeér: az érdeklődőből ügyfél lesz, az ügyfélből elégedett visszatérő — és mindezt egyetlen felületen látod.</p>
+      </div>
+      <div class="bnx-grid-3">
+        <div class="sv-area-tile a1 sv-in">
+          <div class="sv-area-inner">
+            <svg class="sv-area-svg" viewBox="0 0 32 32" fill="none"><path d="M4 28h24M8 22l5-6 5 3 6-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Ügyfélszerzés</h3>
+            <p>Az út az első kattintástól a lefoglalt konzultációig.</p>
+            <ul class="sv-check">
+              <li>Weboldal vagy landing, ami a szolgáltatásodat érthetően adja el</li>
+              <li>Lead-űrlap és automatikus utánkövetés</li>
+              <li>Naptár-alapú konzultáció-foglalás</li>
+              <li>Minden érdeklődő egy listában, állapottal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sv-area-tile a2 sv-in">
+          <div class="sv-area-inner">
+            <svg class="sv-area-svg" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 26c1-4 4-6 7-6s6 2 7 6M18 25c.7-2.6 2.3-4 4-4s3.3 1.4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3>Kiszolgálás</h3>
+            <p>Az ügyfélélmény a szerződéstől az elköszönésig.</p>
+            <ul class="sv-check">
+              <li>Onboarding-folyamat új ügyfeleknek</li>
+              <li>Ajánlat- és szerződés-sablonok</li>
+              <li>Automatikus emlékeztetők és állapot-emailek</li>
+              <li>Elégedettség-követés</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sv-area-tile a3 sv-in">
+          <div class="sv-area-inner">
+            <svg class="sv-area-svg" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M16 10v6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Háttérműködés</h3>
+            <p>Ami eddig a te estéidet vitte.</p>
+            <ul class="sv-check">
+              <li>CRM, amiben minden ügyfél-adat egy helyen van</li>
+              <li>Számlázás- és naptárautomatizálás</li>
+              <li>Feladatkezelés a csapatnak</li>
+              <li>AI-asszisztens az ismétlődő feladatokra — email-vázlatok, összefoglalók, adminisztráció</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <div class="bnx-shead center">
+        <span class="bnx-eyebrow">Kézzelfogható eredmény</span>
+        <h2>A projekt végén ez van a kezedben</h2>
+      </div>
+      <div class="sv-deliver-card sv-in">
+        <ul class="sv-check sv-deliver">
+          <li>Működő weboldal vagy landing a szolgáltatásodhoz</li>
+          <li>Lead-út a jelentkezéstől a lefoglalt konzultációig</li>
+          <li>CRM feltöltve, a saját folyamataidra szabva</li>
+          <li>Automatizált számlázás és naptárkezelés</li>
+          <li>Betanított AI-asszisztens az ismétlődő feladatokra</li>
+          <li>Írott folyamatleírások (SOP-k) minden felépített folyamathoz</li>
+          <li>Betanítás neked és a csapatodnak — nem kell technikai tudás</li>
+          <li>Minden hozzáférés és dokumentáció a te tulajdonodban</li>
+        </ul>
+        <p class="sv-deliver-note">Átadás után 30 nap utókövetés jár — ha bármi elakad, javítom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_timeline sv-tlx">
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container-large w-container">
+        <div class="w-layout-grid timeline_halves">
+          <div class="headline_timeline">
+            <span class="bnx-eyebrow">A folyamat</span>
+            <h2 class="margin-0">Az első beszélgetéstől a működő rendszerig — <span class="tone-subtle"><br/>négy lépésben</span></h2>
+            <p class="tone-medium margin-0">A közös munka világos ívet követ: díjmentes konzultáció, egyedi árajánlat, megvalósítás betanítással, végül utókövetés. Végigveszem, lépésről lépésre.</p>
+            <a class="bnx-btn primary" href="#csomagok" style="align-self:flex-start;">Nézd meg a csomagokat</a>
+          </div>
+          <div class="timeline">
+<div class="timeline_item">
+<div class="left_timeline">
+<div class="circle_timeline"></div>
+<div class="timeline_lines">
+<div class="line_timeline-long"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+</div>
+</div>
+<div class="right_timeline">
+<div class="label-large">01 · Konzultáció</div>
+<div class="wrap_text-timeline">
+<div class="text-size-small">Díjmentes beszélgetés: átnézzük, hogyan működik ma a vállalkozásod, és hol veszíted a legtöbb időt.</div>
+</div>
+<div class="wrap_tags-timeline"><div class="tag-timeline green"><div class="label-small">Díjmentes</div></div></div>
+</div>
+</div>
+<div class="timeline_item">
+<div class="left_timeline">
+<div class="circle_timeline"></div>
+<div class="timeline_lines">
+<div class="line_timeline-long"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+</div>
+</div>
+<div class="right_timeline">
+<div class="label-large">02 · Rendszerterv</div>
+<div class="wrap_text-timeline">
+<div class="text-size-small">Felmérés után pontos tervet kapsz: mit építünk, milyen sorrendben, mennyiért — az árat indulás előtt rögzítjük.</div>
+</div>
+<div class="wrap_tags-timeline"><div class="tag-timeline cyan"><div class="label-small">Egyedi ár</div></div></div>
+</div>
+</div>
+<div class="timeline_item">
+<div class="left_timeline">
+<div class="circle_timeline"></div>
+<div class="timeline_lines">
+<div class="line_timeline-long"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+</div>
+</div>
+<div class="right_timeline">
+<div class="label-large">03 · Megvalósítás</div>
+<div class="wrap_text-timeline">
+<div class="text-size-small">Felépítem a rendszert, integráljuk a meglévő eszközeiddel, és betanítalak téged és a csapatodat.</div>
+</div>
+<div class="wrap_tags-timeline"><div class="tag-timeline pruple"><div class="label-small">Betanítással</div></div></div>
+</div>
+</div>
+<div class="timeline_item">
+<div class="left_timeline">
+<div class="circle_timeline"></div>
+<div class="timeline_lines">
+<div class="line_timeline-long"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+<div class="line_timeline-long short"></div>
+</div>
+</div>
+<div class="right_timeline">
+<div class="label-large">04 · Utókövetés és partnerség</div>
+<div class="wrap_text-timeline">
+<div class="text-size-small">30 nap utókövetés minden projekthez — utána, ha szeretnéd, partnerként üzemeltetem és fejlesztem tovább a rendszert.</div>
+</div>
+<div class="wrap_tags-timeline"><div class="tag-timeline amber"><div class="label-small">Opcionális</div></div></div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+    /* görgetéshez kötött megjelenés — a főoldali nagy blokk szellemében */
+    .sv-tlx .timeline_item{opacity:.25;transition:opacity .5s ease;}
+    .sv-tlx .timeline_item.is-on{opacity:1;transform:none;}
+    .sv-tlx .circle_timeline{transform:scale(.35);transition:transform .45s ease;}
+    .sv-tlx .timeline_item.is-on .circle_timeline{transform:scale(1);}
+    .sv-tlx .line_timeline-long{transform-origin:left center;transform:scaleX(0);transition:transform .65s ease .12s;}
+    .sv-tlx .timeline_item.is-on .line_timeline-long{transform:scaleX(1);}
+    .sv-tlx .headline_timeline .bnx-btn{margin-top:1.4rem;}
+    /* a timeline_halves 3 oszlopos (5fr/1fr/6fr) — explicit elhelyezés, különben a keskeny középső oszlopba esik */
+    .sv-tlx .headline_timeline{grid-column:1;}
+    .sv-tlx .timeline{grid-column:3;}
+    @media (max-width:991px){ .sv-tlx .timeline_halves{grid-template-columns:1fr;} .sv-tlx .headline_timeline,.sv-tlx .timeline{grid-column:1;} }
+    /* mobil/tablet: a fix 203px dekorvonal + 180px-re maxolt szöveg egymás mellett szűk — oszlopba törve teljes szélességen */
+    @media (max-width:991px){
+      .sv-tlx .timeline_item{flex-direction:column;}
+      .sv-tlx .left_timeline{width:100%;}
+      .sv-tlx .timeline_lines{width:auto;flex:1;}
+      .sv-tlx .wrap_text-timeline{max-width:100%;}
+    }
+    /* kis képernyőn a Webflow page-padding 16px, a bnx-szekciók 32px — egységesítés */
+    @media (max-width:767px){ .sv-tlx .padding-global{padding-left:2rem;padding-right:2rem;} }
+    @media (prefers-reduced-motion:reduce){ .sv-tlx .timeline_item,.sv-tlx .circle_timeline,.sv-tlx .line_timeline-long{opacity:1;transform:none;transition:none;} }
+    </style>
+    <script>
+    (function(){
+      var items=document.querySelectorAll('.sv-tlx .timeline_item');
+      if(!items.length)return;
+      function upd(){
+        var vh=window.innerHeight;
+        items.forEach(function(it){
+          var r=it.getBoundingClientRect();
+          if(r.top < vh*0.78 && r.bottom > vh*0.08){it.classList.add('is-on');}
+          else if(r.top >= vh*0.92){it.classList.remove('is-on');}
+        });
+      }
+      window.addEventListener('scroll',upd,{passive:true});
+      window.addEventListener('resize',upd);
+      upd();
+    })();
+    </script>
+  </section>
+
+  <section class="bnx-section tight" id="csomagok">
+    <div class="bnx-container">
+      <style>
+      /* csomag-kártyapár finomhangolás — a .bnx-page h2/h3 felülütné a sablon címméretét */
+      #csomagok .plan h3{font-size:1.55rem;font-weight:400;letter-spacing:-.02em;margin:0;}
+      #csomagok .plan{display:flex;flex-direction:column;}
+      #csomagok .plan_bottom-tile{margin-top:auto;padding-top:1.4rem;}
+      </style>
+      <div class="bnx-shead center">
+        <span class="bnx-eyebrow">Csomagok</span>
+        <h2>Két út — az árat mindkettőnél előre tudod</h2>
+        <p class="bnx-p">A fenti rendszer felépítése egy projektalapú munka, egyedi áron. Utána — ha szeretnéd — partnerként üzemeltetem és fejlesztem tovább.</p>
+      </div>
+      <div class="grid_plans">
+
+        <div class="plan sv-in">
+          <div class="plan_top-tile">
+            <div class="plan_title-tile">
+              <h3>Rendszerépítés</h3>
+              <div class="plan-q">Miben segít?</div>
+              <div class="tone-subtle">Projektalapú közös munka. A fenti rendszert egyedi ajánlat alapján építem fel — a terjedelmét a vállalkozásodhoz igazítjuk.</div>
+            </div>
+            <div class="plan_list">
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">Egy konkrét terület rendbetétele — vagy a teljes háttérrendszer</div>
+              </div>
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">Betanítás és dokumentáció — a rendszer a tiéd, nem tőlem függsz</div>
+              </div>
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">30 nap utókövetés átadás után</div>
+              </div>
+            </div>
+          </div>
+          <div class="plan_bottom-tile">
+            <div class="plan_info-tile">
+              <div class="text_body-bold tone-medium">400 000 – 999 000 Ft <span class="tone-subtle">· egyedi ár, a konzultáció után</span></div>
+            </div>
+            <a class="bnx-btn primary" href="/pricing.html">Részletek és tartalom</a>
+          </div>
+        </div>
+
+        <div class="plan is-with-bg sv-in">
+          <div class="plan_top-tile">
+            <div class="plan_title-tile">
+              <h3>Partneri támogatás</h3>
+              <div class="plan-q">Miben segít?</div>
+              <div class="tone-subtle">A megépített rendszer üzemeltetése, karbantartása és havi fejlesztése — külső partnerként.</div>
+            </div>
+            <div class="plan_list">
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">Felügyelet, karbantartás és hibajavítás</div>
+              </div>
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">Havonta új fejlesztés — mindig a legszűkebb keresztmetszeten dolgozunk</div>
+              </div>
+              <div class="plan_item">
+                <div class="wrap_icon-tick">
+                  <div class="icon_plan-tick w-embed"><svg fill="none" height="100%" viewbox="0 0 16 16" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M13.3307 4L5.9974 11.3333L2.66406 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-icon-stroke)"></path></svg></div>
+                </div>
+                <div class="tone-medium">Havi stratégiai konzultáció és elsőbbségi elérés</div>
+              </div>
+            </div>
+          </div>
+          <div class="plan_bottom-tile">
+            <div class="plan_info-tile">
+              <div class="text_body-bold tone-medium">250 000 Ft/hó <span class="tone-subtle">· minimum 3 hónap, utána hónapról hónapra</span></div>
+            </div>
+            <a class="bnx-btn primary" href="/pricing.html">Részletek és tartalom</a>
+          </div>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin:2.2rem 0 0;font-size:.95rem;color:#5a5a60;">Nincs rejtett költség — a pontos árat az induló felmérés után előre rögzítjük. <a href="/pricing.html" style="color:#15151a;font-weight:500;text-decoration:underline;text-underline-offset:4px;">Teljes összehasonlítás az Árak oldalon →</a></p>
+    </div>
+  </section>
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <div class="bnx-shead center">
+        <span class="bnx-eyebrow">Működés közben</span>
+        <h2>Így néz ki, amikor elkészül</h2>
+        <p class="bnx-p">Nem ígéretek — megépített rendszerek. Nézd meg, hogyan állnak össze a gyakorlatban.</p>
+      </div>
+      <div class="pj-own-grid">
+        <div class="pj-own sv-in">
+          <div class="pj-own-img"><img alt="Kovács Hanna — pszichológus-praxis rendszere" loading="lazy" src="/images/proj-kata.jpg"/><span class="pj-own-tag">Pszichológus-praxis</span></div>
+          <h3>Teljes indulócsomag egy pszichológus-praxisnak — időpontfoglalás, páciens-út és háttéradminisztráció egy rendszerben</h3>
+          <div class="pj-own-foot">
+            <div class="pj-own-meta">Kovács Hanna · 15 felület</div>
+            <div class="pj-own-ctrls"><a class="pj-own-btn dark" href="/esettanulmany-kovacs-hanna.html">Esettanulmány</a></div>
+          </div>
+        </div>
+        <div class="pj-own sv-in">
+          <div class="pj-own-img"><img alt="Konstruo — építőipari modul-rendszer" loading="lazy" src="/images/proj-konstruo.jpg"/><span class="pj-own-tag">Építőipar · csapatoknak</span></div>
+          <h3>Nyolc AI-modul az építőipari adminisztrációra — a jegyzőkönyvtől az ajánlatadásig</h3>
+          <div class="pj-own-foot">
+            <div class="pj-own-meta">Konstruo · 8 modul</div>
+            <div class="pj-own-ctrls"><a class="pj-own-btn dark" href="/esettanulmany-konstruo.html">Esettanulmány</a><a class="pj-own-btn" href="https://konstruo-jegyzokonyv.vercel.app/" target="_blank" rel="noopener">Élő oldal</a></div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin:2rem 0 0;"><a href="/sajat-projektek.html" style="color:#15151a;font-weight:500;text-decoration:underline;text-underline-offset:4px;">Összes projekt megtekintése →</a></p>
+    </div>
+  </section>
+
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <style>
+      /* GYIK — a home-c fül-mintája: középre igazított 3 fül + lenyíló kérdéssor */
+      .sv-faqbar{display:flex;flex-wrap:wrap;justify-content:center;border-bottom:1px solid #e0ded9;max-width:36rem;margin:0 auto clamp(1.8rem,4vw,2.6rem);}
+      .sv-faqtab{font:inherit;font-size:.95rem;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:.85rem 1.5rem;color:rgba(0,0,0,.48);cursor:pointer;transition:color .18s ease,border-color .18s ease;white-space:nowrap;}
+      .sv-faqtab:hover{color:#15151a;}
+      .sv-faqtab.is-active{color:#15151a;border-bottom-color:#15151a;}
+      .sv-faqpane[hidden]{display:none;}
+      @media (max-width:480px){ .sv-faqtab{padding:.8rem .8rem;font-size:.9rem;} }
+      </style>
+      <div class="bnx-shead center">
+        <span class="bnx-eyebrow">GYIK</span>
+        <h2>Gyakran ismételt kérdések</h2>
+        <p class="bnx-p" style="margin-top:.4rem;"><a href="/gyik.html">Összes kérdés és válasz →</a></p>
+      </div>
+      <div class="sv-faqbar" role="tablist" aria-label="Kérdés-kategóriák">
+        <button class="sv-faqtab is-active" type="button" data-pane="f1">Együttműködés</button>
+        <button class="sv-faqtab" type="button" data-pane="f2">Garancia</button>
+        <button class="sv-faqtab" type="button" data-pane="f3">Árak</button>
+      </div>
+      <div class="sv-faqpane bnx-faq" id="sv-f1">
+        <details>
+          <summary>Hogyan indul a közös munka?</summary>
+          <p>Egy díjmentes konzultációval. Átbeszéljük, hol tartasz és mik a céljaid, majd egy audit és rendszerterv alapján kapsz egyedi javaslatot a következő lépésekre.</p>
+        </details>
+        <details>
+          <summary>Mekkora vállalkozásnak való ez?</summary>
+          <p>Jellemzően egyszemélyes szakértőknek és néhány fős szolgáltató csapatoknak építek rendszert. Ha nagyobb a szervezet, a konzultáción kiderül, tudok-e segíteni.</p>
+        </details>
+        <details>
+          <summary>Mennyi ideig tart?</summary>
+          <p>A projekt terjedelmétől függ. A pontos ütemtervet a nálad elvégzett audit dönti el, és előre rögzítjük.</p>
+        </details>
+        <details>
+          <summary>Kell hozzá technikai tudás?</summary>
+          <p>Nem kell fejlesztői háttér. A rendszert úgy építem fel, hogy a mindennapi használata egyszerű legyen — az átadás része a betanítás is.</p>
+        </details>
+        <details>
+          <summary>Le kell cserélnem a meglévő eszközeimet?</summary>
+          <p>Nem — a már használt eszközeidre építek (Gmail, Drive, naptár, számlázó), és csak ott hozok be újat, ahol tényleg indokolt.</p>
+        </details>
+        <details>
+          <summary>Online vagy személyesen dolgozunk?</summary>
+          <p>Alapvetően online — az egyeztetések videóhívásban zajlanak, a rendszerépítés pedig a háttérben történik. Így az ország bármely pontjáról ugyanúgy működik.</p>
+        </details>
+      </div>
+      <div class="sv-faqpane bnx-faq" id="sv-f2" hidden>
+        <details>
+          <summary>Mi történik, ha nem vagyok elégedett?</summary>
+          <p>Elégedettségi garanciával dolgozom: az első hónap végéig az addig kifizetett díj visszajár, utána addig finomítjuk a leadott munkát, amíg a megbeszélt célnak meg nem felel. A részletek a <a href="/garancia.html">Garancia oldalon</a>.</p>
+        </details>
+        <details>
+          <summary>Mi van, ha menet közben elakadunk?</summary>
+          <p>A rendszeres egyeztetések pont erre valók — a felmerülő kérdéseket menet közben rendezzük, a folyamatos együttműködésben pedig elsőbbségi elérést kapsz.</p>
+        </details>
+        <details>
+          <summary>A rendszer az enyém marad?</summary>
+          <p>Igen. Átadás és betanítás után minden hozzáférés, dokumentáció és folyamat a tiéd — nem maradsz tőlem függő.</p>
+        </details>
+        <details>
+          <summary>Lemondható az együttműködés?</summary>
+          <p>Igen. A folyamatos együttműködés a minimum 3 hónap után hónapról hónapra folytatható, és bármikor lemondható, felmondási kötöttség nélkül.</p>
+        </details>
+        <details>
+          <summary>Ki fér hozzá az adataimhoz a közös munka alatt?</summary>
+          <p>Csak én, és csak a munkához szükséges mértékben. Az átadás után minden hozzáférést visszaadok vagy megszüntetek — a fiókjaid és az adataid végig nálad maradnak.</p>
+        </details>
+      </div>
+      <div class="sv-faqpane bnx-faq" id="sv-f3" hidden>
+        <details>
+          <summary>Mennyibe kerül?</summary>
+          <p>A rendszerépítés ára egyedi, jellemzően 400 000 és 999 000 Ft között — a pontos összeg az induló felmérés után dől el. A partneri támogatás fix 250 000 Ft/hó, minimum három hónapra. A pontos, fix ajánlatot az induló felmérés után kapod — a <a href="/pricing.html">részletes csomagtartalmakat itt találod</a>.</p>
+        </details>
+        <details>
+          <summary>A kiírt árból mennyi lesz a végső ár?</summary>
+          <p>A rendszerépítésnél a végleges, egyedi ajánlatot az audit alapján kapod a 400 000 – 999 000 Ft-os sávon belül — tételesen, se rejtett tétel, se utólagos pótdíj. A partneri támogatás díja fix 250 000 Ft/hó.</p>
+        </details>
+        <details>
+          <summary>Van kisebb belépési lehetőség?</summary>
+          <p>Igen — kérj egy díjmentes AI-folyamatvázlatot: hat kérdés, és 48 órán belül látod, hol érdemes kezdened.</p>
+        </details>
+        <details>
+          <summary>A konzultáció tényleg díjmentes?</summary>
+          <p>Igen, és kötelezettség nélküli — konkrét következő lépésekkel zárul akkor is, ha végül nem dolgozunk együtt.</p>
+        </details>
+        <details>
+          <summary>Vannak rejtett költségek?</summary>
+          <p>Nincsenek. Az ajánlatban tételesen benne van minden, amit építünk — ha egy külső eszköznek előfizetési díja van, azt előre jelzem, és te döntesz róla.</p>
+        </details>
+      </div>
+      <script>
+      (function(){
+        var tabs=document.querySelectorAll('.sv-faqtab');
+        tabs.forEach(function(b){
+          b.addEventListener('click',function(){
+            tabs.forEach(function(x){x.classList.remove('is-active');});
+            b.classList.add('is-active');
+            ['f1','f2','f3'].forEach(function(id){
+              var p=document.getElementById('sv-'+id);
+              if(id===b.dataset.pane){p.removeAttribute('hidden');}else{p.setAttribute('hidden','');}
+            });
+          });
+        });
+      })();
+      </script>
+    </div>
+  </section>
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <div class="bnx-cta2-head"><h2>A következő lépés nem elköteleződés — csak tisztánlátás</h2></div>
+      <div class="bnx-cta2">
+        <div class="bnx-cta2-card">
+          <div><h3>Nézd meg a csomagokat</h3><p>Két csomag, előre rögzített árakkal és teljes összehasonlítással — az elején tudod, mit kapsz és mennyiért.</p></div>
+          <a class="bnx-cta2-btn" href="/pricing.html">Árak és csomagtartalmak</a>
+        </div>
+        <div class="bnx-cta2-card smoke">
+          <div><h3>Vagy beszéljünk előbb</h3><p>Díjmentes konzultáció — 30 perc alatt kiderül, van-e értelme a közös munkának. Kötelezettség nélkül.</p></div>
+          <a class="bnx-cta2-btn" href="https://expertflow-quiz.vercel.app/" target="_blank" rel="noopener">Konzultáció foglalása</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+/* sv-in belépő animáció (IntersectionObserver) — a footer-marker ELŐTT kell maradnia! */
+(function(){
+  var els=document.querySelectorAll('.sv-in');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in');});return;}
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('is-in');obs.unobserve(en.target);} });
+  },{threshold:.1});
+  els.forEach(function(e,i){e.style.transitionDelay=(i%5*90)+'ms';obs.observe(e);});
+})();
+</script>
+</main>
+<!-- BNX-FOOTER:START — kanonikus lábléc, a scripts/inject-footer.py illeszti be. Ne szerkeszd oldalanként. -->
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="/szolgaltatas.html">Szolgáltatás</a>
+        <a href="/pricing.html">Árak</a>
+        <a href="/sajat-projektek.html">Projektek</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="/rolam.html">Rólam</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+        <a href="/gyik.html">GYIK</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="/adatvedelem.html">Adatvédelem</a>
+        <a href="/aszf.html">ÁSZF</a>
+        <a href="/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+<!-- BNX-FOOTER:END -->
+<script src="/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/js/reveal-fallback.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>Rólam — business nativ</title>
+<meta content="Nagy Attilának hívnak. Külső operations partnerként segítek egyszerűsíteni, automatizálni és fejleszteni a vállalkozásod működését — bizalommal, jelenléttel, felelősséggel." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.businessnative.hu/rolam" rel="canonical"/>
+<meta content="https://www.businessnative.hu/rolam" property="og:url"/>
+<link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
+<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="/css/bn-brand.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Geist:300,400,500,600,700","IBM Plex Mono:300,400,500,600,700"] }});</script>
+<link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="/css/custom.css" rel="stylesheet"/>
+<style>
+/* Rólam — teljesen fehér alap, kerettel elváló kártyák */
+html, body{background:#fff !important;}
+.bnx-page{background:#fff;}
+.rl-card{background:#faf9f7;border:1px solid #e7e5e1;border-radius:20px;padding:clamp(1.8rem,4.5vw,3.2rem);}
+.rl-frame{border-radius:20px;padding:.65rem;background-size:cover;background-position:50%;}
+.rl-frame.warm{background-image:url('/images/bnx-light-amber.jpg');}
+.rl-frame.cool{background-image:url('/images/bnx-light-teal.jpg');}
+.rl-frame img{border-radius:14px;}
+/* Rólam — akiket szolgálok: bal cím, jobb szöveg */
+.rl-serve{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;}
+.rl-serve h2{margin:0;}
+@media (max-width:860px){ .rl-serve{grid-template-columns:1fr;} }
+/* Rólam — hero két oszlop (scoped) */
+.rl-hero{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+.rl-hero-img img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 15%;border-radius:18px;display:block;background:#e7e5e1;}
+@media (max-width:860px){ .rl-hero{grid-template-columns:1fr;} .rl-hero-img img{aspect-ratio:4/3;} }
+/* Rólam — négy-képes blokk (scoped) */
+.rl-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:2rem;}
+.rl-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;border-radius:14px;display:block;background:#e7e5e1;}
+.rl-caption{margin-top:1.1rem;font-size:.9rem;line-height:1.6;color:#8a888a;}
+@media (max-width:640px){ .rl-photos{grid-template-columns:1fr 1fr;} }
+/* történet-accordion: bal lenyíló lista (főoldali mini-accordion kinézet), jobb váltó kép */
+.rl-story{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:stretch;}
+.rl-story-list{display:flex;flex-direction:column;}
+.rl-story-item{display:block;text-align:left;background:none;border:0;border-bottom:1px solid #e0ded9;padding:.95rem .1rem;cursor:pointer;font:inherit;color:inherit;}
+.rl-story-item:first-child{border-top:1px solid #e0ded9;}
+.rl-story-item h3{margin:0;display:flex;align-items:center;gap:.85rem;font-size:.98rem;font-weight:400;letter-spacing:-.01em;color:#15151a;}
+.rl-story-item h3::before{content:"";flex:none;width:7px;height:7px;border-left:1.5px solid #15151a;border-bottom:1.5px solid #15151a;transform:rotate(-45deg) translateY(-1px);transition:transform .25s ease;}
+.rl-story-item.is-active h3::before{transform:rotate(135deg) translateY(-1px);}
+.rl-story-item p{margin:0;padding-left:calc(7px + .85rem);font-size:.93rem;line-height:1.65;color:#4a4a50;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease,opacity .35s ease,margin .3s ease;}
+.rl-story-item.is-active p{max-height:16rem;opacity:1;margin-top:.7rem;}
+.rl-story-media{min-height:26rem;}
+.rl-story-media img{width:100%;height:100%;min-height:26rem;object-fit:cover;border-radius:16px;display:block;background:#e7e5e1;transition:opacity .25s ease;}
+@media (max-width:860px){ .rl-story{grid-template-columns:1fr;} .rl-story-media{min-height:20rem;order:-1;} .rl-story-media img{min-height:20rem;aspect-ratio:4/3;} }
+</style>
+<!-- BNX-ANALYTICS-HEAD:START -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XSZQJ37');</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-saN1X96fqGpqiarWDfqvq.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="WCWBPQPJ" defer></script>
+<!-- / Fathom -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadLater([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroupPropertiesForFlags setPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_d0ILQSSxO0rsZpp9CxWlxoCZAHOxRATstluTD46BI0u',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only',disable_session_recording:true})
+</script>
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+  amplitude.init('a6ba8cc46ec88eee6d3121680a294976');
+</script>
+<!-- BNX-ANALYTICS-HEAD:END -->
+</head>
+<body>
+<!-- BNX-ANALYTICS-BODY:START -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XSZQJ37" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- BNX-ANALYTICS-BODY:END -->
+
+<div class="page-wrapper">
+<!-- BNX-NAV:START — kanonikus menü, a scripts/inject-nav.py illeszti be minden oldalra. Ne szerkeszd oldalanként. -->
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="/" aria-label="business nativ — főoldal">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+    </a>
+
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="/pricing.html">Árak</a>
+      <a class="bnx-link" href="/rolam.html">Rólam</a>
+      <a class="bnx-link" href="/sajat-projektek.html">Projektek</a>
+
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">Minikurzus felépítése lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="/hasznos-oldalak.html"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+            <a class="bnx-drop-link" href="/claude-skillek-pluginok.html"><span>Claude skill-ek és plugin-ok</span><span class="bnx-drop-sub">Claude skillek és bővítmények</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <!-- mobil panel -->
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="/hasznos-oldalak.html">AI eszköztár</a>
+    <a class="bnx-m-sublink" href="/claude-skillek-pluginok.html">Claude skill-ek és plugin-ok</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+<script>
+(function(){
+  var h=document.currentScript.closest('.bnx-header')||document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle');
+    if(!tog)return;
+    tog.addEventListener('click',function(e){
+      e.preventDefault();
+      items.forEach(function(x){ if(x!==item){x.classList.remove('is-open'); var t=x.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');} });
+      var o=item.classList.toggle('is-open');
+      tog.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    items.forEach(function(item){
+      if(!item.contains(e.target)){item.classList.remove('is-open'); var t=item.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');}
+    });
+  });
+  /* görgetésre a fejléc feketére vált */
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+<button class="bnx-totop" type="button" aria-label="Vissza az oldal tetejére" hidden>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.bnx-totop');
+  if(!b||b.dataset.bnxInit)return; b.dataset.bnxInit="1";
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){b.removeAttribute('hidden');}else{b.setAttribute('hidden','');}
+  },{passive:true});
+  b.addEventListener('click',function(){ window.scrollTo(0,0); });
+})();
+</script>
+<!-- BNX-NAV:END -->
+<main class="bnx-page">
+
+  <section class="bnx-page-hero">
+    <div class="bnx-container">
+      <div class="rl-hero">
+        <div>
+          <span class="bnx-eyebrow">Rólam</span>
+          <h1>Bizalom, jelenlét,<br>felelősségvállalás</h1>
+          <p class="bnx-lead" style="margin-bottom:0;">Nagy Attilának hívnak. Külső operations partnerként segítek egyszerűsíteni és automatizálni a vállalkozásod működését, hogy stabilabban növekedj, és kevesebb ismétlődő munka terheljen.</p>
+        </div>
+        <div class="rl-hero-img"><img src="/images/rolam-hero.webp" alt="Nagy Attila" loading="eager"/></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <style>
+      /* három érték-csempe — a főoldali csempesor felépítése, fehér alapon */
+      .rl-pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch;}
+      .rl-pill{background:#faf9f7;border:1px solid #e7e5e1;border-radius:16px;padding:1.7rem;min-height:15rem;display:flex;flex-direction:column;justify-content:space-between;gap:2.6rem;}
+      .rl-pill svg{width:32px;height:32px;color:#3a3a40;}
+      .rl-pill h3{margin:0 0 .45rem;font-size:1.05rem;font-weight:400;letter-spacing:-.01em;}
+      .rl-pill p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(0,0,0,.64);}
+      @media (max-width:860px){ .rl-pill-grid{grid-template-columns:1fr;} .rl-pill{min-height:0;gap:1.6rem;} }
+      </style>
+      <div class="rl-pill-grid">
+        <div class="rl-pill">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M6 16c0-2.6 2-4.7 4.5-4.7 3.3 0 4.7 3.1 5.5 4.7.8 1.6 2.2 4.7 5.5 4.7 2.5 0 4.5-2.1 4.5-4.7s-2-4.7-4.5-4.7c-3.3 0-4.7 3.1-5.5 4.7-.8 1.6-2.2 4.7-5.5 4.7C8 20.7 6 18.6 6 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Teljes elköteleződés</h3><p>Minden ügyfelemre hosszú távú partnerként tekintek, ezért mindig a legjobb eredményre törekszem.</p></div>
+        </div>
+        <div class="rl-pill">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M9 5h14l6 8-13 15L3 13l6-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 13h26M16 28 11 13l5-8 5 8-5 15" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div><h3>Értékteremtő szemlélet</h3><p>Hiszek abban, amit csinálok: azért dolgozom, hogy valódi értéket adjak másoknak.</p></div>
+        </div>
+        <div class="rl-pill">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="1.4" fill="currentColor"/></svg>
+          <div><h3>Egyedi támogatás</h3><p>Minden vállalkozás más kihívásokkal küzd, ezért személyre szabott megoldásokkal dolgozom.</p></div>
+        </div>
+      </div>
+      <p style="text-align:center;margin:2.2rem 0 0;font-size:.98rem;color:#5a5a60;">16 év élsport · 15 megépített projekt — <a href="/sajat-projektek.html" style="color:#15151a;text-decoration:underline;text-underline-offset:3px;">nézd meg a munkáimat →</a></p>
+    </div>
+  </section>
+
+
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <div class="rl-card" style="text-align:center;background:linear-gradient(rgba(12,12,17,.66),rgba(12,12,17,.66)),url('/images/bnx-smoke-multi.jpg') 50% 18%/cover;border-color:#0c0c11;">
+        <span class="bnx-eyebrow" style="color:rgba(245,244,241,.55);">Filozófiám</span>
+        <div aria-hidden="true" style="font-size:3.2rem;line-height:1;color:rgba(245,244,241,.3);font-family:Georgia,serif;">&bdquo;</div>
+        <p style="max-width:44rem;margin:0 auto;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;letter-spacing:-.02em;color:#f5f4f1;">A jó rendszer nem attól jó, hogy sok mindent automatizál, hanem attól, hogy időt ad vissza arra, amiben a legjobb vagy.</p>
+        <p class="bnx-eyebrow" style="margin:1.6rem 0 0;color:rgba(245,244,241,.55);">Nagy Attila — business nativ</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <style>
+      /* Az én történetem — a sablon feature-tabs mintája: középcím, tab-sor, bal kép + jobb szöveg */
+      .rl-tabbar{display:flex;flex-wrap:wrap;justify-content:center;border-bottom:1px solid #e0ded9;margin:0 auto clamp(2rem,4.5vw,3.2rem);}
+      .rl-tab{font:inherit;font-size:.95rem;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:.85rem 1.5rem;color:rgba(0,0,0,.48);cursor:pointer;transition:color .18s ease,border-color .18s ease;white-space:nowrap;}
+      .rl-tab:hover{color:#15151a;}
+      .rl-tab.is-active{color:#15151a;border-bottom-color:#15151a;}
+      @media (max-width:480px){ .rl-tab{padding:.8rem .8rem;font-size:.9rem;} .rl-tabbar{max-width:18rem;} }
+      .rl-tabpanes{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(2rem,6vw,5rem);align-items:center;}
+      .rl-tabimg img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:18px;display:block;background:#e7e5e1;transition:opacity .25s ease;}
+      .rl-tabtext{transition:opacity .25s ease;}
+      .rl-tabcount{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.752px;color:rgba(0,0,0,.4);margin-bottom:1rem;}
+      .rl-tabtext h3{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:400;letter-spacing:-.03em;line-height:1.12;margin:0 0 1.1rem;}
+      .rl-tabtext p{margin:0;font-size:.98rem;line-height:1.7;color:rgba(0,0,0,.64);}
+      @media (max-width:860px){ .rl-tabpanes{grid-template-columns:1fr;} .rl-tab{padding:.75rem 1rem;font-size:.9rem;} }
+      </style>
+      <div class="bnx-shead center" style="max-width:54rem;margin-left:auto;margin-right:auto;">
+        <span class="bnx-eyebrow">Az én történetem</span>
+        <h2>A vállalkozás a legerősebb eszköz <span class="tone-subtle">a személyes fejlődéshez</span></h2>
+      </div>
+      <div class="rl-tabbar" role="tablist" aria-label="Történet szakaszai">
+        <button class="rl-tab is-active" type="button" role="tab" aria-selected="true" data-i="0">Kezdetek</button>
+        <button class="rl-tab" type="button" role="tab" aria-selected="false" data-i="1">Újratervezés</button>
+        <button class="rl-tab" type="button" role="tab" aria-selected="false" data-i="2">Útkeresés</button>
+        <button class="rl-tab" type="button" role="tab" aria-selected="false" data-i="3">Jelen</button>
+      </div>
+      <div class="rl-tabpanes">
+        <div class="rl-tabimg"><img id="rl-tab-img" src="/images/rolam-1.webp" alt="Történet — aktuális szakasz képe"/></div>
+        <div class="rl-tabtext" id="rl-tab-text">
+          <div class="rl-tabcount" id="rl-tab-count">01 // 04</div>
+          <h3 id="rl-tab-title">Kezdetek — ahol minden elkezdődött</h3>
+          <p id="rl-tab-p">Középiskolai testnevelő tanárom az első napon kihívott megnézni egy rúdugró edzést — azt mondta, „lesznek a pályán jó csajok is”. A csajokból nem lett semmi, de a rúdugrásba azonnal beleszerettem, és attól a naptól fogva 16 évig minden erről szólt.</p>
+        </div>
+      </div>
+      <script>
+      (function(){
+        var DATA=[
+          {img:"/images/rolam-1.webp",t:"Kezdetek — ahol minden elkezdődött",p:"Középiskolai testnevelő tanárom az első napon kihívott megnézni egy rúdugró edzést — azt mondta, „lesznek a pályán jó csajok is”. A csajokból nem lett semmi, de a rúdugrásba azonnal beleszerettem, és attól a naptól fogva 16 évig minden erről szólt."},
+          {img:"/images/rolam-2.webp",t:"Újratervezés — a gyerekkortól indulva",p:"A legjobb akartam lenni benne, olimpiáról álmodtam, és mindent beleadtam, amíg egy sérv véget nem vetett ennek az időszaknak. Az élsport lezárult — egyik napról a másikra új irányt kellett keresnem. Ehhez visszamentem a gyerekkoromhoz: mi az, amit igazán szerettem csinálni, ami mindig is érdekelt, és amit életem végéig szívesen csinálnék."},
+          {img:"/images/rolam-3.webp",t:"Útkeresés — zero waste és a filmipar",p:"Sokáig kerestem azt az egy dolgot, amit egész életemben teljes erőbedobással tudnék csinálni úgy, mint régen a rúdugrást. Kipróbáltam sok mindent: zero waste webshopot, textil körforgásos modellt, még a filmiparba is belekóstoltam."},
+          {img:"/images/rolam-4.webp",t:"Jelen — ami ma mozgat",p:"De bármerre is vitt az élet, végül mindig a vállalkozásépítésnél kötöttem ki — mert semmi más nem ad számomra ennyi kihívást és fejlődési lehetőséget egyszerre. Ma már tudom, hogy ez az, amit igazán szeretek: értéket adni és támogatni mások fejlődését."}
+        ];
+        var tabs=document.querySelectorAll('.rl-tab');
+        var img=document.getElementById('rl-tab-img'), txt=document.getElementById('rl-tab-text');
+        var cnt=document.getElementById('rl-tab-count'), ttl=document.getElementById('rl-tab-title'), par=document.getElementById('rl-tab-p');
+        tabs.forEach(function(b){
+          b.addEventListener('click',function(){
+            if(b.classList.contains('is-active'))return;
+            tabs.forEach(function(x){x.classList.remove('is-active');x.setAttribute('aria-selected','false');});
+            b.classList.add('is-active');b.setAttribute('aria-selected','true');
+            var d=DATA[+b.dataset.i];
+            img.style.opacity='0';txt.style.opacity='0';
+            setTimeout(function(){
+              img.src=d.img;ttl.textContent=d.t;par.textContent=d.p;
+              cnt.textContent='0'+(+b.dataset.i+1)+' // 04';
+              img.onload=function(){img.style.opacity='1';};
+              txt.style.opacity='1';
+            },200);
+          });
+        });
+      })();
+      </script>
+    </div>
+  </section>
+  <section class="bnx-section tight">
+    <div class="bnx-container">
+      <style>
+      .rl-val{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch;}
+      .rl-val-tile{border-radius:18px;padding:.65rem;background-size:cover;background-position:50%;}
+      .rl-val-tile.v1{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-amber.jpg');}
+      .rl-val-tile.v2{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-teal.jpg');}
+      .rl-val-tile.v3{background-image:linear-gradient(rgba(21,21,26,.38),rgba(21,21,26,.38)),url('/images/bnx-light-violet.jpg');}
+      .rl-val-inner{background:#faf9f7;border-radius:13px;padding:1.6rem;height:100%;min-height:14rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.6rem;}
+      .rl-val-inner h3{margin:0 0 .45rem;font-size:1.05rem;font-weight:400;}
+      .rl-val-inner p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(0,0,0,.64);}
+      .rl-val-n{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.752px;color:rgba(0,0,0,.4);}
+      .rl-val-inner .rl-ico{width:32px;height:32px;color:#3a3a40;flex:none;}
+      @media (max-width:860px){ .rl-val{grid-template-columns:1fr;} .rl-val-inner{min-height:0;} }
+      </style>
+      <div class="bnx-shead">
+        <span class="bnx-eyebrow">Ami ma motivál</span>
+        <h2>Amit 16 év élsport tanított a vállalkozásépítésről</h2>
+      </div>
+      <div class="rl-val">
+        <div class="rl-val-tile v1"><div class="rl-val-inner"><svg class="rl-ico" viewBox="0 0 32 32" fill="none"><path d="M4 27h6v-6h6v-6h6v-6h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>Kitartás</h3><p>A rendszer nem egy hétvégén épül. Türelemmel, hétről hétre rakjuk le a stabil alapot.</p></div></div></div>
+        <div class="rl-val-tile v2"><div class="rl-val-inner"><svg class="rl-ico" viewBox="0 0 32 32" fill="none"><path d="M27 16a11 11 0 1 1-3.2-7.8M24 3.5V9h-5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>Vissza az alapokhoz</h3><p>Sérülés után is az alapoktól indultam újra. Egy vállalkozásnál is: előbb a fundamentum, aztán a tempó.</p></div></div></div>
+        <div class="rl-val-tile v3"><div class="rl-val-inner"><svg class="rl-ico" viewBox="0 0 32 32" fill="none"><path d="M8 28V4M8 5h15l-3 5 3 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>A következő cél</h3><p>Nem a végtelen növekedésben hiszek, hanem a következő tiszta, elérhető célban.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <style>
+      /* GYIK — bal cím + napló-gomb, jobb kérdéssor (a gyik.html elrendezésének mintája) */
+      .rl-faq{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2.5rem,7vw,7rem);align-items:start;}
+      .rl-faq-side{position:sticky;top:calc(70px + 2rem);}
+      .rl-faq-side h2{margin-bottom:1.4rem;}
+      .rl-faq-side p{margin:0 0 1.4rem;font-size:.95rem;line-height:1.65;color:rgba(0,0,0,.64);}
+      /* napló-gomb: balról besliduló nyíl hoverre (a fejléc Konzultáció gombjának animációja) */
+      .rl-diary::before{content:"\2192";display:inline-block;max-width:0;overflow:hidden;opacity:0;transform:translateX(-8px);transition:max-width .5s cubic-bezier(.22,.61,.36,1),opacity .35s ease,transform .5s cubic-bezier(.22,.61,.36,1),margin .5s cubic-bezier(.22,.61,.36,1);}
+      .rl-diary:hover::before{max-width:1.1em;opacity:1;transform:none;margin-right:.4em;}
+      @media (max-width:860px){ .rl-faq{grid-template-columns:1fr;} .rl-faq-side{position:static;} }
+      </style>
+      <div class="rl-faq">
+        <div class="rl-faq-side">
+          <span class="bnx-eyebrow">Gyakori kérdések</span>
+          <h2>Ami a bemutatkozásból kimaradt</h2>
+          <p>Az utamat nyilvánosan dokumentálom — ha kíváncsi vagy a kulisszák mögé, a naplómban hétről hétre követheted.</p>
+          <a class="bnx-btn primary rl-diary" href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Az utam dokumentálása</a>
+        </div>
+        <div class="bnx-faq" style="max-width:none;margin:0;">
+        <details>
+          <summary>Miért pont az AI?</summary>
+          <p>A technológia felnagyítja azt, ami már megvan: rendszert ad a jól működő szakértelemhez. Nem öncélú automatizálást építek, hanem olyan működést, amiben a technológia időt szabadít fel a lényegre.</p>
+        </details>
+        <details>
+          <summary>Mi volt a legnagyobb kudarc, amiből tanultál?</summary>
+          <p>A versenysport-pályafutásom vége: egy sérv miatt egyik napról a másikra zárult le 16 év munkája és az olimpiai álom. Ez tanított meg arra, hogyan kell veszteség után az alapoktól újraépíteni — előbb önmagamat, aztán bármit, amit építek.</p>
+        </details>
+        <details>
+          <summary>Mit csinálsz, amikor nem dolgozol?</summary>
+          <p>A mozgás azóta is az életem része — más formában, mint az élsport idején. Emellett folyamatosan tanulok és kísérletezem: amit kipróbálok, az előbb-utóbb a naplómban is megjelenik.</p>
+        </details>
+        <details>
+          <summary>Mit adott neked a versenysport?</summary>
+          <p>Kitartást, alázatot és türelmet. Visszatérés az alapokhoz, majd a következő cél megtalálása — ugyanez a szemlélet vezet, amikor egy vállalkozás rendszerét építem fel.</p>
+        </details>
+        <details>
+          <summary>Milyen szokásaid és furcsaságaid vannak?</summary>
+          <p>Képtelen vagyok megenni a velőt. A mazsolát szeretem magában, de másban nem — ha süteményben találom, kiválogatom. Viszont a rántott hús sült krumplival és uborkasalátával szerintem az emberiség egyik legnagyobb találmánya. A kedvenc édességem a habos mákos, amit senki nem tud úgy elkészíteni, mint anyum. Végül pedig: 2026-ban járunk, és én még nem ültem repülőn.</p>
+        </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <div class="bnx-cta2-head"><h2>Ha ez a szemlélet közel áll hozzád, beszéljünk</h2></div>
+      <div class="bnx-cta2">
+        <div class="bnx-cta2-card">
+          <div><h3>Egyéni konzultáció</h3><p>Egy konzultáción átbeszéljük, hol tartasz most, és megmutatom, mit rendeznék először. Kötelezettség nélkül.</p></div>
+          <a class="bnx-cta2-btn" href="https://expertflow-quiz.vercel.app/" target="_blank" rel="noopener">Konzultáció foglalása</a>
+        </div>
+        <div class="bnx-cta2-card smoke">
+          <div><h3>Nézd meg, hogyan dolgozom</h3><p>A szolgáltatás oldalon látod a teljes folyamatot, a csomagokat és azt, miben más a business nativ.</p></div>
+          <a class="bnx-cta2-btn" href="/szolgaltatas.html">Szolgáltatás</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- BNX-FOOTER:START — kanonikus lábléc, a scripts/inject-footer.py illeszti be. Ne szerkeszd oldalanként. -->
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="/szolgaltatas.html">Szolgáltatás</a>
+        <a href="/pricing.html">Árak</a>
+        <a href="/sajat-projektek.html">Projektek</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="/rolam.html">Rólam</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+        <a href="/gyik.html">GYIK</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="/adatvedelem.html">Adatvédelem</a>
+        <a href="/aszf.html">ÁSZF</a>
+        <a href="/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+<!-- BNX-FOOTER:END -->
+<script src="/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/js/reveal-fallback.js"></script>
+</div>
+</body>
+</html>

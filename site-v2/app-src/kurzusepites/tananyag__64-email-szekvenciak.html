@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Email szekvenciák az indításhoz · Kurzusépítés alapok</title>
+<meta name="description" content="Az indítás email sorozatai a bejelentéstől a kosárzárásig, sorrenddel és időzítéssel.">
+<meta name="author" content="Business Native">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<link rel="canonical" href="https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak">
+<link rel="alternate" hreflang="hu-HU" href="https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak">
+<link rel="alternate" hreflang="x-default" href="https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kurzusépítés alapok · Business Native">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:url" content="https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak">
+<meta property="og:title" content="Email szekvenciák az indításhoz">
+<meta property="og:description" content="Az indítás email sorozatai a bejelentéstől a kosárzárásig, sorrenddel és időzítéssel.">
+<meta property="og:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Email szekvenciák az indításhoz">
+<meta name="twitter:description" content="Az indítás email sorozatai a bejelentéstől a kosárzárásig, sorrenddel és időzítéssel.">
+<meta name="twitter:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/style.css?v=20260721">
+<link rel="stylesheet" href="/bn-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Email szekvenciák az indításhoz",
+  "description": "Az indítás email sorozatai a bejelentéstől a kosárzárásig, sorrenddel és időzítéssel.",
+  "image": "https://kurzusepites-alapok.vercel.app/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "url": "https://businessnative.hu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kurzusepites-alapok.vercel.app/og.png"
+    }
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak"
+  },
+  "inLanguage": "hu-HU",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Kurzusépítés alapok",
+    "url": "https://kurzusepites-alapok.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Főoldal",
+      "item": "https://kurzusepites-alapok.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Értékesítés és launch",
+      "item": "https://kurzusepites-alapok.vercel.app/#ertekesites"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Email szekvenciák",
+      "item": "https://kurzusepites-alapok.vercel.app/tananyag/64-email-szekvenciak"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Business Native",
+  "url": "https://businessnative.hu",
+  "logo": "https://kurzusepites-alapok.vercel.app/og.png",
+  "description": "AI alapú működés szolgáltató vállalkozóknak.",
+  "founder": {
+    "@type": "Person",
+    "name": "Nagy Attila"
+  },
+  "sameAs": [
+    "https://businessnative.hu",
+    "https://youtube.com/@expertflow-hu",
+    "https://www.linkedin.com/in/nagy-attila-expert/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="https://www.businessnative.hu/" aria-label="business nativ — főoldal"><span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span></a>
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="https://businessnative.hu/pricing.html">Árak</a>
+      <a class="bnx-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+      <a class="bnx-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">E-mail minikurzus lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener"><span>Funnelek</span><span class="bnx-drop-sub">Kész marketing-tölcsérek</span></a>
+            <a class="bnx-drop-link" href="https://www.businessnative.hu/hasznos-oldalak"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener">Funnelek</a>
+    <a class="bnx-m-sublink" href="https://www.businessnative.hu/hasznos-oldalak">AI eszköztár</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+
+<header class="lesson-header">
+  <div class="hero-stage">
+    <div class="breadcrumb reveal"><a href="/">Főoldal</a><span class="sep">/</span><a href="/#ertekesites">Értékesítés és launch</a><span class="sep">/</span><span>Email szekvenciák</span></div>
+    <h1 class="animate-fade-in-up reveal reveal-delay-1">Email szekvenciák az <em class="em-violet">indításhoz</em></h1>
+    <p class="lesson-sub reveal reveal-delay-2">Az indítás email sorozatai a bejelentéstől a kosárzárásig, sorrenddel és időzítéssel.</p>
+    <div class="lesson-pill-row reveal reveal-delay-3">
+      <span class="lesson-pill accent">Lecke 35 / 40</span>
+      <span class="lesson-pill">Értékesítés és launch</span>
+      <span class="lesson-pill">Haladó</span>
+    </div>
+  </div>
+</header>
+
+<style>
+.wf-diagram-fig{margin:0 auto clamp(2rem,4vw,3rem);max-width:1100px;background:#f5f4f1;border:1px solid #e4e2e0;border-radius:16px;padding:clamp(1rem,2vw,1.5rem);}
+.wf-diagram-fig img{width:100%;height:auto;display:block;border-radius:10px;}
+.wf-diagram-fig figcaption{margin-top:.9rem;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:#8a8a90;text-align:center;text-transform:uppercase;}
+.wf-diagram-fig figcaption a{color:#15151a;}
+</style>
+<figure class="wf-diagram-fig">
+<div class="wf2-flow">
+    <div class="wf3">
+      <div class="wf3-sec">
+        <span class="wf3-label">Meghívó sorozat — 3-4 email a webinár regisztrációra</span>
+        <div class="wf3-card">
+          <div class="wf3-row"><span class="wf3-ico grey"></span><div class="wf3-col"><span class="wf3-t h" style="width:52%"></span><span class="wf3-t" style="width:78%"></span></div></div>
+          <div class="wf3-row"><span class="wf3-ico grey"></span><div class="wf3-col"><span class="wf3-t h" style="width:46%"></span><span class="wf3-t" style="width:70%"></span></div></div>
+        </div>
+      </div>
+      <div class="wf3-sec">
+        <span class="wf3-label">Emlékeztető sorozat — 24 óra, 1 óra, 15 perc</span>
+        <div class="wf3-card tint-blue" style="padding:9px 12px;">
+          <div class="wf3-row"><span class="wf3-price">-24 ó</span><span class="wf3-price">-1 ó</span><span class="wf3-price">-15 p</span><span class="wf3-t" style="width:32%"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="wf2-arrow"></div>
+    <div class="wf2-arrow-label">az élő webinár után két ágra válik</div>
+    <div class="wf3">
+      <div class="wf3-sec">
+        <span class="wf3-label">Két ág — részt vett / nem vett részt</span>
+        <div class="wf3-cols">
+          <div class="wf3-card tint-green">
+            <span class="wf3-t h" style="width:64%"></span>
+            <span class="wf3-t" style="width:80%"></span>
+          </div>
+          <div class="wf3-card tint-amber">
+            <span class="wf3-t h" style="width:70%"></span>
+            <div class="wf3-row"><span class="wf3-ico amber"></span><span class="wf3-t" style="width:52%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wf2-arrow"></div>
+    <div class="wf2-arrow-label">a visszanéző után a két ág összeér</div>
+    <div class="wf3">
+      <div class="wf3-sec">
+        <span class="wf3-label">Utókövető / értékesítő — 3-5 email a nyitott kosár alatt</span>
+        <div class="wf3-card">
+          <div class="wf3-row"><span class="wf3-ico grey"></span><span class="wf3-t" style="width:64%"></span></div>
+          <div class="wf3-row"><span class="wf3-ico grey"></span><span class="wf3-t" style="width:56%"></span></div>
+          <div class="wf3-row"><span class="wf3-ico grey"></span><span class="wf3-t" style="width:60%"></span></div>
+        </div>
+      </div>
+      <div class="wf3-sec">
+        <span class="wf3-label">Értékesítést erősítő — az utolsó 48 óra kifogáskezelése</span>
+        <div class="wf3-card tint-red">
+          <div class="wf3-row"><span class="wf3-price">-48 ó</span><span class="wf3-t" style="width:52%"></span></div>
+          <div class="wf3-row"><span class="wf3-price">zárás</span><span class="wf3-t" style="width:44%"></span><span class="wf3-btn red" style="min-width:56px"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="wf2-arrow"></div>
+    <div class="wf2-arrow-label">aki vásárolt, azonnal ide kerül át</div>
+    <div class="wf3">
+      <div class="wf3-sec">
+        <span class="wf3-label">Onboarding — az új vevőt fogadja, nincs több sales</span>
+        <div class="wf3-card tint-green">
+          <div class="wf3-row"><span class="wf3-badge"></span><span class="wf3-t" style="width:58%"></span></div>
+          <div class="wf3-check"><span class="wf3-t" style="width:50%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Így épülnek fel a blokkok arányosan</figcaption>
+</figure>
+<article class="lesson-content" data-slug="64-email-szekvenciak">
+<blockquote>A lecke végére látod az élő indítás teljes email gerincét (meghívó, emlékeztető, visszanéző, utókövető, értékesítést erősítő és onboarding sorozat), és meg tudod tervezni, melyik mikor, kinek és mit mond.</blockquote>
+<h2>Miért számít?</h2>
+<p>Az élő indítás bevételének nagyobb része jellemzően nem a webináron, hanem az emailekben dől el, hiszen a webinár a színpad, az email szekvencia pedig az, ami az embereket a regisztrációtól az élő alkalmon át a kosárzárásig viszi. Ez nem kreatív rögtönzés, hanem rendszer, hat jól elkülönülő sorozat, mindegyiknek saját célja és időzítése, és ha egyszer megtervezed a vázat, minden későbbi indításnál újrahasznosítod. Egyfősként ez a döntő, mert az előre megírt és időzített lánc akkor is dolgozik helyetted, amikor te épp ügyfelet szolgálsz ki, nem a launchot pörgeted kézzel. Vegyünk egy hipotetikus magyar példát. Egy HR-tanácsadó az első indítás 3 emailje helyett a második körre teljes, 14 emailes láncot épített, és ugyanakkora listán több mint kétszer annyi vásárlója lett; nem jobb kurzus kellett, hanem több jól időzített érintés.</p>
+<h2>Mit kell tudnod?</h2>
+<h3>Mire való?</h3>
+<p>Az indítási email szekvencia hat egymásra épülő sorozat, ami a listatagot végigkíséri a teljes indításon. A sorrend: meghívó (webinár regisztrációra hív), emlékeztető (a regisztrálót élő nézővé teszi), visszanéző (a lemaradóknak adja oda a felvételt), utókövető (a webinár után nyitott kosár alatt értékesít), értékesítést erősítő (az utolsó 48 óra kifogáskezelő hajrája), és onboarding (az új vevőt fogadja, ezt a 67. leckében bontjuk ki). Az email alapú értékesítési út vázlatát itt találod: <a href="https://marketing-skiccfuzet.vercel.app/tananyag/05a-email-mini-course-funnel-egyszeru" target="_blank" rel="noopener">Email minikurzus funnel, egyszerű</a>, a feliratkozás gyűjtés oldalét pedig itt: <a href="https://marketing-skiccfuzet.vercel.app/tananyag/02-lead-capture-opt-in" target="_blank" rel="noopener">Lead capture / opt-in oldal</a>. Ez a lecke az indítás specifikus sorozatokra koncentrál.</p>
+<h3>Hogyan csináld?</h3>
+<ol><li><strong>Rajzold fel az idővonalat.</strong> Vedd elő a 62. leckében rögzített dátumokat, és oszd ki a hat sorozatot: meghívók a regisztrációs 7 napban, emlékeztetők a webinár előtt, visszanéző utána 24 órán belül, utókövetők a nyitott kosár alatt, erősítők az utolsó 48 órában.</li><li><strong>Írd meg a 3–4 meghívó emailt.</strong> Mindegyik más szögből hív ugyanarra a webinárra: az első a problémát nyitja meg, a második a lehetőséget mutatja, a harmadik sztorit mesél, az utolsó a „holnap kezdünk" sürgetése. Egyetlen CTA legyen mindenhol, a „foglald le a helyed".</li><li><strong>Állítsd be az emlékeztetőket.</strong> Regisztráció után azonnal megerősítés a linkkel, majd 24 órával, 1 órával és 15 perccel az élő előtt. Rövidek, egyetlen feladatuk a megjelenés, ezért emlékeztess a megjelenési bónuszra is.</li><li><strong>Küldd ki a visszanézőt.</strong> A webinár után 24 órán belül, csak a nem megjelenteknek és a link kérőknek. Írd meg őszintén, meddig érhető el a felvétel, és azt tartsd is be.</li><li><strong>Építsd fel az utókövető sorozatot.</strong> A nyitott kosár napjaiban 3–5 email: a webinár kulcsgondolatának összefoglalása, a kurzus bemutatása eredménynyelven, a gyakori kérdések megválaszolása, és ha már van, valódi tanulói példa kitalált vevőtörténet helyett.</li><li><strong>Élezd ki az értékesítést erősítő sorozatot.</strong> Az utolsó 48 órára 2–3 email: kifogás lebontás („nincs időm", „majd legközelebb", „nekem ez menni fog egyedül is"), a garancia kiemelése, végül a kosárzárás napján 1–2 rövid, tényszerű határidő email. Iparági tapasztalat szerint az eladások harmada-fele az utolsó napokban érkezik, ezért ez a sorozat nem opcionális.</li><li><strong>Szegmentálj minimum három csoportra.</strong> Aki már vásárolt, az ne kapjon több sales emailt, hanem azonnal az onboarding sorozatba kerüljön. Aki élőben ott volt, más hangot kaphat, mint aki csak regisztrált. Kit-ben vagy MailerLite-ban ez címkékkel pár kattintás.</li><li><strong>Írd emberi hangon, egy küldő, egy cél elvvel.</strong> Minden email a saját nevedről megy, egy gondolat, egy CTA. A tárgysor rövid és konkrét, mert a nyitás múlik rajta.</li></ol>
+<h3>Mikor érdemes?</h3>
+<ul><li>Webináros élő indításnál, mert ez a teljes lánc natív terepe</li><li>Kihívás vagy minikurzus alapú indításnál ugyanez a logika, csak a webinár helyére más esemény kerül</li><li>Újraindításnál (második, harmadik launch), mert a váz újrahasznosítható, csak a sztorik frissülnek</li><li>Evergreen rendszerre váltáskor, mert ugyanez a lánc lesz az automatizált email sor alapja (66. lecke)</li></ul>
+<h3>Mikor NE?</h3>
+<ul><li>Alacsony árú, mindig megvehető terméknél, mert oda elég egy rövid, állandó üdvözlő sorozat, nem kell indítási dramaturgia</li><li>Ha a listád még 100 fő alatti, mert előbb listaépítés jön (lead magnet, vagyis ingyenes anyag, amit email címért cserébe adsz, 24. lecke), a hat sorozatnak üres címlistán nincs mivel dolgoznia</li><li>Vásárlás után, mert a vevőnek onboarding jár, nem további értékesítés</li><li>Ha a hat sorozatból csak egyet-kettőt tudnál rendesen megírni határidőre, mert inkább kevesebb, de kész email, mint félkész lánc élesben</li></ul>
+<h3>Leggyakoribb hibák</h3>
+<ul><li>Túl kevés email a kosárzárás körül, udvariasságból, pedig a lista nagy része csak az utolsó napokban dönt</li><li>Mindenki mindent megkap, pedig a vásárlók sales emailekkel bombázása a leggyorsabb leiratkozás-generátor</li><li>Csak logisztikai emailek („itt a link") érzelmi és kifogáskezelő tartalom nélkül</li><li>Sablonszagú, túlírt szövegek, pedig a rövid, személyes hangú email magyar piacon jobban nyit</li><li>A határidő elmosása, mert ha a kosárzárás után is lehet vásárolni, a következő indításnál senki sem hisz a határidőnek</li><li>Teszt küldés kihagyása, mert a törött link vagy a rossz keresztnév mező élesben ezreknek megy ki</li></ul>
+<h3>Mit mérj?</h3>
+<ul><li>A megnyitási arány saját, gondozott listán iparági tapasztalat szerint 30–45% a jó sávban van; ha 20% alatt vagy, tárgysor és kézbesíthetőségi probléma van</li><li>A kattintási arány (CTR) sales emaileknél jellemzően 1–4%; a kosárzárás napi emailek a lánc legkattintottabbjai</li><li>A leiratkozási arány indítás alatt 0,5–1% emailonként még normál; a fölött a hangnem vagy a gyakoriság sok</li><li>Az emailenkénti vásárlás hozzárendelés megmutatja, melyik email után jöttek a fizetések; a következő indításnál a gyengéket cseréled</li><li>A kézbesíthetőségnél, ha a megnyitás hirtelen esik, előbb a spam mappát és a feladó hitelesítést (SPF, DKIM) ellenőrizd</li><li>Ha még nincs adatod, az első indítás számai lesznek a bázisod, ezért emailenként jegyezd fel a megnyitást, kattintást, vásárlást</li></ul>
+<h2>Mit vesz át ebből az AI?</h2>
+<p><strong>Régen kézzel:</strong></p>
+<ul><li>A 12–15 emailes lánc megírása 1–2 hét volt, vagy 80–200 ezer Ft szövegírói díj</li><li>A kifogáskezelő emailekhez emlékezetből próbáltad összeszedni, mit kérdeznek a vevők</li><li>A tárgysor változatokon egyedül rágódtál, visszajelzés nélkül</li></ul>
+<p><strong>Ma AI-val:</strong></p>
+<ul><li>Add oda a Claude-nak a webinár vázlatod, az avatárod (az ideális vevőd részletes leírása) és a kifogáslistád, és kérd el a teljes lánc draftját sorozatonként, így egy nap alatt átnézhető állapotban van</li><li>A webinár alatti kérdéseket és a válasz emailjeidet beadva kérj kifogás mintázatot, és abból új erősítő emailt a lánc gyenge pontjára</li><li>Indítás közben az addigi megnyitási számokat beadva kérhetsz javaslatot, melyik emailen érdemes még élesben állítani</li></ul>
+<p><strong>Ami emberi marad:</strong></p>
+<ul><li>A sztorik, mert a saját ügyféltörténeteid és tévedéseid adják az emailek hitelét, ezt az AI nem találhatja ki helyetted</li><li>A határidő etika, hiszen hogy mit ígérsz és mit tartasz be, az bizalmi kérdés, nem szövegezési</li></ul>
+<h2>AI-prompt sablon</h2>
+<p>Másold AI-ügynöknek</p>
+<p>Ez a sablon ezt a lépést csinálja meg veled a saját vállalkozásodra. Töltsd ki a <code>{{placeholder}}</code> változókat, és add át egy AI-ügynöknek (Claude, GPT, Gemini). A Claude, a GPT és a Gemini ingyenes AI-chat oldalak (pl. claude.ai). A sablont egyszerűen üzenetként másolod be, nincs telepítés, és nem kell hozzá technikai tudás.</p>
+<div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>Email marketing stratéga vagy, egy magyar szolgáltató
+kurzusindításának email tervét készíted elő.
+
+KONTEXTUS:
+- Kurzus és ára: {{kurzus_es_ar}}
+- Webinár címe és dátuma: {{webinar}}
+- Kosárnyitás és kosárzárás dátuma: {{kosar_datumok}}
+- Ideális vevő: {{avatar}}
+- Top 3 vásárlói kifogás: {{kifogasok}}
+
+FELADAT — készítsd el az indítás email tervrajzát (NEM a kész szövegeket):
+1. Idővonal táblázat: melyik napon melyik email megy ki, melyik
+   szegmensnek (mindenki / regisztrált / élőben ott volt / vásárolt)
+2. Emailenként: cél egy mondatban + 2 tárgysor javaslat + 3 pontos vázlat
+3. A meghívó sorozatnál minden email más szöget kapjon
+4. Az értékesítést erősítő sorozatban mindhárom kifogásra jusson email
+5. Jelöld, hol kell kizárni a már vásárlókat
+6. A kosárzárás napjára külön jelezd, hány email megy és mikor
+7. Végül adj egy ellenőrző listát az élesítés előtti teszt küldéshez
+
+SZABÁLYOK: magyar nyelv, tegeződés, rövid és személyes hang.
+Egy email = egy cél = egy CTA, ezt a tervrajz is tükrözze.
+
+A kész szövegírás külön lépés lesz — most a szerkezet a dolgod.
+Kamu sürgetést vagy nem valós határidőt ne javasolj.</code></pre></div>
+<h2>Hasznos források</h2>
+<ul><li><a href="https://kit.com" target="_blank" rel="noopener">Kit (volt ConvertKit), automatizmusok</a>. Címkézés, szegmentálás és időzített sorozatok az indításhoz.</li><li><a href="https://www.mailerlite.com" target="_blank" rel="noopener">MailerLite</a>. Magyar szolgáltatók körében népszerű, olcsóbb alternatíva ugyanerre.</li><li><a href="https://reallygoodemails.com" target="_blank" rel="noopener">Really Good Emails, inspirációtár</a>. Valódi email példák százai műfaj szerint böngészhetően.</li></ul>
+</article>
+
+<aside class="lesson-feedback reveal" aria-label="Kurzusépítés szolgáltatás">
+  <p>Nem akarod egyedül végigcsinálni? Ránézünk együtt a kurzusodra, a tervezéstől az indításig.</p>
+  <a class="cta cta-feedback" href="https://businessnative.hu/kurzusepites" target="_blank" rel="noopener">
+    <span>Kurzusépítés szolgáltatás</span>
+    <span class="arrow">→</span>
+  </a>
+</aside>
+
+<nav class="lesson-nav" aria-label="Lecke navigáció">
+<a href="/tananyag/63-webinar-regisztracios-oldal" class="prev"><span class="nav-label">← Előző</span><span class="nav-title">Webinár regisztráció</span></a><a href="/tananyag/17-utemterv-felfutas" class="next"><span class="nav-label">Következő →</span><span class="nav-title">Ütemterv és felfutás</span></a>
+</nav>
+<style>
+.prompt-box{position:relative;}
+.prompt-box .prompt-copy{position:absolute;top:10px;right:10px;z-index:2;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid var(--border-strong,#d8d6d3);background:var(--card,#fff);color:inherit;cursor:pointer;}
+.prompt-box .prompt-copy:hover{border-color:currentColor;}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('.prompt-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre code');
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(){ var t=btn.textContent; btn.textContent='Másolva'; setTimeout(function(){btn.textContent=t;},1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="https://www.businessnative.hu/">Főoldal</a>
+        <a href="https://www.businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+        <a href="https://www.businessnative.hu/pricing.html">Árak</a>
+        <a href="https://www.businessnative.hu/sajat-projektek.html">Projektek</a>
+      </div>
+            <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="https://www.businessnative.hu/rolam.html">Rólam</a>
+        <a href="https://www.businessnative.hu/contact/contact-a.html">Kapcsolat</a>
+        <a href="https://www.businessnative.hu/gyik.html">GYIK</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="https://www.businessnative.hu/adatvedelem.html">Adatvédelem</a>
+        <a href="https://www.businessnative.hu/aszf.html">ÁSZF</a>
+        <a href="https://www.businessnative.hu/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.businessnative.hu/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script>
+(function(){
+  var h=document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle'); if(!tog)return;
+    tog.addEventListener('click',function(e){e.preventDefault();
+      items.forEach(function(x){if(x!==item){x.classList.remove('is-open');var t=x.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});
+      var o=item.classList.toggle('is-open'); tog.setAttribute('aria-expanded',o?'true':'false');});
+  });
+  document.addEventListener('click',function(e){items.forEach(function(item){if(!item.contains(e.target)){item.classList.remove('is-open');var t=item.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});});
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+</body>
+</html>

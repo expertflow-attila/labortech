@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>AI eszköztár — eszközök az AI ügynökeid számára | business nativ</title>
+<meta content="Válogatott nyílt forráskódú eszközök, amelyekkel az AI csapatodat továbbfejlesztheted és a vállalkozásodba integrálhatod — mindegyiknél leírva, miben segít." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.businessnative.hu/hasznos-oldalak" rel="canonical"/>
+<meta content="https://www.businessnative.hu/hasznos-oldalak" property="og:url"/>
+<link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
+<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="/css/bn-brand.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Geist:300,400,500,600,700","IBM Plex Mono:300,400,500,600,700"] }});</script>
+<link href="/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="/css/custom.css" rel="stylesheet"/>
+<style>
+/* Hasznos oldalak — hero középre igazítva */
+.bnx-page-hero .bnx-container{text-align:center;}
+.bnx-page-hero .bnx-lead{margin-left:auto;margin-right:auto;max-width:54rem;}
+</style>
+<!-- BNX-ANALYTICS-HEAD:START -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XSZQJ37');</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-saN1X96fqGpqiarWDfqvq.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="WCWBPQPJ" defer></script>
+<!-- / Fathom -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadLater([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroupPropertiesForFlags setPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_d0ILQSSxO0rsZpp9CxWlxoCZAHOxRATstluTD46BI0u',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only',disable_session_recording:true})
+</script>
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+  amplitude.init('a6ba8cc46ec88eee6d3121680a294976');
+</script>
+<!-- BNX-ANALYTICS-HEAD:END -->
+</head>
+<body>
+<!-- BNX-ANALYTICS-BODY:START -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XSZQJ37" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- BNX-ANALYTICS-BODY:END -->
+
+<div class="page-wrapper">
+<!-- BNX-NAV:START — kanonikus menü, a scripts/inject-nav.py illeszti be minden oldalra. Ne szerkeszd oldalanként. -->
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="/" aria-label="business nativ — főoldal">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+    </a>
+
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="/pricing.html">Árak</a>
+      <a class="bnx-link" href="/rolam.html">Rólam</a>
+      <a class="bnx-link" href="/sajat-projektek.html">Projektek</a>
+
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">Minikurzus felépítése lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="/hasznos-oldalak.html"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+            <a class="bnx-drop-link" href="/claude-skillek-pluginok.html"><span>Claude skill-ek és plugin-ok</span><span class="bnx-drop-sub">Claude skillek és bővítmények</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <!-- mobil panel -->
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="/hasznos-oldalak.html">AI eszköztár</a>
+    <a class="bnx-m-sublink" href="/claude-skillek-pluginok.html">Claude skill-ek és plugin-ok</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+<script>
+(function(){
+  var h=document.currentScript.closest('.bnx-header')||document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle');
+    if(!tog)return;
+    tog.addEventListener('click',function(e){
+      e.preventDefault();
+      items.forEach(function(x){ if(x!==item){x.classList.remove('is-open'); var t=x.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');} });
+      var o=item.classList.toggle('is-open');
+      tog.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    items.forEach(function(item){
+      if(!item.contains(e.target)){item.classList.remove('is-open'); var t=item.querySelector('.bnx-toggle'); if(t)t.setAttribute('aria-expanded','false');}
+    });
+  });
+  /* görgetésre a fejléc feketére vált */
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+<button class="bnx-totop" type="button" aria-label="Vissza az oldal tetejére" hidden>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.bnx-totop');
+  if(!b||b.dataset.bnxInit)return; b.dataset.bnxInit="1";
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){b.removeAttribute('hidden');}else{b.setAttribute('hidden','');}
+  },{passive:true});
+  b.addEventListener('click',function(){ window.scrollTo(0,0); });
+})();
+</script>
+<!-- BNX-NAV:END -->
+<main class="bnx-page">
+
+  <section class="bnx-section">
+    <div class="bnx-container">
+      <style>
+      /* Eszköz-katalógus — a sablon integrations-mintája: középcím, fülek, szürke kártyák ikon nélkül */
+      .ho-head{text-align:center;max-width:54rem;margin:0 auto clamp(1.6rem,3.5vw,2.4rem);}
+      .ho-tabs{display:flex;flex-wrap:wrap;justify-content:center;border-bottom:1px solid #e0ded9;max-width:44rem;margin:0 auto clamp(1.8rem,4vw,2.6rem);}
+      .ho-tab{font:inherit;font-size:.92rem;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:.8rem 1.2rem;color:rgba(0,0,0,.48);cursor:pointer;transition:color .18s ease,border-color .18s ease;white-space:nowrap;}
+      .ho-tab:hover{color:#15151a;}
+      .ho-tab.is-active{color:#15151a;border-bottom-color:#15151a;}
+      .ho-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+      .ho-card{background:#faf9f7;border:1px solid #e7e5e1;border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;}
+      .ho-card[hidden]{display:none;}
+      .ho-card h3{margin:0 0 .5rem;font-size:1.05rem;font-weight:400;}
+      .ho-card p{margin:0 0 1.2rem;font-size:.92rem;line-height:1.6;color:rgba(0,0,0,.64);}
+      .ho-more{margin-top:auto;align-self:flex-start;font-size:.88rem;font-weight:500;color:rgba(0,0,0,.55);text-decoration:none;transition:color .2s ease;}
+      .ho-more::after{content:"\2192";display:inline-block;width:1.1em;margin-left:.35em;opacity:0;transform:translateX(-6px);transition:opacity .3s ease,transform .45s cubic-bezier(.22,.61,.36,1);}
+      .ho-more:hover{color:#15151a;}
+      .ho-more:hover::after{opacity:1;transform:none;}
+      @media (max-width:991px){ .ho-grid{grid-template-columns:1fr 1fr;} }
+      @media (max-width:640px){ .ho-grid{grid-template-columns:1fr;} }
+      </style>
+      <div class="ho-head">
+        <span class="bnx-eyebrow">Tudástár</span>
+        <h1>AI eszköztár <span class="tone-subtle">az ügynökeid munkájához</span></h1>
+<p class="bnx-lead" style="margin-left:auto;margin-right:auto;">Válogatott nyílt forráskódú projektek és platformok, amelyekkel az AI csapatodat továbbfejlesztheted és a vállalkozásodba integrálhatod.</p>
+      </div>
+      <div class="ho-tabs" role="tablist" aria-label="Eszköz-kategóriák">
+        <button class="ho-tab is-active" type="button" data-cat="kutatas">Kutatás és tartalom</button>
+        <button class="ho-tab" type="button" data-cat="skillek">Skillek</button>
+        <button class="ho-tab" type="button" data-cat="cli">CLI-eszközök</button>
+        <button class="ho-tab" type="button" data-cat="fejlesztes">Fejlesztés</button>
+        <button class="ho-tab" type="button" data-cat="platformok">Platformok</button>
+      </div>
+      <div class="ho-grid">
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Browser Use</h3>
+          <p>Weboldalakat tesz az AI-ügynökök számára kezelhetővé: az ügynök kattint, űrlapot tölt ki, adatot gyűjt. Árfigyeléstől a versenytárs-kutatásig szinte minden böngészős rutinmunka automatizálható vele.</p>
+          <a class="ho-more" href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Video Use</h3>
+          <p>Videószerkesztés AI-ügynökkel: vágás, feliratozás, formázás egyszerű szöveges utasításból. Ha rendszeresen készítesz tartalmat, a nyers felvétel utómunkájának nagy része kiadható egy ügynöknek.</p>
+          <a class="ho-more" href="https://github.com/browser-use/video-use" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Hyperframes</h3>
+          <p>Weboldal-kódból (HTML-ből) készít videót, kifejezetten AI-ügynökök számára építve. Marketingvideók és animált bemutatók készülhetnek vele vágóprogram nélkül.</p>
+          <a class="ho-more" href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Autoresearch</h3>
+          <p>Andrej Karpathy projektje: AI-ügynökök, amelyek maguktól futtatnak és értékelnek kutatási kísérleteket. Jó minta arra, hogyan dolgozik több ügynök felügyelet nélkül egy közös célon.</p>
+          <a class="ho-more" href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>LLM-wiki (Karpathy)</h3>
+          <p>Jegyzet arról, hogyan építs olyan tudásbázist, amelyet egy AI tart karban. Ez az alapja annak, hogy az ügynökeid ne felejtsenek: a vállalkozásod tudása egy helyen, mindig frissen.</p>
+          <a class="ho-more" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Claude Watch</h3>
+          <p>Skill, amellyel Claude videót „néz meg” helyetted: letölti, képkockákra bontja és leiratozza, majd kérdezhetsz tőle a tartalmáról. YouTube-videók és felvételek gyors feldolgozására.</p>
+          <a class="ho-more" href="https://github.com/taoufik123-collab/claude-watch" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="kutatas">
+          <h3>Claude Video</h3>
+          <p>Videokészítés és -szerkesztés Claude-dal: a nyersanyagból parancsokkal lesz kész videó. Jó kiindulás, ha a tartalomgyártás utómunkáját ügynökre bíznád.</p>
+          <a class="ho-more" href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>AIS-OS</h3>
+          <p>AI Operating System kezdőcsomag Claude Code-hoz: három skill (onboard, audit, level-up), amellyel felméred és szintre hozod, hogyan használja a vállalkozásod az AI-t.</p>
+          <a class="ho-more" href="https://github.com/nateherkai/AIS-OS" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Superpowers</h3>
+          <p>Skill-keretrendszer és fejlesztési módszertan ügynököknek. Kész, tesztelt munkamódszereket ad az ügynökeidnek, így nem nulláról kell betanítanod őket.</p>
+          <a class="ho-more" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Awesome Claude Skills</h3>
+          <p>Válogatott Claude-skillek és források gyűjteménye. Kiindulópont, ha új képességet keresel az ügynökeidnek — a legtöbb üzleti feladatra létezik már kész skill.</p>
+          <a class="ho-more" href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Skills (Matt Pocock)</h3>
+          <p>Gyakorlati skill-gyűjtemény egy tapasztalt fejlesztő saját munkakörnyezetéből — bevált minták, amelyeket a saját ügynökeidre szabhatsz.</p>
+          <a class="ho-more" href="https://github.com/mattpocock/skills/tree/main/skills/productivity" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Claude Peers MCP</h3>
+          <p>A gépeden futó Claude-példányok üzenhetnek egymásnak. Így több ügynök párhuzamosan, egymással egyeztetve dolgozik — mint egy kis csapat, amely elosztja a feladatokat.</p>
+          <a class="ho-more" href="https://github.com/louislva/claude-peers-mcp" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>PPT Master</h3>
+          <p>Prezentációkészítő skill: forrásanyagból (PDF, dokumentum, link) igényes diasort épít, és PPTX-be exportálja. Ajánlathoz, előadáshoz percek alatt ad használható vázat.</p>
+          <a class="ho-more" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Impeccable</h3>
+          <p>Frontend-design skillgyűjtemény, amely a generikus AI-kinézet helyett átgondolt, prémium felületeket kér számon az ügynöktől. Weboldal-építésnél azonnal látszik a különbség.</p>
+          <a class="ho-more" href="https://impeccable.style/" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>Humanizer</h3>
+          <p>Skill, amely felismeri és kigyomlálja az AI-írás árulkodó jeleit a szövegből. Minden ügynök által írt anyag természetesebben szól tőle — ezen az oldalon is dolgozott.</p>
+          <a class="ho-more" href="https://github.com/blader/humanizer" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="skillek">
+          <h3>PDF Skill (Anthropic)</h3>
+          <p>Az Anthropic hivatalos PDF-skillje: olvasás, kitöltés, egyesítés, aláírás-mezők — minden, amit egy ügynöknek PDF-ekkel tudnia kell.</p>
+          <a class="ho-more" href="https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>CLI Printing Press</h3>
+          <p>Bármelyik API-ból ügynök-barát parancssori eszközt épít. Ha egy szolgáltatásodnak (CRM, számlázó, hírlevél) van API-ja, ebből lesz olyan eszköz, amelyet az ügynökeid önállóan használnak.</p>
+          <a class="ho-more" href="https://github.com/mvanhorn/cli-printing-press" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>Printing Press Library</h3>
+          <p>A CLI Printing Press-szel készült, tesztelt eszközök hivatalos gyűjteménye — kész parancssori eszközök, amelyeket azonnal az ügynökeid kezébe adhatsz.</p>
+          <a class="ho-more" href="https://github.com/mvanhorn/printing-press-library" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>CLI-Anything</h3>
+          <p>Szinte bármely szoftverhez olyan parancssori felületet készít, amelyet az AI-ügynökök közvetlenül kezelni tudnak. A cél, hogy az ügynökeid a teljes eszközparkodat használhassák, ne csak azt, aminek van programozható kapcsolódási pontja (API-ja).</p>
+          <a class="ho-more" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>Google Workspace CLI</h3>
+          <p>A Google hivatalos parancssori eszköze: Gmail, Naptár, Drive, Sheets és Docs egy helyről, AI-ügynököknek szánt kész skillekkel. Az ügynökeid e-mailt, naptárat és dokumentumot kezelnek vele.</p>
+          <a class="ho-more" href="https://github.com/googleworkspace/cli" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>Whisper CLI</h3>
+          <p>Hangfelvételből szöveg egyetlen paranccsal, a Whisper modellel. Értekezletek, diktálások és videók leiratát az ügynökeid maguktól elkészítik vele.</p>
+          <a class="ho-more" href="https://github.com/vatsalaggarwal/whisper-cli" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="cli">
+          <h3>printingpress.dev</h3>
+          <p>A Printing Press eszközök kereshető katalógusa a böngészőben: kész, AI-ügynökök számára készült parancssori eszközök különféle online szolgáltatásokhoz, telepítési útmutatóval.</p>
+          <a class="ho-more" href="https://printingpress.dev/" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>Codex MCP Server</h3>
+          <p>Összekötő eszköz, amellyel a Claude Code fejlesztés közben egy másik AI-fejlesztőt, a Codexet is bevonhatja. Két AI dolgozik egy feladaton: az egyik ír, a másik ellenőriz, így kevesebb hiba kerül a rendszereidbe.</p>
+          <a class="ho-more" href="https://github.com/tuannvm/codex-mcp-server" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>Chrome DevTools MCP</h3>
+          <p>A Chrome böngésző fejlesztői eszközei AI-ügynökök kezébe adva: az ügynök látja a weboldalad, méri a betöltési sebességét, és magától megtalálja és javítja a hibákat.</p>
+          <a class="ho-more" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>Next + Supabase + Stripe Starter</h3>
+          <p>Magas minőségű SaaS-alap: Next.js, Supabase és Stripe előre összekötve. Ha fizetős online terméket indítanál, ezzel hetekkel rövidebb az út az első előfizetőig.</p>
+          <a class="ho-more" href="https://github.com/KolbySisk/next-supabase-stripe-starter" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>GitHub</h3>
+          <p>A világ legnagyobb kódtára és nyílt forráskódú gyűjteménye: projektek, sablonok és kész eszközök ezrei. Az ezen az oldalon ajánlott eszközök többsége is innen tölthető le.</p>
+          <a class="ho-more" href="https://github.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>Claude</h3>
+          <p>Az AI-asszisztens, amellyel a rendszereimet építem — szövegtől a kódig, a napi munka valódi gyorsítója.</p>
+          <a class="ho-more" href="https://claude.ai" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="fejlesztes">
+          <h3>Vercel</h3>
+          <p>Weboldalak és alkalmazások gyors, egyszerű üzemeltetése — az itt látható projektek nagy része is ezen fut.</p>
+          <a class="ho-more" href="https://vercel.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>AITmpl</h3>
+          <p>Kész Claude-sablonok, ügynökök és skillek gyűjteménye kategóriákra bontva. Jó első kör, mielőtt bármit nulláról építenél.</p>
+          <a class="ho-more" href="https://www.aitmpl.com/" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>SkillHub</h3>
+          <p>Közösségi skill-piactér: kereshető, értékelt Claude-skillek. Ha egy feladatra keresel képességet az ügynökeidnek, itt érdemes körülnézni.</p>
+          <a class="ho-more" href="https://www.skillhub.club/" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Cal.com</h3>
+          <p>Nyílt forráskódú időpontfoglaló — a konzultációim is ezen keresztül foglalhatók.</p>
+          <a class="ho-more" href="https://cal.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Supabase</h3>
+          <p>Nyílt forráskódú adatbázis és backend — a legtöbb rendszerem adatkezelését ez adja.</p>
+          <a class="ho-more" href="https://supabase.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Railway</h3>
+          <p>Alkalmazás-hoszting percek alatt: adatbázis, backend és időzített feladatok egy helyen, szerver-üzemeltetés nélkül.</p>
+          <a class="ho-more" href="https://railway.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Netlify</h3>
+          <p>Statikus oldalak és landingek gyors publikálása — git-pushra magától frissül.</p>
+          <a class="ho-more" href="https://www.netlify.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Cloudflare</h3>
+          <p>DNS, CDN és védelem egy helyen — gyorsabb és biztonságosabb weboldal, bőkezű ingyenes szinttel.</p>
+          <a class="ho-more" href="https://www.cloudflare.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Sentry</h3>
+          <p>Hibakövetés élesben: azonnal látod, ha valami eltörik az oldaladon vagy az alkalmazásodban.</p>
+          <a class="ho-more" href="https://sentry.io" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Sanity</h3>
+          <p>Tartalomkezelő rendszer, amely elválasztja a tartalmat a megjelenéstől: a szövegeket kényelmes felületen szerkeszted, a weboldalad kinézete pedig teljesen a te kezedben marad.</p>
+          <a class="ho-more" href="https://www.sanity.io" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Tally</h3>
+          <p>A legegyszerűbb űrlapkészítő — jelentkezések, felmérések és visszajelzések percek alatt, kód nélkül.</p>
+          <a class="ho-more" href="https://tally.so" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>PostHog</h3>
+          <p>Termék-analitika: látod, mit csinálnak a látogatók az oldaladon — session-felvételekkel és tölcsérekkel.</p>
+          <a class="ho-more" href="https://posthog.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Amplitude</h3>
+          <p>Termék-analitika nagyobb léptékben: felhasználói útvonalak, tölcsérek és megtartás elemzése.</p>
+          <a class="ho-more" href="https://amplitude.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Fathom Analytics</h3>
+          <p>Egyszerű, sütimentes webanalitika — GDPR-barát, egyetlen áttekinthető képernyőn.</p>
+          <a class="ho-more" href="https://usefathom.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Plausible</h3>
+          <p>Nyílt forráskódú, privát webanalitika — a Google Analytics könnyű, adatbarát alternatívája.</p>
+          <a class="ho-more" href="https://plausible.io" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>OpenRouter</h3>
+          <p>Egy API-kulcs az összes nagy AI-modellhez — egy helyen váltogatod, hasonlítod és méred őket.</p>
+          <a class="ho-more" href="https://openrouter.ai" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>fal.ai</h3>
+          <p>Kép- és videógenerálás programból hívható szolgáltatásként — a vizuális AI-t közvetlenül a saját folyamataidba építheted be, például termékképek vagy hirdetési vizuálok készítéséhez.</p>
+          <a class="ho-more" href="https://fal.ai" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Exa</h3>
+          <p>Keresőmotor, amelyet kifejezetten AI-rendszereknek terveztek: az ügynökeid pontos, friss webes találatokkal dolgozhatnak, például piackutatásnál vagy versenytárs-figyelésnél.</p>
+          <a class="ho-more" href="https://exa.ai" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Context7</h3>
+          <p>Mindig friss, az aktuális verzióhoz tartozó dokumentációt ad az AI-eszközeidnek, így kevesebb elavult kódjavaslatot kapsz.</p>
+          <a class="ho-more" href="https://context7.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Apify</h3>
+          <p>Web scraping és automatizálási platform — adatgyűjtés kész eszközökkel vagy saját scriptekkel.</p>
+          <a class="ho-more" href="https://apify.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Hermes (Nous Research)</h3>
+          <p>A Nous Research kutatóműhely nyílt AI-asszisztense — közvetlenül a böngészőben kipróbálható AI-ügynök, telepítés nélkül.</p>
+          <a class="ho-more" href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Wispr Flow</h3>
+          <p>Hangalapú diktálás bármelyik alkalmazásba — beszélsz, és kész, tiszta szöveg születik.</p>
+          <a class="ho-more" href="https://wisprflow.ai" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Aqua Voice</h3>
+          <p>Hangvezérelt szövegírás és -szerkesztés — a billentyűzet gyors alternatívája.</p>
+          <a class="ho-more" href="https://withaqua.com" target="_blank" rel="noopener">Tovább</a>
+        </div>
+        <div class="ho-card" data-cat="platformok">
+          <h3>Obsidian</h3>
+          <p>Helyi, markdown-alapú tudásbázis — a jegyzeteid összekapcsolódnak, és végig a tieid maradnak.</p>
+          <a class="ho-more" href="https://obsidian.md" target="_blank" rel="noopener">Tovább</a>
+        </div>
+      </div>
+      <script>
+      (function(){
+        var tabs=document.querySelectorAll('.ho-tab'), cards=document.querySelectorAll('.ho-card');
+        function apply(t){
+          cards.forEach(function(c){
+            if(c.dataset.cat===t.dataset.cat){c.removeAttribute('hidden');}
+            else{c.setAttribute('hidden','');}
+          });
+        }
+        tabs.forEach(function(t){
+          t.addEventListener('click',function(){
+            tabs.forEach(function(x){x.classList.remove('is-active');});
+            t.classList.add('is-active');
+            apply(t);
+          });
+        });
+        var active=document.querySelector('.ho-tab.is-active');
+        if(active) apply(active);
+      })();
+      </script>
+    </div>
+  </section>
+
+</main>
+<!-- BNX-FOOTER:START — kanonikus lábléc, a scripts/inject-footer.py illeszti be. Ne szerkeszd oldalanként. -->
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="/szolgaltatas.html">Szolgáltatás</a>
+        <a href="/pricing.html">Árak</a>
+        <a href="/sajat-projektek.html">Projektek</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="/rolam.html">Rólam</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+        <a href="/gyik.html">GYIK</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="/adatvedelem.html">Adatvédelem</a>
+        <a href="/aszf.html">ÁSZF</a>
+        <a href="/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+<!-- BNX-FOOTER:END -->
+<script src="/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/js/reveal-fallback.js"></script>
+</div>
+</body>
+</html>

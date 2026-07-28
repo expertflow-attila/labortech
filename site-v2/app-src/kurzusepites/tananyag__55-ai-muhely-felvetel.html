@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI-műhely a felvételhez · Kurzusépítés alapok</title>
+<meta name="description" content="AI-eszközök a felvétel körüli munkában, a scripttől a feliratig és az utómunkáig.">
+<meta name="author" content="Business Native">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<link rel="canonical" href="https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel">
+<link rel="alternate" hreflang="hu-HU" href="https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel">
+<link rel="alternate" hreflang="x-default" href="https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kurzusépítés alapok · Business Native">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:url" content="https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel">
+<meta property="og:title" content="AI-műhely a felvételhez">
+<meta property="og:description" content="AI-eszközök a felvétel körüli munkában, a scripttől a feliratig és az utómunkáig.">
+<meta property="og:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI-műhely a felvételhez">
+<meta name="twitter:description" content="AI-eszközök a felvétel körüli munkában, a scripttől a feliratig és az utómunkáig.">
+<meta name="twitter:image" content="https://kurzusepites-alapok.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Kurzusépítés alapok — Business Native">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/style.css?v=20260721">
+<link rel="stylesheet" href="/bn-chrome.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI-műhely a felvételhez",
+  "description": "AI-eszközök a felvétel körüli munkában, a scripttől a feliratig és az utómunkáig.",
+  "image": "https://kurzusepites-alapok.vercel.app/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "url": "https://businessnative.hu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Business Native",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kurzusepites-alapok.vercel.app/og.png"
+    }
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel"
+  },
+  "inLanguage": "hu-HU",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Kurzusépítés alapok",
+    "url": "https://kurzusepites-alapok.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Főoldal",
+      "item": "https://kurzusepites-alapok.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Felvétel és összeállítás",
+      "item": "https://kurzusepites-alapok.vercel.app/#felvetel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI-műhely a felvételhez",
+      "item": "https://kurzusepites-alapok.vercel.app/tananyag/55-ai-muhely-felvetel"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Business Native",
+  "url": "https://businessnative.hu",
+  "logo": "https://kurzusepites-alapok.vercel.app/og.png",
+  "description": "AI alapú működés szolgáltató vállalkozóknak.",
+  "founder": {
+    "@type": "Person",
+    "name": "Nagy Attila"
+  },
+  "sameAs": [
+    "https://businessnative.hu",
+    "https://youtube.com/@expertflow-hu",
+    "https://www.linkedin.com/in/nagy-attila-expert/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bnx-topbar">Az oldal <strong>folyamatos fejlesztés alatt</strong> áll.</div>
+<header class="bnx-header" role="banner">
+  <div class="bnx-inner">
+    <a class="bnx-brand" href="https://www.businessnative.hu/" aria-label="business nativ — főoldal"><span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span></a>
+    <nav class="bnx-nav" aria-label="Fő navigáció">
+      <a class="bnx-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+      <a class="bnx-link" href="https://businessnative.hu/pricing.html">Árak</a>
+      <a class="bnx-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+      <a class="bnx-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+      <div class="bnx-item">
+        <button class="bnx-link bnx-toggle" aria-expanded="false" aria-haspopup="true">Tudástár
+          <svg class="bnx-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="bnx-dropdown" role="menu">
+          <div class="bnx-col">
+            <a class="bnx-drop-link" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener"><span>Online jelenlét</span><span class="bnx-drop-sub">Weboldal és jelenlét alapok</span></a>
+            <a class="bnx-drop-link" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener"><span>Értékesítési szövegek</span><span class="bnx-drop-sub">Copywriting sablonok és példák</span></a>
+            <a class="bnx-drop-link" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener"><span>Landoló oldalak</span><span class="bnx-drop-sub">Kidolgozott landing elemzések</span></a>
+            <a class="bnx-drop-link" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener"><span>Kurzusépítés</span><span class="bnx-drop-sub">Kurzus és digitális termék alapok</span></a>
+            <a class="bnx-drop-link" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener"><span>Minikurzus</span><span class="bnx-drop-sub">E-mail minikurzus lépésről lépésre</span></a>
+            <a class="bnx-drop-link" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener"><span>Funnelek</span><span class="bnx-drop-sub">Kész marketing-tölcsérek</span></a>
+            <a class="bnx-drop-link" href="https://www.businessnative.hu/hasznos-oldalak"><span>AI eszköztár</span><span class="bnx-drop-sub">Eszközök az AI ügynökeid számára</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="bnx-actions">
+      <a class="bnx-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+      <button class="bnx-burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="bnx-mobile" hidden>
+    <a class="bnx-m-link" href="https://businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/pricing.html">Árak</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/rolam.html">Rólam</a>
+    <a class="bnx-m-link" href="https://businessnative.hu/sajat-projektek.html">Projektek</a>
+    <p class="bnx-m-label">Tudástár</p>
+    <a class="bnx-m-sublink" href="https://meek-mooncake-31c92f.netlify.app/" target="_blank" rel="noopener">Online jelenlét</a>
+    <a class="bnx-m-sublink" href="https://copywriting-bn.vercel.app/" target="_blank" rel="noopener">Értékesítési szövegek</a>
+    <a class="bnx-m-sublink" href="https://esettanulmanyok-bn.vercel.app/" target="_blank" rel="noopener">Landoló oldalak</a>
+    <a class="bnx-m-sublink" href="https://kurzusepites-alapok.vercel.app/" target="_blank" rel="noopener">Kurzusépítés</a>
+    <a class="bnx-m-sublink" href="https://minikurzus-alapok.vercel.app/" target="_blank" rel="noopener">Minikurzus</a>
+    <a class="bnx-m-sublink" href="https://funnelek-bn.vercel.app/" target="_blank" rel="noopener">Funnelek</a>
+    <a class="bnx-m-sublink" href="https://www.businessnative.hu/hasznos-oldalak">AI eszköztár</a>
+    <a class="bnx-cta bnx-m-cta" href="https://cal.com/attila-nagy-hjau8q/egyeni-konzultacio" target="_blank" rel="noopener">Konzultáció</a>
+  </div>
+</header>
+
+<header class="lesson-header">
+  <div class="hero-stage">
+    <div class="breadcrumb reveal"><a href="/">Főoldal</a><span class="sep">/</span><a href="/#felvetel">Felvétel és összeállítás</a><span class="sep">/</span><span>AI-műhely a felvételhez</span></div>
+    <h1 class="animate-fade-in-up reveal reveal-delay-1">AI-műhely a <em class="em-violet">felvételhez</em></h1>
+    <p class="lesson-sub reveal reveal-delay-2">AI-eszközök a felvétel körüli munkában, a scripttől a feliratig és az utómunkáig.</p>
+    <div class="lesson-pill-row reveal reveal-delay-3">
+      <span class="lesson-pill accent">Lecke 30 / 40</span>
+      <span class="lesson-pill">Felvétel és összeállítás</span>
+      <span class="lesson-pill">Kezdő</span>
+    </div>
+  </div>
+</header>
+
+<article class="lesson-content" data-slug="55-ai-muhely-felvetel">
+<blockquote>Végigmész egy teljes, AI-val támogatott felvételi munkafolyamaton, a lecke scripttől a diasoron, hangjavításon és vágáson át a magyar feliratig és az akadálymentesítési ellenőrzésig. A végén a saját kurzusod egy leckéje készül el vele.</blockquote>
+<h2>Miért számít?</h2>
+<p>A felvétel és az utómunka az a fázis, ahol a kurzusprojektek elakadnak, mert nem a tudás hiányzik, hanem a gyártási kapacitás, hiszen egy 24 leckés kurzus scriptelése, diázása, vágása és feliratozása hagyományosan 60–100 munkaóra. Ennek gépies része (átiratból felirat, szünetek kivágása, vázlatból dia nyersanyag) AI-eszközökkel nagyságrendekkel gyorsabb. A műhely lényege a sorrend. A vázlatból lesz a script, a scriptből a diasor, a felvételből az átirat, abból pedig a felirat, az összefoglaló és a leckeoldal szövege; egy forrás, sok kimenet, minimális dupla munka. Nézzünk egy hipotetikus magyar példát. Egy HR-tanácsadó egy 10 perces lecke utómunkáját így 5 óráról 1,5 órára rövidítette, romló minőség nélkül, mert minden kimenetet ő hagyott jóvá.</p>
+<h2>Mit kell tudnod?</h2>
+<h3>Mire való?</h3>
+<p>Ha még sosem használtál AI-chatet, semmi gond, ez egy sima weboldal, ahol úgy írsz az asszisztensnek, mintha üzenetet küldenél valakinek. Csak szöveget másolsz be és a választ olvasod, elrontani nem tudsz semmit, és ha nem tetszik az eredmény, kérsz egy újat.</p>
+<p>Ez a munkafolyamat a felvételi fázis négy AI-erősségét fűzi össze.</p>
+<ul><li><strong>Script és diasor előkészítés.</strong> A kurzusvázból (4. modul) leckénkénti beszédvázlat és diákra bontás.</li><li><strong>Hangjavítás.</strong> AI-alapú zajszűrés és visszhangcsökkentés, amitől az átlagos szobában rögzített hang stúdióközelivé válik.</li><li><strong>AI-alapú vágás.</strong> Szöveg alapú videóvágók, ahol az átiratban törölsz egy mondatot, és a videóból is kikerül; a szünetek és töltelékszavak jelölése automatikus.</li><li><strong>Felirat és akadálymentesítés.</strong> Beszédfelismerővel generált magyar felirat, plusz AI-ellenőrzés arra, hogy az anyag hallássérült és látássérült tanulónak is használható legyen.</li></ul>
+<p>Eszközkategóriákban gondolkodj, ne egy termékben. A négy kategória a beszédfelismerő (átirat) eszköz, a szöveg alapú videóvágó, az AI-hangtisztító és az AI-funkciós diaeszköz. Mindegyikben több jó megoldás van, és a felhozatal gyorsan változik; a munkafolyamat marad, az eszköz cserélhető.</p>
+<h3>Hogyan csináld?</h3>
+<ol><li><strong>Készítsd elő a lecke scriptet.</strong> Add oda az AI-ügynöknek (Claude, GPT, Gemini) a kurzusvázad és a kiválasztott lecke tartalomkeretét, és kérj 5–7 perces beszédvázlatot (az 1. prompt sablonnal lent, a prompt az AI-nak írt utasítás). A kimenet vázlat, nem felolvasandó szöveg, a saját példáidat és sztorijaidat te teszed bele.</li><li><strong>Generáld a diasor nyersanyagát.</strong> Ugyanabból a vázlatból kérj diánkénti bontást az 53. lecke szabályai szerint (egy dia egy gondolat, nyitó és záró dia). A kapott szerkezetet a saját sablonodba töltsd be, mert az AI-diaeszközök egykattintásos „kész prezentációja" jellemzően túlzsúfolt, a szerkezeti javaslatuk viszont jó alap.</li><li><strong>Vedd fel a leckét az 52. lecke beállításával.</strong> Itt nincs AI rövidítés, a kamera vagy mikrofon előtt te vagy. Egy trükk mégis van, ha nem folyamatosan beszélve veszed fel. Hibázásnál csattints egyet, tarts 2 másodperc szünetet, és mondd újra a mondatot; a vágásnál a csend és a hangcsúcs alapján másodpercek alatt megtalálod a javítási pontokat.</li><li><strong>Futtasd át a hangot AI-tisztításon.</strong> A hangtisztító kategória (önálló eszközként vagy a vágószoftverbe építve) a háttérzajt, visszhangot és hangerő-ingadozást egy menetben javítja. Előtte-utána hallgasd meg fülhallgatóval, mert ritkán, de torzíthat, olyankor vedd vissza az erősségét.</li><li><strong>Vágj szövegalapon.</strong> Töltsd be a felvételt egy szöveg alapú vágóba, generáltasd le az átiratot, majd a szövegben töröld a bakikat, ismétléseket és a felesleges kitérőket. A töltelékszó-eltávolítást és a hosszú szünetek rövidítését automatikus funkcióra bízhatod, de mintavételesen ellenőrizd, mert a géppuskatempójú, minden levegővételt kivágó vágás fárasztó, a természetes rövid szünetek maradjanak.</li><li><strong>Generálj magyar feliratot, és lektoráld.</strong> A beszédfelismerők magyar pontossága ma már jó, de a szakszavakat, neveket és számokat mindig nézd át, mert egy ÁFA-kulcs vagy egy jogszabályhely félrehallása a feliratban szakmai hitelességi kérdés. A kész feliratfájlt (SRT vagy a platform saját formátuma) töltsd fel a videó mellé.</li><li><strong>Hasznosítsd újra az átiratot.</strong> A lejavított átiratból kérj az AI-ügynöktől lecke összefoglalót, 3 kulcstanulságot és lecke végi következő lépést az 54. lecke leckeoldalához, így az átirat egyszeri munkája három kimenetet ad.</li><li><strong>Futtasd le az akadálymentesítési ellenőrzést.</strong> A 2. prompt sablonnal nézesd át a lecke anyagait (diaszövegek, feliratok, letölthető PDF-ek), vagyis a kontrasztot, a betűméretet, a képek szöveges leírását és a feliratok meglétét. Ez nem extra udvariasság, hiszen a tanulóid egy része hallgatva, más része olvasva tanul, és a felirat meg a jó kontraszt mindenkinek jobb élmény.</li><li><strong>Magyar adaptáció.</strong> Az eszközök előfizetési díját forintosítva tervezd (a szöveg alapú vágók és hangtisztítók jellemzően havi 5–15 000 Ft-nak megfelelő devizás díjak, több eszköznél van használható ingyenes szint), és a feliratot mindig magyar lektorálással add ki; ha B2B vevőknek számlázol a kurzusról, az eszközköltségek ÁFA-kezelését a könyvelőddel nézesd át.</li></ol>
+<h3>Mikor érdemes?</h3>
+<ul><li>Rögzített kurzus gyártásánál, ahol 10-nél több lecke vár rád, mert itt a legnagyobb az időnyereség.</li><li>Az élő kör (51. lecke) felvételeinek evergreen anyaggá vágásánál, mert az átirat alapú húzás hosszú élő alkalmakból csinál tömör leckéket.</li><li>Meglévő kurzus feliratozásának és leckeoldalainak pótlásánál.</li><li>Ha egyedül dolgozol vágó és szerkesztő nélkül, hiszen az AI itt a hiányzó stáb.</li></ul>
+<h3>Mikor NE?</h3>
+<ul><li>Ne generáltass teljes, szó szerint felolvasandó scriptet, mert a felolvasott AI-szöveg hallhatóan élettelen, és a tanuló pont a te tapasztalatodért fizetett.</li><li>Ne add ki a generált feliratot és összefoglalót lektorálás nélkül, mert a szakmai hibáért nem az eszköz felel, hanem te.</li><li>Ne tolj be minden leckét egy „automata pipeline-ba" minta ellenőrzés nélkül, mert az AI-lépések hibái csendesek, csak nézéskor derülnek ki.</li></ul>
+<h3>Leggyakoribb hibák</h3>
+<ul><li>Eszközhalmozás, vagyis öt előfizetés, mindegyik félig megismerve; pedig egy átirat eszköz, egy vágó és egy AI-ügynök az egész folyamatot lefedi.</li><li>A nyers AI-kimenet publikálása, pedig a generált diaszöveg és összefoglaló az átnézésig nyersanyag, nem termék.</li><li>Túlvágás, amikor a töltelékszó-irtás automatikája természetes szüneteket is kivág, és a lecke lélegzet nélkülivé válik.</li><li>A felirat kihagyása „majd később" alapon, pedig utólag 24 leckét feliratozni sosem kerül sorra, menet közben viszont leckénként 15 perc az egész.</li><li>Az akadálymentesítés dekorációként kezelése, pedig a kontraszt és a feliratok hibái a mobilon tanuló többségnek is rontják az élményt.</li></ul>
+<h3>Mit mérj?</h3>
+<ul><li><strong>Utómunka idő leckénként.</strong> A cél a kézi folyamat idejének 30–50%-a; ha nem csökken, a folyamatból hiányzik egy lépés, nem az eszközökből.</li><li><strong>Felirat hibaarány.</strong> A lektoráláskor javított hibák száma leckénként; ha rendre magas, jobb hangfelvétel kell, nem jobb felismerő.</li><li><strong>Leckeoldal kitöltöttség.</strong> Hány leckének van összefoglalója, felirata, következő lépése; a cél 100%, mert az átirat újrahasznosítással ez már olcsó.</li><li>Ha még nincs adatod, előbb egy leckén mérd le a kézi és az AI-támogatott folyamat idejét, mert az a saját alapvonalad.</li></ul>
+<h2>AI-prompt sablon</h2>
+<p>Másold AI-ügynöknek</p>
+<p>Ez a sablon ezt a lépést csinálja meg veled a saját vállalkozásodra. Töltsd ki a <code>{{placeholder}}</code> változókat, és add át egy AI-ügynöknek (Claude, GPT, Gemini). Ebben a leckében két sablont kapsz, az első a lecke script és diasor előkészítése, a második az akadálymentesítési ellenőrzés. A Claude, a GPT és a Gemini ingyenes AI-chat oldalak (pl. claude.ai). A sablont egyszerűen üzenetként másolod be, nincs telepítés, nem kell hozzá technikai tudás.</p>
+<p><strong>1. sablon a lecke scripthez és a diákra bontáshoz</strong></p>
+<div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>Online kurzus egy leckéjének felvételére készítesz fel egy magyar
+szolgáltatót.
+
+KONTEXTUS:
+- Kurzus és célközönség: {{kurzus_es_celkozonseg}}
+- A lecke címe és tartalomkerete (Mit, Miért, Hogyan, Bizonyíték):
+  {{lecke_tartalom_keret}}
+- Célhossz percben: {{celhossz}}
+- Kulcspontok, amiknek kötelezően szerepelniük kell: {{kulcspontok}}
+
+FELADAT:
+1. Írj beszédvázlatot a leckéhez — pontokba szedve, nem szó szerinti
+   szöveggel. Jelöld, hol tartson szünetet, és hol kell a saját példám
+   ({{PÉLDA HELYE}} jelöléssel — ide én írok sztorit).
+2. Bontsd a vázlatot diánkénti tervre — dia címe, a dián megjelenő
+   max. 1 mondat vagy 3-5 felsoroláspont, jegyzetmező kulcsszavak.
+   Nyitó dia &quot;Ebben a leckében megtanulod&quot; 2-3 ponttal, záró dia
+   összefoglalóval és következő lépéssel.
+3. Adj a nyitáshoz 2-3 megfogalmazási alternatívát az első két mondatra —
+   ezt az egyet érdemes szóról szóra megtanulni a magabiztos kezdéshez.
+
+NE írj felolvasandó teljes scriptet. Vázlatot adj, kérdezz vissza, ha egy
+kulcspont nem fér bele a célhosszba.</code></pre></div>
+<p><strong>2. sablon az akadálymentesítési ellenőrzéshez</strong></p>
+<div class="prompt-box"><button type="button" class="prompt-copy" aria-label="Prompt másolása">Másolás</button><pre><code>Online kurzus akadálymentesítését ellenőrzöd, hogy hallássérült és látássérült,
+valamint mobilon, hang nélkül tanuló diákoknak is használható legyen.
+
+KONTEXTUS:
+- A kurzus felépítése (modulok, leckék): {{kurzusvaz}}
+- Anyagtípusok leckénként: {{anyagtipusok}} (pl. videó diasorral, PDF
+  munkafüzet, checklist)
+- Amit már megtettem: {{meglevo_intezkedesek}} (pl. felirat kész, átirat
+  elérhető)
+- Ide másolom egy tipikus lecke diaszövegeit: {{dia_szovegek}}
+
+FELADAT:
+1. Menj végig anyagtípusonként, és adj konkrét hiánylistát — felirat,
+   szöveges átirat, képek alternatív leírása, kontraszt és betűméret,
+   PDF-ek olvashatósága felolvasó szoftverrel.
+2. A beküldött diaszövegeknél jelöld a konkrét problémás pontokat
+   és adj javított változatot.
+3. Adj 8-10 pontos, minden jövőbeli leckére alkalmazható
+   akadálymentesítési ellenőrzőlistát, fontossági sorrendben.
+
+Rangsorolj — előbb a kevés munkával sokat javító tételek. NE általános
+elveket sorolj, hanem az én anyagaimra szabott teendőket.</code></pre></div>
+<h2>Hasznos források</h2>
+<ul><li><a href="https://obsproject.com" target="_blank" rel="noopener">OBS Studio, ingyenes felvevő a nyersanyaghoz</a>. A munkafolyamat felvételi lépésének szoftvere.</li><li><a href="https://www.descript.com" target="_blank" rel="noopener">Descript, szöveg alapú videóvágó kategória példa</a>. Átirat alapú vágás, töltelékszó-eltávolítás, hangtisztítás egyben; a kategóriában több hasonló eszköz is van.</li><li><a href="https://www.canva.com" target="_blank" rel="noopener">Canva, diaeszköz AI-funkciókkal</a>. A generált diákra bontás gyors összerakásához, egységes sablonnal.</li></ul>
+</article>
+
+<aside class="lesson-feedback reveal" aria-label="Kurzusépítés szolgáltatás">
+  <p>Nem akarod egyedül végigcsinálni? Ránézünk együtt a kurzusodra, a tervezéstől az indításig.</p>
+  <a class="cta cta-feedback" href="https://businessnative.hu/kurzusepites" target="_blank" rel="noopener">
+    <span>Kurzusépítés szolgáltatás</span>
+    <span class="arrow">→</span>
+  </a>
+</aside>
+
+<nav class="lesson-nav" aria-label="Lecke navigáció">
+<a href="/tananyag/54-feltoltes-tanuloi-elmeny" class="prev"><span class="nav-label">← Előző</span><span class="nav-title">Feltöltés és élmény</span></a><a href="/tananyag/56-delegalas-minosegvedelem" class="next"><span class="nav-label">Következő →</span><span class="nav-title">Delegálás és minőség</span></a>
+</nav>
+<style>
+.prompt-box{position:relative;}
+.prompt-box .prompt-copy{position:absolute;top:10px;right:10px;z-index:2;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid var(--border-strong,#d8d6d3);background:var(--card,#fff);color:inherit;cursor:pointer;}
+.prompt-box .prompt-copy:hover{border-color:currentColor;}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('.prompt-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre code');
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(){ var t=btn.textContent; btn.textContent='Másolva'; setTimeout(function(){btn.textContent=t;},1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+<footer class="bnx-footer">
+  <div class="bnx-foot-inner">
+    <div class="bnx-foot-brand">
+      <span class="bn-logo"><span>business</span><svg class="bn-arrow" viewBox="0 0 15 13" fill="currentColor" aria-hidden="true"><circle cx="1.4" cy="1.4" r="1.1"/><circle cx="1.4" cy="4.6" r="1.1"/><circle cx="1.4" cy="7.8" r="1.1"/><circle cx="1.4" cy="11" r="1.1"/><circle cx="5.4" cy="3" r="1.1"/><circle cx="5.4" cy="6.2" r="1.1"/><circle cx="5.4" cy="9.4" r="1.1"/><circle cx="9.4" cy="4.6" r="1.1"/><circle cx="9.4" cy="7.8" r="1.1"/><circle cx="13.4" cy="6.2" r="1.1"/></svg><span>nativ</span></span>
+      <p class="bnx-foot-tag">AI alapú működés szolgáltató vállalkozóknak</p>
+    </div>
+    <div class="bnx-foot-cols">
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Oldalak</p>
+        <a href="https://www.businessnative.hu/">Főoldal</a>
+        <a href="https://www.businessnative.hu/szolgaltatas.html">Szolgáltatás</a>
+        <a href="https://www.businessnative.hu/pricing.html">Árak</a>
+        <a href="https://www.businessnative.hu/sajat-projektek.html">Projektek</a>
+      </div>
+            <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Ismerj meg</p>
+        <a href="https://www.businessnative.hu/rolam.html">Rólam</a>
+        <a href="https://www.businessnative.hu/contact/contact-a.html">Kapcsolat</a>
+        <a href="https://www.businessnative.hu/gyik.html">GYIK</a>
+        <a href="https://dirt-and-clouds-v2.vercel.app/" target="_blank" rel="noopener">Napló</a>
+      </div>
+      <div class="bnx-foot-col">
+        <p class="bnx-foot-h">Jogi</p>
+        <a href="https://www.businessnative.hu/adatvedelem.html">Adatvédelem</a>
+        <a href="https://www.businessnative.hu/aszf.html">ÁSZF</a>
+        <a href="https://www.businessnative.hu/garancia.html">Garancia</a>
+      </div>
+    </div>
+  </div>
+  <div class="bnx-foot-bottom">
+    <p>© 2026 business nativ — Nagy Attila Ferenc e.v.</p>
+    <p><a href="https://youtube.com/@expertflow-hu" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/nagy-attila-expert/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.businessnative.hu/contact/contact-a.html">E-mail</a></p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script>
+(function(){
+  var h=document.querySelector('.bnx-header');
+  if(!h||h.dataset.bnxInit)return; h.dataset.bnxInit="1";
+  var burger=h.querySelector('.bnx-burger'), mobile=h.querySelector('.bnx-mobile');
+  if(burger&&mobile){burger.addEventListener('click',function(){var o=mobile.hasAttribute('hidden');if(o){mobile.removeAttribute('hidden');}else{mobile.setAttribute('hidden','');}burger.setAttribute('aria-expanded',o?'true':'false');});}
+  var items=h.querySelectorAll('.bnx-item');
+  items.forEach(function(item){
+    var tog=item.querySelector('.bnx-toggle'); if(!tog)return;
+    tog.addEventListener('click',function(e){e.preventDefault();
+      items.forEach(function(x){if(x!==item){x.classList.remove('is-open');var t=x.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});
+      var o=item.classList.toggle('is-open'); tog.setAttribute('aria-expanded',o?'true':'false');});
+  });
+  document.addEventListener('click',function(e){items.forEach(function(item){if(!item.contains(e.target)){item.classList.remove('is-open');var t=item.querySelector('.bnx-toggle');if(t)t.setAttribute('aria-expanded','false');}});});
+  function hdr(){ if(window.scrollY>24){h.classList.add('is-scrolled');}else{h.classList.remove('is-scrolled');} }
+  window.addEventListener('scroll',hdr,{passive:true}); hdr();
+})();
+</script>
+</body>
+</html>

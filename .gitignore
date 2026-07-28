@@ -1,0 +1,15 @@
+.vercel
+node_modules/
+
+# Build-kimenet: a `npm run build` állítja elő, és a deploy is ebből megy.
+# Nem verziózzuk (a site-generator/public/ sincs a repóban), mert több száz
+# generált fájl és ~120 MB asset — a generátorok + a forrás HTML-ek elegendők
+# a reprodukáláshoz.
+public/
+
+# Letükrözött assetek: a crawl-lépések töltik le újra (CDN-ről), ezért nem
+# tartjuk verzióban. A FORRÁS HTML-ek (ef-src/, bn-src/, app-src/) viszont
+# igen — azok a tartalom egyetlen igazság-forrásai.
+site-v2/ef-assets/
+site-v2/bn-assets/
+site-v2/app-assets/
